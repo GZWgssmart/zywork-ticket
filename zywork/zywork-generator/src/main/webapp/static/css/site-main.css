@@ -1,0 +1,46 @@
+/**
+下拉菜单式按钮
+ */
+.btn-group>.btn+.dropdown-toggle {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+/**
+bootstrap-table顶部按钮
+ */
+.columns .btn {
+    height: 34px;
+}
+
+/**
+modal中打开select2下拉菜单
+ */
+.select2-container--bootstrap{
+    z-index: 9999999;
+}
+
+.operation-column {
+    min-width: 120px;
+}
+
+/**
+bootstrap-table表格的详情展开列
+ */
+.table tbody tr td:first-child {
+    text-align: center;
+}
+
+/**
+bootstrap-table表格详情中的标题
+ */
+.row-detail-title {
+    font-weight: bold;
+}
+
+.search-form {
+    margin-top: 15px;
+}
+
+.detail-content {
+    padding: 5px 0px 5px 0px;
+}

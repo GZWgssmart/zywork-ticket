@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/zywork.iml" filepath="$PROJECT_DIR$/zywork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zywork-common/zywork-common.iml" filepath="$PROJECT_DIR$/zywork-common/zywork-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zywork-generator/zywork-generator.iml" filepath="$PROJECT_DIR$/zywork-generator/zywork-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zywork-ui/zywork-ui-backend/zywork-ui-backend.iml" filepath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/zywork-ui-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zywork-ui/zywork-ui-frontend/zywork-ui-frontend.iml" filepath="$PROJECT_DIR$/zywork-ui/zywork-ui-frontend/zywork-ui-frontend.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/zywork-bpms/zywork-bpms-web" />
+    <file type="web" url="file://$PROJECT_DIR$/zywork-cms/zywork-cms-web" />
+    <file type="web" url="file://$PROJECT_DIR$/zywork-generator" />
+    <file type="web" url="file://$PROJECT_DIR$/zywork-log/zywork-log-web" />
+    <file type="web" url="file://$PROJECT_DIR$/zywork-message/zywork-message-web" />
+    <file type="web" url="file://$PROJECT_DIR$/zywork-report/zywork-report-web" />
+    <file type="web" url="file://$PROJECT_DIR$/zywork-schedule/zywork-schedule-web" />
+    <file type="web" url="file://$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-web" />
+    <file type="web" url="file://$PROJECT_DIR$/zywork-upms/zywork-upms-web" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/zywork-common/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/zywork-bpms/pom.xml" />
+        <option value="$PROJECT_DIR$/zywork-cms/pom.xml" />
+        <option value="$PROJECT_DIR$/zywork-config/pom.xml" />
+        <option value="$PROJECT_DIR$/zywork-log/pom.xml" />
+        <option value="$PROJECT_DIR$/zywork-message/pom.xml" />
+        <option value="$PROJECT_DIR$/zywork-pay/pom.xml" />
+        <option value="$PROJECT_DIR$/zywork-report/pom.xml" />
+        <option value="$PROJECT_DIR$/zywork-schedule/pom.xml" />
+        <option value="$PROJECT_DIR$/zywork-ucenter/pom.xml" />
+        <option value="$PROJECT_DIR$/zywork-upms/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

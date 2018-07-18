@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zywork-common" />
+        <module name="zywork-generator" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zywork" target="1.8" />
+      <module name="zywork-autocode" target="1.8" />
+      <module name="zywork-bpms" target="1.8" />
+      <module name="zywork-bpms-common" target="1.8" />
+      <module name="zywork-bpms-dao" target="1.8" />
+      <module name="zywork-bpms-service-api" target="1.8" />
+      <module name="zywork-bpms-service-impl" target="1.8" />
+      <module name="zywork-bpms-web" target="1.8" />
+      <module name="zywork-cms" target="1.8" />
+      <module name="zywork-cms-common" target="1.8" />
+      <module name="zywork-cms-dao" target="1.8" />
+      <module name="zywork-cms-service-api" target="1.8" />
+      <module name="zywork-cms-service-impl" target="1.8" />
+      <module name="zywork-cms-web" target="1.8" />
+      <module name="zywork-common" target="1.8" />
+      <module name="zywork-config" target="1.8" />
+      <module name="zywork-config-common" target="1.8" />
+      <module name="zywork-config-dao" target="1.8" />
+      <module name="zywork-config-service" target="1.8" />
+      <module name="zywork-config-shiro" target="1.8" />
+      <module name="zywork-config-web" target="1.8" />
+      <module name="zywork-generator" target="1.8" />
+      <module name="zywork-log" target="1.8" />
+      <module name="zywork-log-aspect" target="1.8" />
+      <module name="zywork-log-common" target="1.8" />
+      <module name="zywork-log-dao" target="1.8" />
+      <module name="zywork-log-service-api" target="1.8" />
+      <module name="zywork-log-service-impl" target="1.8" />
+      <module name="zywork-log-web" target="1.8" />
+      <module name="zywork-message" target="1.8" />
+      <module name="zywork-message-common" target="1.8" />
+      <module name="zywork-message-dao" target="1.8" />
+      <module name="zywork-message-service-api" target="1.8" />
+      <module name="zywork-message-service-impl" target="1.8" />
+      <module name="zywork-message-web" target="1.8" />
+      <module name="zywork-pay" target="1.8" />
+      <module name="zywork-report" target="1.8" />
+      <module name="zywork-report-common" target="1.8" />
+      <module name="zywork-report-dao" target="1.8" />
+      <module name="zywork-report-service-api" target="1.8" />
+      <module name="zywork-report-service-impl" target="1.8" />
+      <module name="zywork-report-web" target="1.8" />
+      <module name="zywork-schedule" target="1.8" />
+      <module name="zywork-schedule-common" target="1.8" />
+      <module name="zywork-schedule-dao" target="1.8" />
+      <module name="zywork-schedule-service-api" target="1.8" />
+      <module name="zywork-schedule-service-impl" target="1.8" />
+      <module name="zywork-schedule-web" target="1.8" />
+      <module name="zywork-ucenter" target="1.8" />
+      <module name="zywork-ucenter-common" target="1.5" />
+      <module name="zywork-ucenter-dao" target="1.8" />
+      <module name="zywork-ucenter-service" target="1.8" />
+      <module name="zywork-ucenter-service-api" target="1.8" />
+      <module name="zywork-ucenter-service-impl" target="1.8" />
+      <module name="zywork-ucenter-web" target="1.8" />
+      <module name="zywork-upms" target="1.8" />
+      <module name="zywork-upms-common" target="1.8" />
+      <module name="zywork-upms-dao" target="1.8" />
+      <module name="zywork-upms-service-api" target="1.8" />
+      <module name="zywork-upms-service-impl" target="1.8" />
+      <module name="zywork-upms-shiro" target="1.8" />
+      <module name="zywork-upms-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

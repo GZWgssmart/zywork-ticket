@@ -1,0 +1,243 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.zywork.dao.ProcessDAO">
+
+    <insert id="save" parameterType="processDO">
+        insert into t_process
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null">
+				name,
+			</if>
+			<if test="filePath != null">
+				file_path,
+			</if>
+			<if test="description != null">
+				description,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="updateTime != null">
+				update_time,
+			</if>
+			<if test="isDeploy != null">
+				is_deploy,
+			</if>
+			<if test="deployTime != null">
+				deploy_time,
+			</if>
+			<if test="isActive != null">
+				is_active,
+			</if>
+			
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name != null">
+				#{name},
+			</if>
+			<if test="filePath != null">
+				#{filePath},
+			</if>
+			<if test="description != null">
+				#{description},
+			</if>
+			<if test="userId != null">
+				#{userId},
+			</if>
+			<if test="createTime != null">
+				#{createTime},
+			</if>
+			<if test="updateTime != null">
+				#{updateTime},
+			</if>
+			<if test="isDeploy != null">
+				#{isDeploy},
+			</if>
+			<if test="deployTime != null">
+				#{deployTime},
+			</if>
+			<if test="isActive != null">
+				#{isActive},
+			</if>
+			
+        </trim>
+    </insert>
+
+    <delete id="remove" parameterType="processDO">
+        delete from t_process where id = #{id}
+    </delete>
+
+    <delete id="removeById" parameterType="long">
+        delete from t_process where id = #{id}
+    </delete>
+
+    <delete id="removeByIds">
+        delete from t_process where id in
+        <foreach item="id" collection="array" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <update id="update" parameterType="processDO">
+        update t_process
+        <set>
+            <if test="name != null">
+				name = #{name},
+			</if>
+			<if test="filePath != null">
+				file_path = #{filePath},
+			</if>
+			<if test="description != null">
+				description = #{description},
+			</if>
+			<if test="userId != null">
+				user_id = #{userId},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime},
+			</if>
+			<if test="updateTime != null">
+				update_time = #{updateTime},
+			</if>
+			<if test="isDeploy != null">
+				is_deploy = #{isDeploy},
+			</if>
+			<if test="deployTime != null">
+				deploy_time = #{deployTime},
+			</if>
+			<if test="isActive != null">
+				is_active = #{isActive},
+			</if>
+			
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="updateActiveStatus" parameterType="top.zywork.query.StatusQuery">
+        update t_process set is_active = #{status} where id = #{id}
+    </update>
+
+    <update id="updateActiveStatuses" parameterType="top.zywork.query.StatusQueries">
+        update t_process set is_active = #{status} where id in
+        <foreach item="id" collection="ids" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+
+    <sql id="select_columns">
+        id as id, name as name, file_path as filePath, description as description, user_id as userId, create_time as createTime, update_time as updateTime, is_deploy as isDeploy, deploy_time as deployTime, is_active as isActive
+    </sql>
+
+    <sql id="query_where_clause">
+        <if test="query != null and query.id != null">
+			id = #{query.id}
+		</if>
+		<if test="query != null and query.name != null and query.name != ''">
+			and name like concat('%', #{query.name}, '%')
+		</if>
+		<if test="query != null and query.filePath != null and query.filePath != ''">
+			and file_path like concat('%', #{query.filePath}, '%')
+		</if>
+		<if test="query != null and query.description != null and query.description != ''">
+			and description like concat('%', #{query.description}, '%')
+		</if>
+		<if test="query != null and query.userId != null">
+			and user_id = #{query.userId}
+		</if>
+		<if test="query != null and query.createTimeStart != null and query.createTimeEnd == null">
+			and create_time <![CDATA[ >= ]]> #{query.createTimeStart}
+		</if>
+		<if test="query != null and query.createTimeStart == null and query.createTimeEnd != null">
+			and create_time <![CDATA[ <= ]]> #{query.createTimeEnd}
+		</if>
+		<if test="query != null and query.createTimeStart != null and query.createTimeEnd != null">
+			and create_time <![CDATA[ >= ]]> #{query.createTimeStart} and create_time <![CDATA[ <= ]]> #{query.createTimeEnd}
+		</if>
+		<if test="query != null and query.updateTimeStart != null and query.updateTimeEnd == null">
+			and update_time <![CDATA[ >= ]]> #{query.updateTimeStart}
+		</if>
+		<if test="query != null and query.updateTimeStart == null and query.updateTimeEnd != null">
+			and update_time <![CDATA[ <= ]]> #{query.updateTimeEnd}
+		</if>
+		<if test="query != null and query.updateTimeStart != null and query.updateTimeEnd != null">
+			and update_time <![CDATA[ >= ]]> #{query.updateTimeStart} and update_time <![CDATA[ <= ]]> #{query.updateTimeEnd}
+		</if>
+		<if test="query != null and query.isDeploy != null">
+			and is_deploy = #{query.isDeploy}
+		</if>
+		<if test="query != null and query.deployTimeStart != null and query.deployTimeEnd == null">
+			and deploy_time <![CDATA[ >= ]]> #{query.deployTimeStart}
+		</if>
+		<if test="query != null and query.deployTimeStart == null and query.deployTimeEnd != null">
+			and deploy_time <![CDATA[ <= ]]> #{query.deployTimeEnd}
+		</if>
+		<if test="query != null and query.deployTimeStart != null and query.deployTimeEnd != null">
+			and deploy_time <![CDATA[ >= ]]> #{query.deployTimeStart} and deploy_time <![CDATA[ <= ]]> #{query.deployTimeEnd}
+		</if>
+		<if test="query != null and query.isActive != null">
+			and is_active = #{query.isActive}
+		</if>
+		
+    </sql>
+
+    <select id="getById" parameterType="long" resultType="processDO">
+        select
+        <include refid="select_columns"/>
+        from t_process where id = #{id}
+    </select>
+
+    <select id="listAll" resultType="processDO">
+        select
+        <include refid="select_columns"/>
+        from t_process
+        order by update_time desc, create_time desc
+    </select>
+
+    <select id="listPage" parameterType="top.zywork.query.PageQuery" resultType="processDO">
+        select
+        <include refid="select_columns"/>
+        from t_process
+        order by
+        <if test="sort != null and sort != ''">
+            ${sort} ${order}
+        </if>
+        <if test="sort == null or sort == ''">
+            update_time desc, create_time desc
+        </if>
+        limit #{beginIndex}, #{pageSize}
+    </select>
+
+    <select id="count" resultType="long">
+        select count(*) from t_process
+    </select>
+
+    <select id="listPageByCondition" resultType="processDO">
+        select
+        <include refid="select_columns"/>
+        from t_process
+        <where>
+            <include refid="query_where_clause"/>
+        </where>
+        order by
+        <if test="pager.sort != null and pager.sort != ''">
+            ${pager.sort} ${pager.order}
+        </if>
+        <if test="pager.sort == null or pager.sort == ''">
+            update_time desc, create_time desc
+        </if>
+        limit #{pager.beginIndex}, #{pager.pageSize}
+    </select>
+
+    <select id="countByCondition" resultType="long">
+        select count(*) from t_process
+        <where>
+            <include refid="query_where_clause"/>
+        </where>
+    </select>
+
+</mapper>
