@@ -599,18 +599,39 @@
         <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="52" column="100" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="100" />
+              <caret line="52" column="100" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="100" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserTicketOrder.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserTicketOrder.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/UserTicketOrder/UserTicketOrder.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="810">
               <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TicketOrderDAOMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDAOMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+              <folding>
+                <marker date="1531897493209" expanded="true" signature="1584:1627" ph="delete from " />
+                <marker date="1531897493209" expanded="true" signature="1701:1744" ph="delete from " />
+                <marker date="1531897493209" expanded="true" signature="2032:2714" ph="update t_tic... " />
+                <marker date="1531897493209" expanded="true" signature="2820:2884" ph="update t_tic... " />
+                <marker date="1531897493209" expanded="true" signature="5798:5891" ph="select from t_ticket_order" />
+                <marker date="1531897493209" expanded="true" signature="5968:6096" ph="select from t_ticket_order" />
+                <marker date="1531897493209" expanded="true" signature="6217:6550" ph="select from t_ticket_order" />
+                <marker date="1531897493209" expanded="true" signature="6616:6651" ph="select count... t_ticket_order" />
+                <marker date="1531897493209" expanded="true" signature="6740:7204" ph="select from t_ticket_order" />
+                <marker date="1531897493209" expanded="true" signature="7281:7316" ph="select count... t_ticket_order" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -702,7 +723,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -712,7 +733,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/common/WebUtils.java" />
         <option value="$PROJECT_DIR$/documents/zywork.sql" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/SysLogController.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dto/SysLogDTO.java" />
@@ -763,6 +783,7 @@
         <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/generatedcodes/mapper/UserDAOMapper.xml" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/home.jsp" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/UserTicketOrder/UserTicketOrder.jsp" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDAOMapper.xml" />
       </list>
     </option>
   </component>
@@ -885,6 +906,86 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -913,8 +1014,8 @@
       <recent name="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views" />
       <recent name="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js" />
       <recent name="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper" />
-      <recent name="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User" />
-      <recent name="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend" />
+      <recent name="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl" />
+      <recent name="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="top.zywork.vo" />
@@ -1231,7 +1332,7 @@
       <workItem from="1530259249048" duration="3058000" />
       <workItem from="1530495788308" duration="7683000" />
       <workItem from="1531381460513" duration="15247000" />
-      <workItem from="1531884632574" duration="9314000" />
+      <workItem from="1531884632574" duration="10140000" />
     </task>
     <servers />
   </component>
@@ -1268,7 +1369,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="973144000" />
+    <option name="totallyTimeSpent" value="973970000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1281,6 +1382,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5601173" sideWeight="0.503231" order="8" side_tool="true" content_ui="tabs" />
@@ -1305,7 +1407,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33198708" sideWeight="0.4941349" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33198708" sideWeight="0.4941349" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1399,13 +1501,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/index">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/ModuleController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1789,7 +1884,7 @@
     <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="52" column="100" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="100" />
+          <caret line="52" column="100" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="100" />
           <folding />
         </state>
       </provider>
@@ -1799,6 +1894,25 @@
         <state relative-caret-position="810">
           <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDAOMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <marker date="1531897493209" expanded="true" signature="1584:1627" ph="delete from " />
+            <marker date="1531897493209" expanded="true" signature="1701:1744" ph="delete from " />
+            <marker date="1531897493209" expanded="true" signature="2032:2714" ph="update t_tic... " />
+            <marker date="1531897493209" expanded="true" signature="2820:2884" ph="update t_tic... " />
+            <marker date="1531897493209" expanded="true" signature="5798:5891" ph="select from t_ticket_order" />
+            <marker date="1531897493209" expanded="true" signature="5968:6096" ph="select from t_ticket_order" />
+            <marker date="1531897493209" expanded="true" signature="6217:6550" ph="select from t_ticket_order" />
+            <marker date="1531897493209" expanded="true" signature="6616:6651" ph="select count... t_ticket_order" />
+            <marker date="1531897493209" expanded="true" signature="6740:7204" ph="select from t_ticket_order" />
+            <marker date="1531897493209" expanded="true" signature="7281:7316" ph="select count... t_ticket_order" />
+          </folding>
         </state>
       </provider>
     </entry>
