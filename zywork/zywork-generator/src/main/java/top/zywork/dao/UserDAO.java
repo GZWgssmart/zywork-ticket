@@ -38,4 +38,6 @@ public interface UserDAO extends BaseDAO {
      * @return 用户密码
      */
     String getPassword(String username);
+
+    Object getByOpenid(String openid);
 }

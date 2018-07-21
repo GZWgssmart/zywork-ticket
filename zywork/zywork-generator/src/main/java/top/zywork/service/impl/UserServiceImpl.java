@@ -61,6 +61,15 @@ public class UserServiceImpl extends AbstractBaseService implements UserService 
         redisTemplate.delete("user:" + username);
     }
 
+    @Override
+    public Object getByOpenid(String openid) {
+        Object obj = userDAO.getByOpenid(openid);
+        if (obj != null) {
+            return getBeanMapper().map(obj, getDtoClass());
+        }
+        return null;
+    }
+
     @Autowired
     public void setUserDAO(UserDAO userDAO) {
         super.setBaseDAO(userDAO);

@@ -9,468 +9,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3891c4bd-30e2-4dc3-9494-cb36e46aec05" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dos/TicketItemDO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dos/UserTicketOrderDO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dto/TicketItemDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dto/UserTicketOrderDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/query/UserTicketOrderQuery.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/TicketItemService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/UserTicketOrderService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/TicketItemServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/UserTicketOrderServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/vo/TicketItemVO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/vo/UserTicketOrderVO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/UserTicketOrderDAOMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/TicketItem/TicketItem.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/TicketItem/TicketItemAddModal.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/TicketItem/TicketItemDetailModal.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/TicketItem/TicketItemEditModal.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/TicketItem/TicketItemSearchModal.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/UserTicketOrder/UserTicketOrder.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/UserTicketOrder/UserTicketOrderAddModal.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/UserTicketOrder/UserTicketOrderDetailModal.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/UserTicketOrder/UserTicketOrderEditModal.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/main.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/TicketItem/TicketItem.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/TicketItem/TicketItemSearchModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/UserTicketOrder/UserTicketOrder.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_101tec_zkclient_0_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_dubbo_2_5_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_icu_icu4j_57_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_lowagie_itext_2_1_7_js6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_java6_2_3_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_api_2_2_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_spi_2_2_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_10_5_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_regexp_jakarta_regexp_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jasperreports_jasperreports_6_4_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_4_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_4_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_4_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_4_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_4_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_52.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_castor_castor_core_1_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_castor_castor_xml_1_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_core_compiler_ecj_4_4_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_netty_netty_3_2_5_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jcommon_1_0_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jfreechart_1_0_19.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_olap4j_olap4j_0_9_7_309_JS_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_2_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_13_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_1_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-common/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-common/src/main/java/top/zywork/dos/ProcessDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-common/src/main/java/top/zywork/dto/ProcessDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-common/src/main/java/top/zywork/query/ProcessQuery.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-common/src/main/java/top/zywork/vo/ProcessVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-common/zywork-bpms-common.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-dao/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-dao/src/main/java/top/zywork/dao/ProcessDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-dao/src/main/resources/mapper/ProcessDAOMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-dao/zywork-bpms-dao.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-api/src/main/java/top/zywork/service/ActivitiService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-api/src/main/java/top/zywork/service/ProcessService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-api/zywork-bpms-service-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-impl/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-impl/src/main/java/com/gs/service/impl/ActivitiServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-impl/src/main/java/com/gs/service/impl/ProcessServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-impl/src/main/resources/config/spring-bpms-provider.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-impl/src/main/resources/zywork-bpms-service.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-impl/zywork-bpms-service-impl.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-web/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-web/src/main/resources/config/spring-bmps-consumer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-web/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-web/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-web/zywork-bpms-web.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-common/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-common/zywork-cms-common.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-dao/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-dao/zywork-cms-dao.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-service-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-service-api/zywork-cms-service-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-service-impl/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-service-impl/src/main/resources/config/spring-cms-provider.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-service-impl/src/main/resources/zywork-cms-service.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-service-impl/zywork-cms-service-impl.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-web/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-web/src/main/resources/config/spring-cms-consumer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-web/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-web/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms-web/zywork-cms-web.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-cms/zywork-cms.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-common/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-common/src/main/resources/config/spring-dozer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-common/src/main/resources/logback.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-common/zywork-config-common.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-dao/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-dao/src/main/resources/config/jdbc.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-dao/src/main/resources/config/mybatis.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-dao/src/main/resources/config/spring-datasource.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-dao/src/main/resources/config/spring-mybatis.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-dao/zywork-config-dao.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-service/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-service/src/main/resources/config/redis.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-service/src/main/resources/config/spring-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-service/src/main/resources/config/spring-redis-single.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-service/zywork-config-service.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-web/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-web/src/main/resources/config/logback.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-web/src/main/resources/config/spring-session.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-web/src/main/resources/config/springmvc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config-web/zywork-config-web.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-config/zywork-config.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-generator/src/main/resources/config/spring-activiti.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-aspect/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-aspect/src/main/java/top/zywork/annotation/SysLog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-aspect/src/main/java/top/zywork/aspect/SysLogAspect.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-aspect/src/main/resources/config/spring-log-consumer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-aspect/zywork-log-aspect.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-common/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-common/src/main/java/top/zywork/dos/SysLogDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-common/src/main/java/top/zywork/dto/SysLogDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-common/src/main/java/top/zywork/query/SysLogQuery.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-common/src/main/java/top/zywork/vo/SysLogVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-common/zywork-log-common.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-dao/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-dao/src/main/resources/mapper/SysLogDAOMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-dao/zywork-log-dao.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-api/src/main/java/top/zywork/service/SysLogService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-api/src/main/java/top/zywork/service/SysLogTestService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-api/zywork-log-service-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-impl/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-impl/src/main/java/top/zywork/service/impl/SysLogServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-impl/src/main/java/top/zywork/service/impl/SysLogTestServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-impl/src/main/resources/config/spring-log-provider.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-impl/src/main/resources/zywork-log-service.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-impl/src/test/java/top/zywork/service/BaseTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-impl/src/test/java/top/zywork/service/SysLogServiceTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-service-impl/zywork-log-service-impl.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-web/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-web/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-web/zywork-log-web.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-common/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-common/src/main/java/top/zywork/common/Mail.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-common/src/main/java/top/zywork/common/MailAccount.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-common/src/main/java/top/zywork/common/MailAddressUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-common/src/main/java/top/zywork/common/MailAuthenticator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-common/src/main/java/top/zywork/common/MailUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-common/src/main/resources/config/mail.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-common/zywork-message-common.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-dao/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-dao/zywork-message-dao.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-service-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-service-api/zywork-message-service-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-service-impl/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-service-impl/src/main/resources/config/spring-message-provider.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-service-impl/src/main/resources/zywork-message-service.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-service-impl/zywork-message-service-impl.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-web/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-web/src/main/resources/config/spring-message-consumer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-web/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-web/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message-web/zywork-message-web.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-message/zywork-message.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-pay/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-pay/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-pay/zywork-pay.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/documents/jasperreports-readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/lib/jasperreports-fonts-6.4.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-common/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-common/src/main/java/top/zywork/common/ExcelExportUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-common/src/main/java/top/zywork/common/ExcelUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-common/src/main/java/top/zywork/common/ExportUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-common/src/main/java/top/zywork/dto/ExcelExportDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-common/src/main/java/top/zywork/dto/ExcelImportDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-common/zywork-report-common.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-dao/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-dao/zywork-report-dao.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-api/src/main/java/top/zywork/service/ExcelExportService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-api/src/main/java/top/zywork/service/ExcelImportService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-api/zywork-report-service-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/main/java/top/zywork/service/impl/ExcelExportServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/main/java/top/zywork/service/impl/ExcelImportServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/main/resources/config/spring-report-provider.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/main/resources/zywork-report-service.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/test/java/top/zywork/service/BaseTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/test/java/top/zywork/service/ExcelExportServiceTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/test/java/top/zywork/service/ExcelImportServiceTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/test/java/top/zywork/service/UserExportDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/test/java/top/zywork/service/UserImportDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/test/resources/user-export.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/test/resources/user-import.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/src/test/resources/user.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-service-impl/zywork-report-service-impl.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-web/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-web/src/main/resources/config/spring-report-consumer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-web/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-web/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report-web/zywork-report-web.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-report/zywork-report.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/src/main/java/top/zywork/common/SchedulerUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/src/main/java/top/zywork/dos/SchedulerDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/src/main/java/top/zywork/dto/SchedulerDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/src/main/java/top/zywork/query/SchedulerQuery.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/src/main/java/top/zywork/vo/SchedulerVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/src/test/java/top/zywork/common/JobData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/src/test/java/top/zywork/common/SchedulerUtilsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/src/test/java/top/zywork/common/TestDataJob.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/src/test/java/top/zywork/common/TestJob.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-common/zywork-schedule-common.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-dao/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-dao/src/main/java/top/zywork/dao/SchedulerDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-dao/src/main/resources/mapper/SchedulerDAOMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-dao/zywork-schedule-dao.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-service-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-service-api/src/main/java/top/zywork/service/SchedulerService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-service-api/zywork-schedule-service-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-service-impl/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-service-impl/src/main/java/top/zywork/service/impl/SchedulerServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-service-impl/src/main/resources/config/spring-schedule-provider.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-service-impl/src/main/resources/zywork-schedule-service.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-service-impl/zywork-schedule-service-impl.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-web/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-web/src/main/java/top/zywork/controller/SchedulerController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-web/src/main/resources/config/spring-schedule-consumer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-web/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule-web/zywork-schedule-web.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-schedule/zywork-schedule.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-common/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-common/src/main/java/top/zywork/dos/UserDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-common/src/main/java/top/zywork/dto/UserDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-common/src/main/java/top/zywork/query/UserQuery.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-common/src/main/java/top/zywork/vo/UserVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-common/zywork-ucenter-common.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-dao/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-dao/src/main/resources/mapper/UserDAOMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-dao/zywork-ucenter-dao.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-api/src/main/java/top/zywork/service/UserService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-api/zywork-ucenter-service-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-impl/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-impl/src/main/java/top/zywork/service/impl/UserServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-impl/src/main/resources/config/spring-ucenter-provider.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-impl/src/main/resources/zywork-ucenter-service.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-impl/src/test/java/UCenterApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-impl/src/test/java/top/zywork/service/BaseTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-impl/src/test/java/top/zywork/service/UserServiceTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-service-impl/zywork-ucenter-service-impl.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-web/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-web/src/main/java/top/zywork/controller/UserController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-web/src/main/resources/config/spring-ucenter-consumer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-web/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-web/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-web/zywork-ucenter-web.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/.babelrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/.eslintignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/.eslintrc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/.postcssrc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/build/build.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/build/check-versions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/build/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/build/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/build/vue-loader.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/build/webpack.base.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/build/webpack.dev.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/build/webpack.prod.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/config/dev.env.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/config/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/config/prod.env.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/config/test.env.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/package-lock.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/assets/dynamic_demo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/assets/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/assets/zywork-backend-ui.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/components/AppFooter/AppFooter.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/components/AppHeader/AppHeader.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/components/AppSider/AppSider.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/components/CityPicker/CityPicker.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/components/ThemePicker/ThemePicker.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/router/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/theme/style.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/utils/Auth.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/utils/CityData.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/utils/JSON.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/utils/color.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/utils/file.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/views/home.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/views/homeIndex.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/views/login.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/views/register.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/views/users.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/static/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/static/images/user.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/test/e2e/custom-assertions/elementCount.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/test/e2e/nightwatch.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/test/e2e/runner.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/test/e2e/specs/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/test/unit/.eslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/test/unit/jest.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/test/unit/setup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/test/unit/specs/HelloWorld.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-backend/zywork-ui-backend.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui-frontend/zywork-ui-frontend.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-ui/zywork-ui.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/dos/ModuleDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/dos/PermissionDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/dos/RoleDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/dos/UserDO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/dto/ModuleDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/dto/PermissionDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/dto/RoleDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/dto/UserDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/dto/UserTokenDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/enums/UserControllerStatusEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/query/ModuleQuery.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/query/RoleQuery.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/query/UserAccountPasswordQuery.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/query/UserQuery.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/vo/LoginStatusVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/vo/ModuleVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/vo/PermissionVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/vo/RoleVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/vo/UserLoginVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/vo/UserVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/zywork-upms-common.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-dao/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-dao/src/main/java/top/zywork/dao/ModuleDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-dao/src/main/java/top/zywork/dao/PermissionDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-dao/src/main/java/top/zywork/dao/RoleDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-dao/src/main/java/top/zywork/dao/UserDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-dao/src/main/resources/mapper/ModuleDAOMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-dao/src/main/resources/mapper/RoleDAOMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-dao/src/main/resources/mapper/UserDAOMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-dao/zywork-upms-dao.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-api/src/main/java/top/zywork/service/ModuleService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-api/src/main/java/top/zywork/service/PermissionService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-api/src/main/java/top/zywork/service/RoleService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-api/src/main/java/top/zywork/service/UserService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-api/zywork-upms-service-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-impl/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-impl/src/main/java/top/zywork/service/impl/ModuleServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-impl/src/main/java/top/zywork/service/impl/PermissionServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-impl/src/main/java/top/zywork/service/impl/RoleServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-impl/src/main/java/top/zywork/service/impl/UserServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-impl/src/main/resources/config/spring-upms-provider.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-impl/src/main/resources/zywork-upms-service.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-impl/src/test/java/UPMSApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-service-impl/zywork-upms-service-impl.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-shiro/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-shiro/src/main/java/top/zywork/security/shiro/AppShiroRealm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-shiro/src/main/java/top/zywork/security/shiro/CustomToken.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-shiro/src/main/resources/config/ehcache-shiro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-shiro/src/main/resources/config/spring-shiro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-shiro/src/main/resources/config/spring-upms-consumer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-shiro/zywork-upms-shiro.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-web/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-web/src/main/java/top/zywork/controller/UserController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-web/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-web/zywork-upms-web.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms.iml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/documents/zywork.sql" afterPath="$PROJECT_DIR$/documents/ticket.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-service-impl/src/main/resources/config/spring-activiti.xml" afterPath="$PROJECT_DIR$/zywork-generator/src/main/resources/config/springactiviti.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/zywork-bpms/zywork-bpms-web/src/main/java/top/zywork/controller/ProcessController.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/UserTicketOrderController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-dao/src/main/java/top/zywork/dao/SysLogDAO.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dao/UserTicketOrderDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/zywork-log/zywork-log-web/src/main/java/top/zywork/controller/SysLogController.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/TicketItemController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/zywork-ucenter/zywork-ucenter-dao/src/main/java/top/zywork/dao/UserDAO.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dao/TicketItemDAO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-common/src/main/java/top/zywork/query/PermissionQuery.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/query/TicketItemQuery.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/zywork-upms/zywork-upms-dao/src/main/resources/mapper/PermissionDAOMapper.xml" afterPath="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketItemDAOMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_bpms_web_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_bpms_web_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_bpms_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_bpms_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_cms_web_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_cms_web_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_cms_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_cms_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_log_web_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_log_web_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_log_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_log_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_message_web_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_message_web_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_message_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_message_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_report_web_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_report_web_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_report_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_report_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_schedule_web_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_schedule_web_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_schedule_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_schedule_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_ucenter_web_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_ucenter_web_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_ucenter_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_ucenter_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_upms_web_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_upms_web_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/zywork_upms_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zywork_upms_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/IndexController.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dos/UserDO.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dos/UserDO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dto/UserDTO.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dto/UserDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/query/UserQuery.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/query/UserQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/ActivitiServiceImpl.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/ActivitiServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/vo/UserVO.java" afterPath="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/vo/UserVO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/resources/config/generator.json" afterPath="$PROJECT_DIR$/zywork-generator/src/main/resources/config/generator.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.json" afterPath="$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.properties" afterPath="$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/UserDAOMapper.xml" afterPath="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/UserDAOMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/User.jsp" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/User.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/UserAddModal.jsp" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/UserAddModal.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/UserDetailModal.jsp" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/UserDetailModal.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/UserEditModal.jsp" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/UserEditModal.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/UserSearchModal.jsp" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/UserSearchModal.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/home.jsp" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/index.jsp" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/User.js" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/User.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/UserSearchModal.js" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/UserSearchModal.js" />
-    </list>
+    <list default="true" id="3891c4bd-30e2-4dc3-9494-cb36e46aec05" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/zywork-common/target/" />
@@ -575,83 +114,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="generator.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/config/generator.json">
+      <file leaf-file-name="user.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/user.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="68" lean-forward="false" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+            <state relative-caret-position="331">
+              <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dao/UserDAO.java">
+      <file leaf-file-name="user.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="522">
+              <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/home.jsp">
+      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="52" column="100" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="100" />
+            <state relative-caret-position="45">
+              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserTicketOrder.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/UserTicketOrder/UserTicketOrder.jsp">
+      <file leaf-file-name="seat.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/seat.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="500">
+              <caret line="63" column="70" lean-forward="false" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketOrderDAOMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDAOMapper.xml">
+      <file leaf-file-name="iconfont.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/static/css/iconfont/iconfont.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state relative-caret-position="255">
+              <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WechatLoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/WechatLoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding>
-                <marker date="1531897493209" expanded="true" signature="1584:1627" ph="delete from " />
-                <marker date="1531897493209" expanded="true" signature="1701:1744" ph="delete from " />
-                <marker date="1531897493209" expanded="true" signature="2032:2714" ph="update t_tic... " />
-                <marker date="1531897493209" expanded="true" signature="2820:2884" ph="update t_tic... " />
-                <marker date="1531897493209" expanded="true" signature="5798:5891" ph="select from t_ticket_order" />
-                <marker date="1531897493209" expanded="true" signature="5968:6096" ph="select from t_ticket_order" />
-                <marker date="1531897493209" expanded="true" signature="6217:6550" ph="select from t_ticket_order" />
-                <marker date="1531897493209" expanded="true" signature="6616:6651" ph="select count... t_ticket_order" />
-                <marker date="1531897493209" expanded="true" signature="6740:7204" ph="select from t_ticket_order" />
-                <marker date="1531897493209" expanded="true" signature="7281:7316" ph="select count... t_ticket_order" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketItemDO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dos/TicketItemDO.java">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="519">
+              <caret line="48" column="11" lean-forward="false" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BeanGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/generator/BeanGenerator.java">
+      <file leaf-file-name="HashUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/common/HashUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="291">
+              <caret line="33" column="49" lean-forward="false" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="565">
+              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAOMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/UserDAOMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="66" lean-forward="false" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+              <folding>
+                <marker date="1532156726376" expanded="true" signature="1930:1965" ph="delete from " />
+                <marker date="1532156726376" expanded="true" signature="2039:2074" ph="delete from " />
+                <marker date="1532156726376" expanded="true" signature="2347:3238" ph="update t_use... " />
+                <marker date="1532156726376" expanded="true" signature="3344:3400" ph="update t_use... " />
+                <marker date="1532156726376" expanded="true" signature="6616:6701" ph="select from t_user" />
+                <marker date="1532156726376" expanded="true" signature="6771:6891" ph="select from t_user" />
+                <marker date="1532156726376" expanded="true" signature="7005:7330" ph="select from t_user" />
+                <marker date="1532156726376" expanded="true" signature="7396:7423" ph="select count... t_user" />
+                <marker date="1532156726376" expanded="true" signature="7505:7961" ph="select from t_user" />
+                <marker date="1532156726376" expanded="true" signature="8038:8065" ph="select count... t_user" />
+                <marker date="1532156726376" expanded="true" signature="8222:8385" ph="select from t_user" />
+                <marker date="1532156726376" expanded="true" signature="8470:8573" ph="select passw... t_user" />
+                <marker date="1532156726376" expanded="true" signature="8658:8739" ph="select from t_user" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -733,34 +307,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/documents/zywork.sql" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/SysLogController.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dto/SysLogDTO.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dos/SysLogDO.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/query/SysLogQuery.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/vo/SysLogVO.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/generator/ViewGenerator.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/template/view_search_js.tpl" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/SysLog/SysLogSearchModal.js" />
-        <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/common/FileUtils.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/controller/JoinTableController.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/controller/GeneratorController.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/controller/SettingController.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/controller/SingleTableController.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/controller/TableController.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/generator/generator_setting.jsp" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/generator/jdbc_setting.jsp" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/generator/join_table.jsp" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/generator/single_table.jsp" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/generator/index.jsp" />
-        <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/vo/PagerVO.java" />
-        <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/dto/PagerDTO.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/site-main.js" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/template/view_text_detail.tpl" />
         <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/common/IPUtils.java" />
-        <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/enums/CharsetEnum.java" />
         <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/enums/HashEncodeEnum.java" />
         <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/common/HashUtils.java" />
         <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/common/AuthUtils.java" />
@@ -776,7 +325,6 @@
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/index.jsp" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/IndexController.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.properties" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.json" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/ActivitiServiceImpl.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/config/generator.json" />
@@ -784,6 +332,32 @@
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/home.jsp" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/UserTicketOrder/UserTicketOrder.jsp" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDAOMapper.xml" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_pay.jsp" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/WXPay.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/WXPayRequest.java" />
+        <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/common/WebUtils.java" />
+        <option value="$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/enums/CharsetEnum.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/WXPayUtil.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wechat/WechatUtil.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/vo/TicketItemVO.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/TicketItemController.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_history.jsp" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/seat.jsp" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item.jsp" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item_detail.jsp" />
+        <option value="$PROJECT_DIR$/documents/ticket.sql" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/config/springmvc.xml" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wechat/WechatAPI.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/cookie.js" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dao/UserDAO.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/UserService.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/TicketPageController.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/UserDAOMapper.xml" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/WechatLoginController.java" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.properties" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/user.jsp" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/user.html" />
       </list>
     </option>
   </component>
@@ -912,43 +486,6 @@
               <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zywork" type="462c0819:PsiDirectoryNode" />
-              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zywork" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zywork" type="462c0819:PsiDirectoryNode" />
-              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zywork" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zywork" type="462c0819:PsiDirectoryNode" />
-              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zywork" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zywork" type="462c0819:PsiDirectoryNode" />
-              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -958,7 +495,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
@@ -984,7 +521,55 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="iconfont" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1011,11 +596,11 @@
       <recent name="top.zywork" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views" />
-      <recent name="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js" />
-      <recent name="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper" />
-      <recent name="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl" />
-      <recent name="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service" />
+      <recent name="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front" />
+      <recent name="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/css/iconfont" />
+      <recent name="$PROJECT_DIR$/zywork-generator/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork" />
+      <recent name="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="top.zywork.vo" />
@@ -1332,7 +917,7 @@
       <workItem from="1530259249048" duration="3058000" />
       <workItem from="1530495788308" duration="7683000" />
       <workItem from="1531381460513" duration="15247000" />
-      <workItem from="1531884632574" duration="10140000" />
+      <workItem from="1531884632574" duration="36222000" />
     </task>
     <servers />
   </component>
@@ -1369,7 +954,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="973970000" />
+    <option name="totallyTimeSpent" value="1000052000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1381,7 +966,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <frame x="1" y="23" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1391,6 +976,7 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13893376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1403,11 +989,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5366569" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53519064" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33198708" sideWeight="0.4941349" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33198708" sideWeight="0.4941349" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1415,7 +1001,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293944" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -1448,7 +1033,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5366569" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53519064" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293944" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1488,7 +1073,7 @@
           <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="104" />
+      <option name="time" value="105" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1501,370 +1086,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/ModuleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-log/zywork-log-aspect/src/main/java/top/zywork/aspect/SysLogAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="65" column="46" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/aspect/SysLogAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/bean/ColumnDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/listener/GeneratorLoadListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/GeneratorApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/GeneratorRemoveApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/site-main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6237">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/generator/jdbc_setting.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/generator/generator_setting.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4297">
-          <caret line="287" column="0" lean-forward="false" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/generator/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/components/CityPicker/CityPicker.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1404">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/components/ThemePicker/ThemePicker.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/controller/GeneratorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/generator/single_table.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="63" lean-forward="false" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/generator/join_table.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="109" lean-forward="false" selection-start-line="61" selection-start-column="87" selection-end-line="61" selection-end-column="109" />
-          <folding>
-            <marker date="1525349532514" expanded="true" signature="5907:5913" ph="&amp;nbsp;" />
-            <marker date="1525349532514" expanded="true" signature="5913:5919" ph="&amp;nbsp;" />
-            <marker date="1525349532514" expanded="true" signature="6001:6007" ph="&amp;nbsp;" />
-            <marker date="1525349532514" expanded="true" signature="6007:6013" ph="&amp;nbsp;" />
-            <marker date="1525349532514" expanded="true" signature="6349:6365" ph="..." />
-            <marker date="1525349532514" expanded="true" signature="6466:6472" ph="&amp;nbsp;" />
-            <marker date="1525349532514" expanded="true" signature="6472:6478" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-ui/zywork-ui-backend/src/views/login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/tpl/view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/template/view_js.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1382">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/config/mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-upms/zywork-upms-web/src/main/java/top/zywork/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/documents/ticket.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1470">
-          <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="75" column="61" lean-forward="false" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/security/shiro/AppShiroRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/security/shiro/CustomToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/template/mapper.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/ActivitiServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="36" column="61" lean-forward="true" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/vo/UserVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="74" column="49" lean-forward="false" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generator/generator/BeanGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/config/generator.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="68" lean-forward="false" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generatedcodes/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generatedcodes/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2337">
-          <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generatedcodes/dos/UserDO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generatedcodes/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generatedcodes/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/UserDAOMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="233" column="13" lean-forward="true" selection-start-line="224" selection-start-column="4" selection-end-line="233" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/generatedcodes/mapper/UserDAOMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="281" column="13" lean-forward="false" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dos/TicketItemDO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/generatedcodes/query/TicketItemQuery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1881,14 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="52" column="100" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/UserTicketOrder/UserTicketOrder.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -1899,7 +1112,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDAOMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="142">
           <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding>
             <marker date="1531897493209" expanded="true" signature="1584:1627" ph="delete from " />
@@ -1913,6 +1126,409 @@
             <marker date="1531897493209" expanded="true" signature="6740:7204" ph="select from t_ticket_order" />
             <marker date="1531897493209" expanded="true" signature="7281:7316" ph="select count... t_ticket_order" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/UserTicketOrder/UserTicketOrderEditModal.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-417">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="387" column="58" lean-forward="false" selection-start-line="387" selection-start-column="58" selection-end-line="387" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/User/UserSearchModal.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/TicketOrder/TicketOrderSearchModal.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/backend/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/IWXPayDomain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/WXPay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/WXPayConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-763">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/WXPayConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/WXPayReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3087">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/WXPayRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2952">
+          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/WXPayXmlUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/common/WebUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="125" column="69" lean-forward="false" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/enums/CharsetEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wxpay/sdk/WXPayUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4440">
+          <caret line="300" column="5" lean-forward="false" selection-start-line="300" selection-start-column="5" selection-end-line="300" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#9376#9377#0" expanded="false" />
+            <element signature="e#9464#9465#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/format/annotation/DateTimeFormat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/vo/TicketItemVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/query/PageQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/vo/UserVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_pay.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="134" column="28" lean-forward="false" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/TicketItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="222" column="39" lean-forward="false" selection-start-line="222" selection-start-column="39" selection-end-line="222" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item_detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/ticket.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1719">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/config/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="79" column="58" lean-forward="false" selection-start-line="79" selection-start-column="58" selection-end-line="79" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dto/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="69" column="11" lean-forward="false" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/service/AbstractBaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/target/classes/config/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wechat/WechatAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/wechat/WechatUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="35" column="27" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/TicketPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="22" column="116" lean-forward="false" selection-start-line="22" selection-start-column="116" selection-end-line="22" selection-end-column="116" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/enums/HashEncodeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/common/HashUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="33" column="49" lean-forward="false" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/UserDAOMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="66" lean-forward="false" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+          <folding>
+            <marker date="1532156726376" expanded="true" signature="1930:1965" ph="delete from " />
+            <marker date="1532156726376" expanded="true" signature="2039:2074" ph="delete from " />
+            <marker date="1532156726376" expanded="true" signature="2347:3238" ph="update t_use... " />
+            <marker date="1532156726376" expanded="true" signature="3344:3400" ph="update t_use... " />
+            <marker date="1532156726376" expanded="true" signature="6616:6701" ph="select from t_user" />
+            <marker date="1532156726376" expanded="true" signature="6771:6891" ph="select from t_user" />
+            <marker date="1532156726376" expanded="true" signature="7005:7330" ph="select from t_user" />
+            <marker date="1532156726376" expanded="true" signature="7396:7423" ph="select count... t_user" />
+            <marker date="1532156726376" expanded="true" signature="7505:7961" ph="select from t_user" />
+            <marker date="1532156726376" expanded="true" signature="8038:8065" ph="select count... t_user" />
+            <marker date="1532156726376" expanded="true" signature="8222:8385" ph="select from t_user" />
+            <marker date="1532156726376" expanded="true" signature="8470:8573" ph="select passw... t_user" />
+            <marker date="1532156726376" expanded="true" signature="8658:8739" ph="select from t_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="48" column="11" lean-forward="false" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/static/css/iconfont/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/WechatLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/seat.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="63" column="70" lean-forward="false" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

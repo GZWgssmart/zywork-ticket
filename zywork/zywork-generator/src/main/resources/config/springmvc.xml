@@ -56,6 +56,7 @@
 
     <mvc:resources location="/static/" mapping="/static/**"/>
     <mvc:resources location="/uploads/" mapping="/uploads/**"/>
+    <mvc:resources location="/" mapping="/*.txt"/>
 
     <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
         <!--<property name="defaultErrorView" value="common/error"/>-->

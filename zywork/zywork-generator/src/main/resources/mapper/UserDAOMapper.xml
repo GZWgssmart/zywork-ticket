@@ -5,6 +5,9 @@
 <mapper namespace="top.zywork.dao.UserDAO">
 
     <insert id="save" parameterType="userDO">
+		<selectKey order="AFTER" keyProperty="id" resultType="long">
+			select LAST_INSERT_ID()
+		</selectKey>
         insert into t_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="email != null">
@@ -279,6 +282,12 @@
 
 	<select id="getPassword" parameterType="string" resultType="string">
 		select password from t_user where email = #{account} or phone = #{account} or account_name = #{account}
+	</select>
+
+	<select id="getByOpenid" parameterType="string" resultType="userDO">
+		select
+		<include refid="select_columns"/>
+		from t_user where openid = #{openid}
 	</select>
 
 </mapper>

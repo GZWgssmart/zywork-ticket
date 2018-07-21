@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
--- Host: localhost    Database: zywork
+-- Host: localhost    Database: zywork_ticket
 -- ------------------------------------------------------
 -- Server version	5.7.20
 
@@ -8,8 +8,6 @@
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
@@ -37,10 +35,6 @@ CREATE TABLE `t_module` (
 -- Dumping data for table `t_module`
 --
 
-LOCK TABLES `t_module` WRITE;
-/*!40000 ALTER TABLE `t_module` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_module` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_permission`
@@ -68,10 +62,6 @@ CREATE TABLE `t_permission` (
 -- Dumping data for table `t_permission`
 --
 
-LOCK TABLES `t_permission` WRITE;
-/*!40000 ALTER TABLE `t_permission` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_permission` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_process`
@@ -101,10 +91,6 @@ CREATE TABLE `t_process` (
 -- Dumping data for table `t_process`
 --
 
-LOCK TABLES `t_process` WRITE;
-/*!40000 ALTER TABLE `t_process` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_process` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_role`
@@ -128,10 +114,6 @@ CREATE TABLE `t_role` (
 -- Dumping data for table `t_role`
 --
 
-LOCK TABLES `t_role` WRITE;
-/*!40000 ALTER TABLE `t_role` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_role` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_role_permission`
@@ -158,10 +140,6 @@ CREATE TABLE `t_role_permission` (
 -- Dumping data for table `t_role_permission`
 --
 
-LOCK TABLES `t_role_permission` WRITE;
-/*!40000 ALTER TABLE `t_role_permission` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_role_permission` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_scheduler`
@@ -191,10 +169,6 @@ CREATE TABLE `t_scheduler` (
 -- Dumping data for table `t_scheduler`
 --
 
-LOCK TABLES `t_scheduler` WRITE;
-/*!40000 ALTER TABLE `t_scheduler` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_scheduler` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_social_type`
@@ -218,10 +192,6 @@ CREATE TABLE `t_social_type` (
 -- Dumping data for table `t_social_type`
 --
 
-LOCK TABLES `t_social_type` WRITE;
-/*!40000 ALTER TABLE `t_social_type` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_social_type` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_sys_log`
@@ -232,7 +202,7 @@ DROP TABLE IF EXISTS `t_sys_log`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `t_sys_log` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '编号',
-  `user_account` VARCHAR(100) DEFAULT NULL COMMENT '用户账号',
+  `user_account` varchar(100) DEFAULT NULL COMMENT '用户账号',
   `description` varchar(500) DEFAULT NULL COMMENT '执行说明',
   `execute_class` varchar(200) DEFAULT NULL COMMENT '类名称',
   `execute_method` varchar(200) DEFAULT NULL COMMENT '方法名称',
@@ -247,10 +217,82 @@ CREATE TABLE `t_sys_log` (
 -- Dumping data for table `t_sys_log`
 --
 
-LOCK TABLES `t_sys_log` WRITE;
-/*!40000 ALTER TABLE `t_sys_log` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_sys_log` ENABLE KEYS */;
-UNLOCK TABLES;
+
+--
+-- Table structure for table `t_ticket_item`
+--
+
+DROP TABLE IF EXISTS `t_ticket_item`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `t_ticket_item` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `title` varchar(100) NOT NULL COMMENT '名称',
+  `head_img` varchar(500) DEFAULT NULL COMMENT '封面图片',
+  `play_time` datetime NOT NULL COMMENT '放映时间',
+  `price` double NOT NULL COMMENT '原价',
+  `unit_price` double NOT NULL COMMENT '优惠价',
+  `address` varchar(100) NOT NULL COMMENT '放映地点',
+  `description` varchar(500) DEFAULT NULL COMMENT '描述',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `t_ticket_item`
+--
+
+INSERT INTO `t_ticket_item` VALUES (1,'丑小鸭','','2018-07-21 08:57:06',89,69,'1楼','最新剧目','2018-07-21 08:57:34',NULL);
+
+--
+-- Table structure for table `t_ticket_order`
+--
+
+DROP TABLE IF EXISTS `t_ticket_order`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `t_ticket_order` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `ticket_item_id` bigint(20) DEFAULT NULL COMMENT '剧目编号',
+  `user_id` bigint(20) DEFAULT NULL COMMENT '用户编号',
+  `order_time` datetime DEFAULT NULL COMMENT '下单时间',
+  `unit_price` double DEFAULT NULL COMMENT '单价',
+  `total_seat` int(11) DEFAULT NULL COMMENT '总座位数',
+  `total_price` double DEFAULT NULL COMMENT '支付总额',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `t_ticket_order`
+--
+
+
+--
+-- Table structure for table `t_ticket_order_detail`
+--
+
+DROP TABLE IF EXISTS `t_ticket_order_detail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `t_ticket_order_detail` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `ticket_order_id` bigint(20) DEFAULT NULL COMMENT '订单编号',
+  `seat` varchar(45) DEFAULT NULL COMMENT '座位号',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `t_ticket_order_detail`
+--
+
 
 --
 -- Table structure for table `t_user`
@@ -266,6 +308,10 @@ CREATE TABLE `t_user` (
   `account_name` varchar(20) DEFAULT NULL COMMENT '账户名',
   `password` varchar(50) NOT NULL COMMENT '密码',
   `salt` varchar(200) DEFAULT NULL COMMENT '加密盐值',
+  `headicon` varchar(500) DEFAULT NULL COMMENT '头像',
+  `nickname` varchar(45) DEFAULT NULL COMMENT '昵称',
+  `gender` tinyint(4) DEFAULT NULL COMMENT '性别',
+  `openid` varchar(200) DEFAULT NULL COMMENT '微信openid',
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `is_active` tinyint(4) DEFAULT '0' COMMENT '是否激活',
@@ -277,11 +323,7 @@ CREATE TABLE `t_user` (
 -- Dumping data for table `t_user`
 --
 
-LOCK TABLES `t_user` WRITE;
-/*!40000 ALTER TABLE `t_user` DISABLE KEYS */;
-INSERT INTO `t_user` VALUES (1,NULL,'13672297775',NULL,'4QrcOUm6Wau+VuBX8g+IPg==','','2017-12-11 19:13:08',NULL,0);
-/*!40000 ALTER TABLE `t_user` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `t_user` VALUES (1,NULL,'13672297775',NULL,'4QrcOUm6Wau+VuBX8g+IPg==','',NULL,NULL,NULL,NULL,'2017-12-11 19:13:08',NULL,0);
 
 --
 -- Table structure for table `t_user_detail`
@@ -311,10 +353,6 @@ CREATE TABLE `t_user_detail` (
 -- Dumping data for table `t_user_detail`
 --
 
-LOCK TABLES `t_user_detail` WRITE;
-/*!40000 ALTER TABLE `t_user_detail` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_user_detail` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_user_role`
@@ -341,10 +379,6 @@ CREATE TABLE `t_user_role` (
 -- Dumping data for table `t_user_role`
 --
 
-LOCK TABLES `t_user_role` WRITE;
-/*!40000 ALTER TABLE `t_user_role` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_user_role` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `t_user_social`
@@ -371,11 +405,6 @@ CREATE TABLE `t_user_social` (
 -- Dumping data for table `t_user_social`
 --
 
-LOCK TABLES `t_user_social` WRITE;
-/*!40000 ALTER TABLE `t_user_social` DISABLE KEYS */;
-/*!40000 ALTER TABLE `t_user_social` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
@@ -385,4 +414,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-17  9:58:01
+-- Dump completed on 2018-07-21 11:08:47

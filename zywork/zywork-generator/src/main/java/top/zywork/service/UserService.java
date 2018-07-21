@@ -46,4 +46,6 @@ public interface UserService extends BaseService {
      */
     void removeUserToken(String username);
 
+    Object getByOpenid(String openid);
+
 }

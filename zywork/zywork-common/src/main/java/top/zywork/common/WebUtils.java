@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+import top.zywork.enums.CharsetEnum;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.Cookie;
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 /**
  * Web工具类<br />
@@ -116,6 +119,15 @@ public class WebUtils {
             }
         }
         return sessionId;
+    }
+
+    public static String encodeUrl(String url) {
+        try {
+            return URLEncoder.encode(url, CharsetEnum.UTF8.getValue());
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }
