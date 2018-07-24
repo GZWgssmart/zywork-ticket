@@ -13,7 +13,7 @@ import javax.annotation.PostConstruct;
 /**
  * TicketOrderServiceImpl服务接口实现类<br/>
  *
- * 创建于2018-07-18<br/>
+ * 创建于2018-07-24<br/>
  *
  * @author http://zywork.top 王振宇
  * @version 1.0
@@ -22,6 +22,11 @@ import javax.annotation.PostConstruct;
 public class TicketOrderServiceImpl extends AbstractBaseService implements TicketOrderService {
 
     private TicketOrderDAO ticketOrderDAO;
+
+    @Override
+    public void updateOrderTimeByOrderNo(String orderNo) {
+        ticketOrderDAO.updateOrderTimeByOrderNo(orderNo);
+    }
 
     @Autowired
     public void setTicketOrderDAO(TicketOrderDAO ticketOrderDAO) {

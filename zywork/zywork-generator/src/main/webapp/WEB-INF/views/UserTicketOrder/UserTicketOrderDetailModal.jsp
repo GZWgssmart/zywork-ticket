@@ -11,8 +11,13 @@
 </div>
 
 <div class="col-sm-6 detail-content">
-    <span class="col-sm-4 row-detail-title">用户编号：</span>
-    <span class="col-sm-8" id="ticketOrderUserIdDetail"></span>
+    <span class="col-sm-4 row-detail-title">微信openid：</span>
+    <span class="col-sm-8" id="ticketOrderOpenidDetail"></span>
+</div>
+
+<div class="col-sm-6 detail-content">
+    <span class="col-sm-4 row-detail-title">订单编号：</span>
+    <span class="col-sm-8" id="ticketOrderOrderNoDetail"></span>
 </div>
 
 <div class="col-sm-6 detail-content">
@@ -37,21 +42,6 @@
 
 <div class="col-sm-6 detail-content">
     <span class="col-sm-4 row-detail-title">编号：</span>
-    <span class="col-sm-8" id="userIdDetail"></span>
-</div>
-
-<div class="col-sm-6 detail-content">
-    <span class="col-sm-4 row-detail-title">头像：</span>
-    <span class="col-sm-8" id="userHeadiconDetail"></span>
-</div>
-
-<div class="col-sm-6 detail-content">
-    <span class="col-sm-4 row-detail-title">昵称：</span>
-    <span class="col-sm-8" id="userNicknameDetail"></span>
-</div>
-
-<div class="col-sm-6 detail-content">
-    <span class="col-sm-4 row-detail-title">编号：</span>
     <span class="col-sm-8" id="ticketItemIdDetail"></span>
 </div>
 
@@ -71,8 +61,8 @@
 </div>
 
 <div class="col-sm-6 detail-content">
-    <span class="col-sm-4 row-detail-title">放映地点：</span>
-    <span class="col-sm-8" id="ticketItemAddressDetail"></span>
+    <span class="col-sm-4 row-detail-title">微信openid：</span>
+    <span class="col-sm-8" id="userOpenidDetail"></span>
 </div>
 
 

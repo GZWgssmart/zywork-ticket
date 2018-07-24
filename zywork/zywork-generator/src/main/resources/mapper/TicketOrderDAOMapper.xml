@@ -5,9 +5,6 @@
 <mapper namespace="top.zywork.dao.TicketOrderDAO">
 
     <insert id="save" parameterType="ticketOrderDO">
-		<selectKey order="AFTER" keyProperty="id" resultType="long">
-			select LAST_INSERT_ID()
-		</selectKey>
         insert into t_ticket_order
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="ticketItemId != null">
@@ -15,6 +12,12 @@
 			</if>
 			<if test="userId != null">
 				user_id,
+			</if>
+			<if test="openid != null">
+				openid,
+			</if>
+			<if test="orderNo != null">
+				order_no,
 			</if>
 			<if test="orderTime != null">
 				order_time,
@@ -42,6 +45,12 @@
 			</if>
 			<if test="userId != null">
 				#{userId},
+			</if>
+			<if test="openid != null">
+				#{openid},
+			</if>
+			<if test="orderNo != null">
+				#{orderNo},
 			</if>
 			<if test="orderTime != null">
 				#{orderTime},
@@ -89,6 +98,12 @@
 			<if test="userId != null">
 				user_id = #{userId},
 			</if>
+			<if test="openid != null">
+				openid = #{openid},
+			</if>
+			<if test="orderNo != null">
+				order_no = #{orderNo},
+			</if>
 			<if test="orderTime != null">
 				order_time = #{orderTime},
 			</if>
@@ -124,7 +139,7 @@
     </update>
 
     <sql id="select_columns">
-        id as id, ticket_item_id as ticketItemId, user_id as userId, order_time as orderTime, unit_price as unitPrice, total_seat as totalSeat, total_price as totalPrice, create_time as createTime, update_time as updateTime
+        id as id, ticket_item_id as ticketItemId, user_id as userId, openid as openid, order_no as orderNo, order_time as orderTime, unit_price as unitPrice, total_seat as totalSeat, total_price as totalPrice, create_time as createTime, update_time as updateTime
     </sql>
 
     <sql id="query_where_clause">
@@ -136,6 +151,12 @@
 		</if>
 		<if test="query != null and query.userId != null">
 			and user_id = #{query.userId}
+		</if>
+		<if test="query != null and query.openid != null and query.openid != ''">
+			and openid like concat('%', #{query.openid}, '%')
+		</if>
+		<if test="query != null and query.orderNo != null and query.orderNo != ''">
+			and order_no like concat('%', #{query.orderNo}, '%')
 		</if>
 		<if test="query != null and query.orderTimeStart != null and query.orderTimeEnd == null">
 			and order_time <![CDATA[ >= ]]> #{query.orderTimeStart}
@@ -230,5 +251,9 @@
             <include refid="query_where_clause"/>
         </where>
     </select>
+
+	<update id="updateOrderTimeByOrderNo" parameterType="string">
+		update t_ticket_order set order_time = CURRENT_TIMESTAMP where order_no = #{orderNo}
+	</update>
 
 </mapper>

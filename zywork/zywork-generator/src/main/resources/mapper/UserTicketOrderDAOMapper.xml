@@ -10,8 +10,11 @@
             <if test="ticketOrderTicketItemId != null">
 				ticket_item_id,
 			</if>
-			<if test="ticketOrderUserId != null">
-				user_id,
+			<if test="ticketOrderOpenid != null">
+				openid,
+			</if>
+			<if test="ticketOrderOrderNo != null">
+				order_no,
 			</if>
 			<if test="ticketOrderOrderTime != null">
 				order_time,
@@ -31,8 +34,11 @@
             <if test="ticketOrderTicketItemId != null">
 				#{ticketOrderTicketItemId},
 			</if>
-			<if test="ticketOrderUserId != null">
-				#{ticketOrderUserId},
+			<if test="ticketOrderOpenid != null">
+				#{ticketOrderOpenid},
+			</if>
+			<if test="ticketOrderOrderNo != null">
+				#{ticketOrderOrderNo},
 			</if>
 			<if test="ticketOrderOrderTime != null">
 				#{ticketOrderOrderTime},
@@ -71,8 +77,11 @@
             <if test="ticketOrderTicketItemId != null">
 				ticket_item_id = #{ticketOrderTicketItemId},
 			</if>
-			<if test="ticketOrderUserId != null">
-				user_id = #{ticketOrderUserId},
+			<if test="ticketOrderOpenid != null">
+				openid = #{ticketOrderOpenid},
+			</if>
+			<if test="ticketOrderOrderNo != null">
+				order_no = #{ticketOrderOrderNo},
 			</if>
 			<if test="ticketOrderOrderTime != null">
 				order_time = #{ticketOrderOrderTime},
@@ -103,24 +112,18 @@
     </update>
 
     <sql id="select_columns">
-        t_user.id as userId, t_user.headicon as userHeadicon, t_user.nickname as userNickname, t_ticket_order.ticket_item_id as ticketOrderTicketItemId, t_ticket_order.user_id as ticketOrderUserId, t_ticket_order.order_time as ticketOrderOrderTime, t_ticket_order.unit_price as ticketOrderUnitPrice, t_ticket_order.total_seat as ticketOrderTotalSeat, t_ticket_order.total_price as ticketOrderTotalPrice, t_ticket_item.id as ticketItemId, t_ticket_item.title as ticketItemTitle, t_ticket_item.head_img as ticketItemHeadImg, t_ticket_item.play_time as ticketItemPlayTime, t_ticket_item.address as ticketItemAddress
+        t_ticket_order.ticket_item_id as ticketOrderTicketItemId, t_ticket_order.openid as ticketOrderOpenid, t_ticket_order.order_no as ticketOrderOrderNo, t_ticket_order.order_time as ticketOrderOrderTime, t_ticket_order.unit_price as ticketOrderUnitPrice, t_ticket_order.total_seat as ticketOrderTotalSeat, t_ticket_order.total_price as ticketOrderTotalPrice, t_ticket_item.id as ticketItemId, t_ticket_item.title as ticketItemTitle, t_ticket_item.head_img as ticketItemHeadImg, t_ticket_item.play_time as ticketItemPlayTime, t_user.openid as userOpenid
     </sql>
 
     <sql id="query_where_clause">
-        <if test="query != null and query.userId != null">
-			t_user.id = #{query.userId}
+        <if test="query != null and query.ticketOrderTicketItemId != null">
+			t_ticket_order.ticket_item_id = #{query.ticketOrderTicketItemId}
 		</if>
-		<if test="query != null and query.userHeadicon != null and query.userHeadicon != ''">
-			and t_user.headicon like concat('%', #{query.userHeadicon}, '%')
+		<if test="query != null and query.ticketOrderOpenid != null and query.ticketOrderOpenid != ''">
+			and t_ticket_order.openid like concat('%', #{query.ticketOrderOpenid}, '%')
 		</if>
-		<if test="query != null and query.userNickname != null and query.userNickname != ''">
-			and t_user.nickname like concat('%', #{query.userNickname}, '%')
-		</if>
-		<if test="query != null and query.ticketOrderTicketItemId != null">
-			and t_ticket_order.ticket_item_id = #{query.ticketOrderTicketItemId}
-		</if>
-		<if test="query != null and query.ticketOrderUserId != null">
-			and t_ticket_order.user_id = #{query.ticketOrderUserId}
+		<if test="query != null and query.ticketOrderOrderNo != null and query.ticketOrderOrderNo != ''">
+			and t_ticket_order.order_no like concat('%', #{query.ticketOrderOrderNo}, '%')
 		</if>
 		<if test="query != null and query.ticketOrderOrderTimeStart != null and query.ticketOrderOrderTimeEnd == null">
 			and t_ticket_order.order_time <![CDATA[ >= ]]> #{query.ticketOrderOrderTimeStart}
@@ -158,36 +161,37 @@
 		<if test="query != null and query.ticketItemPlayTimeStart != null and query.ticketItemPlayTimeEnd != null">
 			and t_ticket_item.play_time <![CDATA[ >= ]]> #{query.ticketItemPlayTimeStart} and t_ticket_item.play_time <![CDATA[ <= ]]> #{query.ticketItemPlayTimeEnd}
 		</if>
-		<if test="query != null and query.ticketItemAddress != null and query.ticketItemAddress != ''">
-			and t_ticket_item.address like concat('%', #{query.ticketItemAddress}, '%')
+		<if test="query != null and query.userOpenid != null and query.userOpenid != ''">
+			and t_user.openid like concat('%', #{query.userOpenid}, '%')
 		</if>
 		
         and
-        t_user.id = t_ticket_order.user_id and t_ticket_order.ticket_item_id = t_ticket_item.id
+        t_user.openid = t_ticket_order.openid and t_ticket_order.ticket_item_id = t_ticket_item.id
     </sql>
 
     <select id="getById" parameterType="long" resultType="userTicketOrderDO">
         select
         <include refid="select_columns"/>
-        from t_user, t_ticket_order, t_ticket_item where t_ticket_order.id = #{id} and
-        t_user.id = t_ticket_order.user_id and t_ticket_order.ticket_item_id = t_ticket_item.id
+        from t_ticket_order, t_ticket_item, t_user where t_ticket_order.id = #{id} and
+        t_user.openid = t_ticket_order.openid and t_ticket_order.ticket_item_id = t_ticket_item.id
     </select>
 
     <select id="listAll" resultType="userTicketOrderDO">
         select
         <include refid="select_columns"/>
-        from t_user, t_ticket_order, t_ticket_item
+        from t_ticket_order, t_ticket_item, t_user
         where
-        t_user.id = t_ticket_order.user_id and t_ticket_order.ticket_item_id = t_ticket_item.id
-        order by t_ticket_order.update_time desc, t_ticket_order.create_time desc
+        t_user.openid = t_ticket_order.openid and t_ticket_order.ticket_item_id = t_ticket_item.id
+		and t_ticket_order.order_time is not null
+        order by t_ticket_order.order_time desc, t_ticket_order.update_time desc, t_ticket_order.create_time desc
     </select>
 
     <select id="listPage" parameterType="top.zywork.query.PageQuery" resultType="userTicketOrderDO">
         select
         <include refid="select_columns"/>
-        from t_user, t_ticket_order, t_ticket_item
+        from t_ticket_order, t_ticket_item, t_user
         where
-        t_user.id = t_ticket_order.user_id and t_ticket_order.ticket_item_id = t_ticket_item.id
+        t_user.openid = t_ticket_order.openid and t_ticket_order.ticket_item_id = t_ticket_item.id
         order by
         <if test="sort != null and sort != ''">
             ${sort} ${order}
@@ -199,19 +203,21 @@
     </select>
 
     <select id="count" resultType="long">
-        select count(*) from t_user, t_ticket_order, t_ticket_item
+        select count(*) from t_ticket_order, t_ticket_item, t_user
         where
-        t_user.id = t_ticket_order.user_id and t_ticket_order.ticket_item_id = t_ticket_item.id
+        t_user.openid = t_ticket_order.openid and t_ticket_order.ticket_item_id = t_ticket_item.id
     </select>
 
     <select id="listPageByCondition" resultType="userTicketOrderDO">
         select
         <include refid="select_columns"/>
-        from t_user, t_ticket_order, t_ticket_item
+        from t_ticket_order, t_ticket_item, t_user
         <where>
             <include refid="query_where_clause"/>
         </where>
+		and t_ticket_order.order_time is not null
         order by
+		t_ticket_order.order_time desc
         <if test="pager.sort != null and pager.sort != ''">
             ${pager.sort} ${pager.order}
         </if>
@@ -222,7 +228,7 @@
     </select>
 
     <select id="countByCondition" resultType="long">
-        select count(*) from t_user, t_ticket_order, t_ticket_item
+        select count(*) from t_ticket_order, t_ticket_item, t_user
         <where>
             <include refid="query_where_clause"/>
         </where>

@@ -67,6 +67,35 @@ public class WechatUtil {
     }
 
     /**
+     * 准备预支付需要提交的数据
+     * @param openid
+     * @param ip
+     * @param totalFee
+     * @return
+     */
+    public Map<String, String> prepayData(String openid, String orderNo, String ip, String body, String attach, int totalFee) {
+        Map<String, String> reqData = new HashMap<String, String>();
+        reqData.put("appid", WechatAPI.APP_ID);
+        reqData.put("mch_id", WechatAPI.MCH_ID);
+        reqData.put("nonce_str", WXPayUtil.generateUUID());
+        reqData.put("sign_type", WXPayConstants.MD5);
+        reqData.put("openid", openid);
+        reqData.put("body", body);
+        reqData.put("attach", attach);
+        reqData.put("out_trade_no", orderNo);
+        reqData.put("total_fee", totalFee +"");
+        reqData.put("trade_type", WechatAPI.TRADE_JSAPI);
+        reqData.put("spbill_create_ip", ip);
+        reqData.put("notify_url", WechatAPI.NOTIFY_URL);
+        try {
+            reqData.put("sign", WXPayUtil.generateSignature(reqData, WechatAPI.API_KEY, WXPayConstants.SignType.MD5));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return reqData;
+    }
+
+    /**
      * 预支付请求并获取预支持结果
      * @param openid
      * @param ip
@@ -74,11 +103,11 @@ public class WechatUtil {
      * @param totalFee
      * @return
      */
-    public Map<String, String> prepayResult(String openid, String ip, String body, String attach, int totalFee) {
+    public Map<String, String> prepayResult(String openid, String orderNo, String ip, String body, String attach, int totalFee) {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(WechatAPI.ORDER_URL);
         httpPost.addHeader("Content-Type", "text/xml");
-        Map<String, String> reqData = prepayData(openid, ip, body, attach, totalFee);
+        Map<String, String> reqData = prepayData(openid, orderNo, ip, body, attach, totalFee);
         try {
             String data = WXPayUtil.mapToXml(reqData);
             StringEntity stringEntity = new StringEntity(data, CharsetEnum.UTF8.getValue());
@@ -94,35 +123,6 @@ public class WechatUtil {
             e.printStackTrace();
         }
         return null;
-    }
-
-    /**
-     * 准备预支付需要提交的数据
-     * @param openid
-     * @param ip
-     * @param totalFee
-     * @return
-     */
-    public Map<String, String> prepayData(String openid, String ip, String body, String attach, int totalFee) {
-        Map<String, String> reqData = new HashMap<String, String>();
-        reqData.put("appid", WechatAPI.APP_ID);
-        reqData.put("mch_id", WechatAPI.MCH_ID);
-        reqData.put("nonce_str", WXPayUtil.generateUUID());
-        reqData.put("sign_type", WXPayConstants.MD5);
-        reqData.put("openid", openid);
-        reqData.put("body", body);
-        reqData.put("attach", attach);
-        reqData.put("out_trade_no", WXPayUtil.generateUUID());
-        reqData.put("total_fee", totalFee +"");
-        reqData.put("trade_type", WechatAPI.TRADE_JSAPI);
-        reqData.put("spbill_create_ip", ip);
-        reqData.put("notify_url", WechatAPI.NOTIFY_URL);
-        try {
-            reqData.put("sign", WXPayUtil.generateSignature(reqData, WechatAPI.API_KEY, WXPayConstants.SignType.MD5));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return reqData;
     }
 
     /**

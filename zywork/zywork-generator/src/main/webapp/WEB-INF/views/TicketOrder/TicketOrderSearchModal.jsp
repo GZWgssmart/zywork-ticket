@@ -33,6 +33,20 @@
 </div>
 
 <div class="col-sm-6 form-group">
+    <label for="openidSearch" class="col-sm-4 control-label">微信openid：</label>
+    <div class="col-sm-8">
+        <input id="openidSearch" name="openid" class="form-control" placeholder="请输入微信openid">
+    </div>
+</div>
+
+<div class="col-sm-6 form-group">
+    <label for="orderNoSearch" class="col-sm-4 control-label">订单编号：</label>
+    <div class="col-sm-8">
+        <input id="orderNoSearch" name="orderNo" class="form-control" placeholder="请输入订单编号">
+    </div>
+</div>
+
+<div class="col-sm-6 form-group">
     <label for="orderTimeStartSearch" class="col-sm-4 control-label">下单时间(开始)：</label>
     <div class="input-group date form_datetime col-sm-8" style="padding-left: 15px; padding-right: 15px;">
         <input id="orderTimeStartSearch" name="orderTimeStart" class="form-control input-datetime" type="text" value="" readonly placeholder="请选择下单时间(开始)"/>

@@ -5,14 +5,14 @@ import java.util.Date;
 /**
  * TicketOrderDTO数据传输对象类<br/>
  *
- * 创建于2018-07-18<br/>
+ * 创建于2018-07-24<br/>
  *
  * @author http://zywork.top 王振宇
  * @version 1.0
  */
 public class TicketOrderDTO extends BaseDTO {
 
-    private static final long serialVersionUID = -9223372035679375219L;
+    private static final long serialVersionUID = -9223372036587470456L;
 
     /**
 	 * 编号
@@ -26,6 +26,14 @@ public class TicketOrderDTO extends BaseDTO {
 	 * 用户编号
 	 */
 	private Long userId;
+	/**
+	 * 微信openid
+	 */
+	private String openid;
+	/**
+	 * 订单编号
+	 */
+	private String orderNo;
 	/**
 	 * 下单时间
 	 */
@@ -53,10 +61,12 @@ public class TicketOrderDTO extends BaseDTO {
 	
     public TicketOrderDTO () {}
 
-    public TicketOrderDTO (Long id, Long ticketItemId, Long userId, Date orderTime, Double unitPrice, Integer totalSeat, Double totalPrice, Date createTime, Date updateTime) {
+    public TicketOrderDTO (Long id, Long ticketItemId, Long userId, String openid, String orderNo, Date orderTime, Double unitPrice, Integer totalSeat, Double totalPrice, Date createTime, Date updateTime) {
         this.id = id;
 		this.ticketItemId = ticketItemId;
 		this.userId = userId;
+		this.openid = openid;
+		this.orderNo = orderNo;
 		this.orderTime = orderTime;
 		this.unitPrice = unitPrice;
 		this.totalSeat = totalSeat;
@@ -88,6 +98,22 @@ public class TicketOrderDTO extends BaseDTO {
 
 	public void setUserId(Long userId) {
 		this.userId = userId;
+	}
+
+	public String getOpenid() {
+		return openid;
+	}
+
+	public void setOpenid(String openid) {
+		this.openid = openid;
+	}
+
+	public String getOrderNo() {
+		return orderNo;
+	}
+
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
 	}
 
 	public Date getOrderTime() {
@@ -145,6 +171,8 @@ public class TicketOrderDTO extends BaseDTO {
                 "id = " + id + 
 				", ticketItemId = " + ticketItemId + 
 				", userId = " + userId + 
+				", openid = " + openid + 
+				", orderNo = " + orderNo + 
 				", orderTime = " + orderTime + 
 				", unitPrice = " + unitPrice + 
 				", totalSeat = " + totalSeat + 

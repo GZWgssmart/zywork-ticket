@@ -1,41 +1,35 @@
 package top.zywork.vo;
 
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 /**
  * UserTicketOrderVO值对象类<br/>
  *
- * 创建于2018-07-18<br/>
+ * 创建于2018-07-24<br/>
  *
  * @author http://zywork.top 王振宇
  * @version 1.0
  */
 public class UserTicketOrderVO extends BaseVO {
 
-    private static final long serialVersionUID = -9223372035130163119L;
+    private static final long serialVersionUID = -9223372036266777382L;
 
-    //t_user表的字段对应的属性
-	/**
-	 * 编号
-	 */
-	private Long userId;
-	/**
-	 * 头像
-	 */
-	private String userHeadicon;
-	/**
-	 * 昵称
-	 */
-	private String userNickname;
-	//t_ticket_order表的字段对应的属性
+    //t_ticket_order表的字段对应的属性
 	/**
 	 * 剧目编号
 	 */
 	private Long ticketOrderTicketItemId;
 	/**
-	 * 用户编号
+	 * 微信openid
 	 */
-	private Long ticketOrderUserId;
+	@Size(min = 0, max = 200, message = "必须小于200个字符")
+	private String ticketOrderOpenid;
+	/**
+	 * 订单编号
+	 */
+	@Size(min = 0, max = 100, message = "必须小于100个字符")
+	private String ticketOrderOrderNo;
 	/**
 	 * 下单时间
 	 */
@@ -69,19 +63,18 @@ public class UserTicketOrderVO extends BaseVO {
 	 * 放映时间
 	 */
 	private Date ticketItemPlayTime;
+	//t_user表的字段对应的属性
 	/**
-	 * 放映地点
+	 * 微信openid
 	 */
-	private String ticketItemAddress;
+	private String userOpenid;
 	
-    public UserTicketOrderVO() {}
+    public UserTicketOrderVO () {}
 
-    public UserTicketOrderVO(Long userId, String userHeadicon, String userNickname, Long ticketOrderTicketItemId, Long ticketOrderUserId, Date ticketOrderOrderTime, Double ticketOrderUnitPrice, Integer ticketOrderTotalSeat, Double ticketOrderTotalPrice, Long ticketItemId, String ticketItemTitle, String ticketItemHeadImg, Date ticketItemPlayTime, String ticketItemAddress) {
-        this.userId = userId;
-		this.userHeadicon = userHeadicon;
-		this.userNickname = userNickname;
-		this.ticketOrderTicketItemId = ticketOrderTicketItemId;
-		this.ticketOrderUserId = ticketOrderUserId;
+    public UserTicketOrderVO (Long ticketOrderTicketItemId, String ticketOrderOpenid, String ticketOrderOrderNo, Date ticketOrderOrderTime, Double ticketOrderUnitPrice, Integer ticketOrderTotalSeat, Double ticketOrderTotalPrice, Long ticketItemId, String ticketItemTitle, String ticketItemHeadImg, Date ticketItemPlayTime, String userOpenid) {
+        this.ticketOrderTicketItemId = ticketOrderTicketItemId;
+		this.ticketOrderOpenid = ticketOrderOpenid;
+		this.ticketOrderOrderNo = ticketOrderOrderNo;
 		this.ticketOrderOrderTime = ticketOrderOrderTime;
 		this.ticketOrderUnitPrice = ticketOrderUnitPrice;
 		this.ticketOrderTotalSeat = ticketOrderTotalSeat;
@@ -90,35 +83,11 @@ public class UserTicketOrderVO extends BaseVO {
 		this.ticketItemTitle = ticketItemTitle;
 		this.ticketItemHeadImg = ticketItemHeadImg;
 		this.ticketItemPlayTime = ticketItemPlayTime;
-		this.ticketItemAddress = ticketItemAddress;
+		this.userOpenid = userOpenid;
 		
     }
 
-    public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public String getUserHeadicon() {
-		return userHeadicon;
-	}
-
-	public void setUserHeadicon(String userHeadicon) {
-		this.userHeadicon = userHeadicon;
-	}
-
-	public String getUserNickname() {
-		return userNickname;
-	}
-
-	public void setUserNickname(String userNickname) {
-		this.userNickname = userNickname;
-	}
-
-	public Long getTicketOrderTicketItemId() {
+    public Long getTicketOrderTicketItemId() {
 		return ticketOrderTicketItemId;
 	}
 
@@ -126,12 +95,20 @@ public class UserTicketOrderVO extends BaseVO {
 		this.ticketOrderTicketItemId = ticketOrderTicketItemId;
 	}
 
-	public Long getTicketOrderUserId() {
-		return ticketOrderUserId;
+	public String getTicketOrderOpenid() {
+		return ticketOrderOpenid;
 	}
 
-	public void setTicketOrderUserId(Long ticketOrderUserId) {
-		this.ticketOrderUserId = ticketOrderUserId;
+	public void setTicketOrderOpenid(String ticketOrderOpenid) {
+		this.ticketOrderOpenid = ticketOrderOpenid;
+	}
+
+	public String getTicketOrderOrderNo() {
+		return ticketOrderOrderNo;
+	}
+
+	public void setTicketOrderOrderNo(String ticketOrderOrderNo) {
+		this.ticketOrderOrderNo = ticketOrderOrderNo;
 	}
 
 	public Date getTicketOrderOrderTime() {
@@ -198,23 +175,21 @@ public class UserTicketOrderVO extends BaseVO {
 		this.ticketItemPlayTime = ticketItemPlayTime;
 	}
 
-	public String getTicketItemAddress() {
-		return ticketItemAddress;
+	public String getUserOpenid() {
+		return userOpenid;
 	}
 
-	public void setTicketItemAddress(String ticketItemAddress) {
-		this.ticketItemAddress = ticketItemAddress;
+	public void setUserOpenid(String userOpenid) {
+		this.userOpenid = userOpenid;
 	}
 
 	
     @Override
     public String toString() {
         return "UserTicketOrderDO{" +
-                "userId = " + userId + 
-				", userHeadicon = " + userHeadicon + 
-				", userNickname = " + userNickname + 
-				", ticketOrderTicketItemId = " + ticketOrderTicketItemId + 
-				", ticketOrderUserId = " + ticketOrderUserId + 
+                "ticketOrderTicketItemId = " + ticketOrderTicketItemId + 
+				", ticketOrderOpenid = " + ticketOrderOpenid + 
+				", ticketOrderOrderNo = " + ticketOrderOrderNo + 
 				", ticketOrderOrderTime = " + ticketOrderOrderTime + 
 				", ticketOrderUnitPrice = " + ticketOrderUnitPrice + 
 				", ticketOrderTotalSeat = " + ticketOrderTotalSeat + 
@@ -223,7 +198,7 @@ public class UserTicketOrderVO extends BaseVO {
 				", ticketItemTitle = " + ticketItemTitle + 
 				", ticketItemHeadImg = " + ticketItemHeadImg + 
 				", ticketItemPlayTime = " + ticketItemPlayTime + 
-				", ticketItemAddress = " + ticketItemAddress + 
+				", userOpenid = " + userOpenid + 
 				"}";
     }
 

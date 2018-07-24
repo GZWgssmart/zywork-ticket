@@ -20,6 +20,20 @@
 </div>
 
 <div class="form-group">
+    <label for="openid" class="col-sm-2 control-label">微信openid：</label>
+    <div class="col-sm-10">
+        <input id="openid" name="openid" class="form-control" placeholder="请输入微信openid"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="orderNo" class="col-sm-2 control-label">订单编号：</label>
+    <div class="col-sm-10">
+        <input id="orderNo" name="orderNo" class="form-control" placeholder="请输入订单编号"/>
+    </div>
+</div>
+
+<div class="form-group">
     <label for="orderTime" class="col-sm-2 control-label">下单时间：</label>
     <div class="input-group date form_datetime col-sm-10" style="padding-left: 15px; padding-right: 15px;">
         <input id="orderTime" name="orderTime" class="form-control input-datetime" type="text" value="" readonly placeholder="请选择下单时间"/>

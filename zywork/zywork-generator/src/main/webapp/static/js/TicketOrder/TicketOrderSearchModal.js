@@ -55,6 +55,18 @@ function ticketOrderSearchTable() {
 	sortable: true
 },
 {
+	title: '微信openid',
+	field: 'openid',
+	align: 'center',
+	sortable: true
+},
+{
+	title: '订单编号',
+	field: 'orderNo',
+	align: 'center',
+	sortable: true
+},
+{
 	title: '下单时间',
 	field: 'orderTime',
 	align: 'center',

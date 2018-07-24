@@ -1,14 +1,11 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    String path = request.getContextPath();
-%>
 <!doctype html>
 
 <html>
 <head>
-    <title>我的购票</title>
+    <title>购票订单</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link href="../../../static/css/iconfont/iconfont.css" rel="stylesheet"/>
     <link href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css" rel="stylesheet"/>
     <style>
         .order {
@@ -73,28 +70,30 @@
 <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 <script src="https://cdn.bootcss.com/qs/6.5.2/qs.min.js"></script>
 <script>
-    var openid = '${requestScope.openid}'
     var app = new Vue(
         {
             el: '#app',
             data: {
-                ticketOrders:[]
-            },
-            created () {
-                axios.get(
-                    '/byjc/user-order/pager-cond',
-                    Qs.stringify(
-                        {
-                            offset: 0,
-                            limit: 100,
-                            openid: openid
-                        }
-                    )
-                ).then(response => {
-                    this.ticketOrders = response.data.rows
-                }).catch(error => {
-                    console.log(error)
-                })
+                ticketOrders:[
+                    {
+                        ticketItemTitle: '丑小鸭',
+                        ticketItemHeadImg: '',
+                        ticketItemPlayTime: '2018-07-28',
+                        ticketOrderUnitPrice: 59,
+                        ticketOrderTotalPrice: 118,
+                        ticketOrderTotalSeat: 2,
+                        ticketOrderOrderTime: '2018-07-25'
+                    },
+                    {
+                        ticketItemTitle: '小蝌蚪找妈妈',
+                        ticketItemHeadImg: '',
+                        ticketItemPlayTime: '2018-07-28',
+                        ticketOrderUnitPrice: 59,
+                        ticketOrderTotalPrice: 118,
+                        ticketOrderTotalSeat: 2,
+                        ticketOrderOrderTime: '2018-07-25'
+                    }
+                ]
             },
             methods: {
 

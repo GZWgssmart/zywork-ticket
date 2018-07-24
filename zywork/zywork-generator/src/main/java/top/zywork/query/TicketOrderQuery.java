@@ -5,14 +5,14 @@ import java.util.Date;
 /**
  * TicketOrderQuery查询对象类<br/>
  *
- * 创建于2018-07-18<br/>
+ * 创建于2018-07-24<br/>
  *
  * @author http://zywork.top 王振宇
  * @version 1.0
  */
 public class TicketOrderQuery extends BaseQuery {
 
-    private static final long serialVersionUID = -9223372035712823636L;
+    private static final long serialVersionUID = -9223372035593102021L;
 
     /**
 	 * 编号
@@ -26,6 +26,14 @@ public class TicketOrderQuery extends BaseQuery {
 	 * 用户编号
 	 */
 	private Long userId;
+	/**
+	 * 微信openid
+	 */
+	private String openid;
+	/**
+	 * 订单编号
+	 */
+	private String orderNo;
 	/**
 	 * 下单时间
 	 */
@@ -77,10 +85,12 @@ public class TicketOrderQuery extends BaseQuery {
 	
     public TicketOrderQuery () {}
 
-    public TicketOrderQuery (Long id, Long ticketItemId, Long userId, Date orderTime, Date orderTimeStart, Date orderTimeEnd, Double unitPrice, Integer totalSeat, Double totalPrice, Date createTime, Date createTimeStart, Date createTimeEnd, Date updateTime, Date updateTimeStart, Date updateTimeEnd) {
+    public TicketOrderQuery (Long id, Long ticketItemId, Long userId, String openid, String orderNo, Date orderTime, Date orderTimeStart, Date orderTimeEnd, Double unitPrice, Integer totalSeat, Double totalPrice, Date createTime, Date createTimeStart, Date createTimeEnd, Date updateTime, Date updateTimeStart, Date updateTimeEnd) {
         this.id = id;
 		this.ticketItemId = ticketItemId;
 		this.userId = userId;
+		this.openid = openid;
+		this.orderNo = orderNo;
 		this.orderTime = orderTime;
 		this.orderTimeStart = orderTimeStart;
 		this.orderTimeEnd = orderTimeEnd;
@@ -118,6 +128,22 @@ public class TicketOrderQuery extends BaseQuery {
 
 	public void setUserId(Long userId) {
 		this.userId = userId;
+	}
+
+	public String getOpenid() {
+		return openid;
+	}
+
+	public void setOpenid(String openid) {
+		this.openid = openid;
+	}
+
+	public String getOrderNo() {
+		return orderNo;
+	}
+
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
 	}
 
 	public Date getOrderTime() {

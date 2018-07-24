@@ -21,6 +21,16 @@
 </div>
 
 <div class="col-sm-6 detail-content">
+    <span class="col-sm-4 row-detail-title">微信openid：</span>
+    <span class="col-sm-8" id="openidDetail"></span>
+</div>
+
+<div class="col-sm-6 detail-content">
+    <span class="col-sm-4 row-detail-title">订单编号：</span>
+    <span class="col-sm-8" id="orderNoDetail"></span>
+</div>
+
+<div class="col-sm-6 detail-content">
     <span class="col-sm-4 row-detail-title">下单时间：</span>
     <span class="col-sm-8" id="orderTimeDetail"></span>
 </div>

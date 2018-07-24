@@ -64,6 +64,18 @@ function loadTable() {
 	sortable: true
 },
 {
+	title: '微信openid',
+	field: 'openid',
+	align: 'center',
+	sortable: true
+},
+{
+	title: '订单编号',
+	field: 'orderNo',
+	align: 'center',
+	sortable: true
+},
+{
 	title: '下单时间',
 	field: 'orderTime',
 	align: 'center',
@@ -135,7 +147,7 @@ function formatOperators(value, row, index) {
     return strArray.join('');
 }
 
-let fieldTitles = {'id':'编号','ticketItemId':'剧目编号','userId':'用户编号','orderTime-date':'下单时间','unitPrice':'单价','totalSeat':'总座位数','totalPrice':'支付总额','createTime-date':'创建时间','updateTime-date':'更新时间'};
+let fieldTitles = {'id':'编号','ticketItemId':'剧目编号','userId':'用户编号','openid':'微信openid','orderNo':'订单编号','orderTime-date':'下单时间','unitPrice':'单价','totalSeat':'总座位数','totalPrice':'支付总额','createTime-date':'创建时间','updateTime-date':'更新时间'};
 
 window.operateEvents = {
     'click .to-detail': function (e, value, row, index) {
@@ -195,6 +207,26 @@ ticketItemId: {
 },
 userId: {
 	validators: {
+	}
+},
+openid: {
+	validators: {
+
+		stringLength: {
+			min: 0,
+			max: 200,
+			message: '必须小于200个字符'
+		}
+	}
+},
+orderNo: {
+	validators: {
+
+		stringLength: {
+			min: 0,
+			max: 100,
+			message: '必须小于100个字符'
+		}
 	}
 },
 orderTime: {

@@ -7,9 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import top.zywork.common.BindingResultUtils;
-import top.zywork.common.DozerMapperUtils;
-import top.zywork.common.StringUtils;
+import top.zywork.common.*;
 import top.zywork.dto.PagerDTO;
 import top.zywork.dto.TicketOrderDTO;
 import top.zywork.exception.ServiceException;
@@ -21,15 +19,21 @@ import top.zywork.service.TicketOrderService;
 import top.zywork.vo.ControllerStatusVO;
 import top.zywork.vo.PagerVO;
 import top.zywork.vo.TicketOrderVO;
+import top.zywork.wechat.PayData;
+import top.zywork.wechat.WechatAPI;
+import top.zywork.wechat.WechatUtil;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * TicketOrderController控制器类<br/>
  *
- * 创建于2018-07-18<br/>
+ * 创建于2018-07-24<br/>
  *
  * @author http://zywork.top 王振宇
  * @version 1.0
@@ -69,20 +73,47 @@ public class TicketOrderController extends BaseController {
 
     @PostMapping("save")
     @ResponseBody
-    public ControllerStatusVO save(@Validated TicketOrderVO ticketOrderVO, BindingResult bindingResult) {
-        ControllerStatusVO statusVO = new ControllerStatusVO();
+    public PayData save(@Validated TicketOrderVO ticketOrderVO, BindingResult bindingResult, String allSeatsString, HttpServletRequest request) {
+        PayData returnPayData = new PayData();
         if (bindingResult.hasErrors()) {
-            statusVO.dataErrorStatus(500, BindingResultUtils.errorString(bindingResult));
+            return null;
         } else {
             try {
+                ticketOrderVO.setOrderNo(System.currentTimeMillis() + "" + RandomUtils.randomNum(100000, 999999));
                 ticketOrderService.save(getBeanMapper().map(ticketOrderVO, TicketOrderDTO.class));
-                statusVO.okStatus(200, "添加成功");
+                WechatUtil wechatUtil = new WechatUtil();
+                Map<String, String> prepayResult = wechatUtil.prepayResult(ticketOrderVO.getOpenid(),
+                        ticketOrderVO.getOrderNo(),
+                        IPUtils.getIP(request), "北艺赣州剧场选座付款", allSeatsString,
+                        (int) (ticketOrderVO.getTotalPrice() * 100));
+                Map<String, String> payData = wechatUtil.payData(prepayResult);
+                returnPayData.setAppId(WechatAPI.APP_ID);
+                returnPayData.setTimeStamp(payData.get("timeStamp"));
+                returnPayData.setNonceStr(payData.get("nonceStr"));
+                returnPayData.setPackages(payData.get("package"));
+                returnPayData.setPaySign(payData.get("paySign"));
+                return returnPayData;
             } catch (ServiceException e) {
                 logger.error("添加失败：{}", e.getMessage());
-                statusVO.errorStatus(500, "添加失败");
             }
         }
-        return statusVO;
+        return null;
+    }
+
+    @RequestMapping("result")
+    public void payResult(HttpServletRequest request, HttpServletResponse response) {
+        System.out.println("***********************notify_url*************************");
+        WechatUtil wechatUtil = new WechatUtil();
+        Map<String, String> resultMap = wechatUtil.payResult(request);
+        String resultCode = resultMap.get("result_code");
+        if (resultCode != null && resultCode.equals("SUCCESS")) {
+            String totalFee = resultMap.get("total_fee");
+            String openId = resultMap.get("openid");
+            String tranId = resultMap.get("transaction_id");
+            String outTradeNo = resultMap.get("out_trade_no");
+            ticketOrderService.updateOrderTimeByOrderNo(outTradeNo);
+            wechatUtil.responsePayNotify(response);
+        }
     }
 
     @PostMapping("remove")

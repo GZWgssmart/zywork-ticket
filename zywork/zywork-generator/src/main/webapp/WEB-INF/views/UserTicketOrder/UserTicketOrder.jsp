@@ -61,9 +61,16 @@
 </div>
 
 <div class="col-sm-6 form-group">
-    <label for="ticketOrderUserIdSearch" class="col-sm-4 control-label">用户编号：</label>
+    <label for="ticketOrderOpenidSearch" class="col-sm-4 control-label">微信openid：</label>
     <div class="col-sm-8">
-        <input id="ticketOrderUserIdSearch" name="ticketOrderUserId" class="form-control" placeholder="请输入用户编号">
+        <input id="ticketOrderOpenidSearch" name="ticketOrderOpenid" class="form-control" placeholder="请输入微信openid">
+    </div>
+</div>
+
+<div class="col-sm-6 form-group">
+    <label for="ticketOrderOrderNoSearch" class="col-sm-4 control-label">订单编号：</label>
+    <div class="col-sm-8">
+        <input id="ticketOrderOrderNoSearch" name="ticketOrderOrderNo" class="form-control" placeholder="请输入订单编号">
     </div>
 </div>
 

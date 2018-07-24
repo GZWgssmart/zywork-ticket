@@ -58,8 +58,14 @@ function loadTable() {
 	sortable: true
 },
 {
-	title: '用户编号',
-	field: 'ticketOrderUserId',
+	title: '微信openid',
+	field: 'ticketOrderOpenid',
+	align: 'center',
+	sortable: true
+},
+{
+	title: '订单编号',
+	field: 'ticketOrderOrderNo',
 	align: 'center',
 	sortable: true
 },
@@ -90,24 +96,6 @@ function loadTable() {
 },
 {
 	title: '编号',
-	field: 'userId',
-	align: 'center',
-	sortable: true
-},
-{
-	title: '头像',
-	field: 'userHeadicon',
-	align: 'center',
-	sortable: true
-},
-{
-	title: '昵称',
-	field: 'userNickname',
-	align: 'center',
-	sortable: true
-},
-{
-	title: '编号',
 	field: 'ticketItemId',
 	align: 'center',
 	sortable: true
@@ -132,8 +120,8 @@ function loadTable() {
 	formatter: formatDate
 },
 {
-	title: '放映地点',
-	field: 'ticketItemAddress',
+	title: '微信openid',
+	field: 'userOpenid',
 	align: 'center',
 	sortable: true
 },
@@ -170,7 +158,7 @@ function formatOperators(value, row, index) {
     return strArray.join('');
 }
 
-let fieldTitles = {'ticketOrderTicketItemId':'剧目编号','ticketOrderUserId':'用户编号','ticketOrderOrderTime-date':'下单时间','ticketOrderUnitPrice':'单价','ticketOrderTotalSeat':'总座位数','ticketOrderTotalPrice':'支付总额','userId':'编号','userHeadicon':'头像','userNickname':'昵称','ticketItemId':'编号','ticketItemTitle':'名称','ticketItemHeadImg':'封面图片','ticketItemPlayTime-date':'放映时间','ticketItemAddress':'放映地点'};
+let fieldTitles = {'ticketOrderTicketItemId':'剧目编号','ticketOrderOpenid':'微信openid','ticketOrderOrderNo':'订单编号','ticketOrderOrderTime-date':'下单时间','ticketOrderUnitPrice':'单价','ticketOrderTotalSeat':'总座位数','ticketOrderTotalPrice':'支付总额','ticketItemId':'编号','ticketItemTitle':'名称','ticketItemHeadImg':'封面图片','ticketItemPlayTime-date':'放映时间','userOpenid':'微信openid'};
 
 window.operateEvents = {
     'click .to-detail': function (e, value, row, index) {
@@ -224,39 +212,28 @@ function queryParams(params) {
 function validateFields() {
     return {
         
-userId: {
-	validators: {
-		notEmpty: {
-			message: '编号是必须项'
-		}
-	}
-},
-userHeadicon: {
-	validators: {
-
-		stringLength: {
-			min: 0,
-			max: 500,
-			message: '必须小于500个字符'
-		}
-	}
-},
-userNickname: {
-	validators: {
-
-		stringLength: {
-			min: 0,
-			max: 45,
-			message: '必须小于45个字符'
-		}
-	}
-},
 ticketOrderTicketItemId: {
 	validators: {
 	}
 },
-ticketOrderUserId: {
+ticketOrderOpenid: {
 	validators: {
+
+		stringLength: {
+			min: 0,
+			max: 200,
+			message: '必须小于200个字符'
+		}
+	}
+},
+ticketOrderOrderNo: {
+	validators: {
+
+		stringLength: {
+			min: 0,
+			max: 100,
+			message: '必须小于100个字符'
+		}
 	}
 },
 ticketOrderOrderTime: {
@@ -311,15 +288,13 @@ ticketItemPlayTime: {
 		}
 	}
 },
-ticketItemAddress: {
+userOpenid: {
 	validators: {
-		notEmpty: {
-			message: '放映地点是必须项'
-		},
+
 		stringLength: {
-			min: 1,
-			max: 100,
-			message: '必须是1-100个字符'
+			min: 0,
+			max: 200,
+			message: '必须小于200个字符'
 		}
 	}
 }

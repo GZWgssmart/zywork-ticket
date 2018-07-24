@@ -5,37 +5,28 @@ import java.util.Date;
 /**
  * UserTicketOrderQuery查询对象类<br/>
  *
- * 创建于2018-07-18<br/>
+ * 创建于2018-07-24<br/>
  *
  * @author http://zywork.top 王振宇
  * @version 1.0
  */
 public class UserTicketOrderQuery extends BaseQuery {
 
-    private static final long serialVersionUID = -9223372034942175545L;
+    private static final long serialVersionUID = -9223372036128048176L;
 
-    //t_user表的字段对应的属性
-	/**
-	 * 编号
-	 */
-	private Long userId;
-	/**
-	 * 头像
-	 */
-	private String userHeadicon;
-	/**
-	 * 昵称
-	 */
-	private String userNickname;
-	//t_ticket_order表的字段对应的属性
+    //t_ticket_order表的字段对应的属性
 	/**
 	 * 剧目编号
 	 */
 	private Long ticketOrderTicketItemId;
 	/**
-	 * 用户编号
+	 * 微信openid
 	 */
-	private Long ticketOrderUserId;
+	private String ticketOrderOpenid;
+	/**
+	 * 订单编号
+	 */
+	private String ticketOrderOrderNo;
 	/**
 	 * 下单时间
 	 */
@@ -85,19 +76,18 @@ public class UserTicketOrderQuery extends BaseQuery {
 	 * 放映时间(结束)
 	 */
 	private Date ticketItemPlayTimeEnd;
+	//t_user表的字段对应的属性
 	/**
-	 * 放映地点
+	 * 微信openid
 	 */
-	private String ticketItemAddress;
+	private String userOpenid;
 	
-    public UserTicketOrderQuery() {}
+    public UserTicketOrderQuery () {}
 
-    public UserTicketOrderQuery(Long userId, String userHeadicon, String userNickname, Long ticketOrderTicketItemId, Long ticketOrderUserId, Date ticketOrderOrderTime, Date ticketOrderOrderTimeStart, Date ticketOrderOrderTimeEnd, Double ticketOrderUnitPrice, Integer ticketOrderTotalSeat, Double ticketOrderTotalPrice, Long ticketItemId, String ticketItemTitle, String ticketItemHeadImg, Date ticketItemPlayTime, Date ticketItemPlayTimeStart, Date ticketItemPlayTimeEnd, String ticketItemAddress) {
-        this.userId = userId;
-		this.userHeadicon = userHeadicon;
-		this.userNickname = userNickname;
-		this.ticketOrderTicketItemId = ticketOrderTicketItemId;
-		this.ticketOrderUserId = ticketOrderUserId;
+    public UserTicketOrderQuery (Long ticketOrderTicketItemId, String ticketOrderOpenid, String ticketOrderOrderNo, Date ticketOrderOrderTime, Date ticketOrderOrderTimeStart, Date ticketOrderOrderTimeEnd, Double ticketOrderUnitPrice, Integer ticketOrderTotalSeat, Double ticketOrderTotalPrice, Long ticketItemId, String ticketItemTitle, String ticketItemHeadImg, Date ticketItemPlayTime, Date ticketItemPlayTimeStart, Date ticketItemPlayTimeEnd, String userOpenid) {
+        this.ticketOrderTicketItemId = ticketOrderTicketItemId;
+		this.ticketOrderOpenid = ticketOrderOpenid;
+		this.ticketOrderOrderNo = ticketOrderOrderNo;
 		this.ticketOrderOrderTime = ticketOrderOrderTime;
 		this.ticketOrderOrderTimeStart = ticketOrderOrderTimeStart;
 		this.ticketOrderOrderTimeEnd = ticketOrderOrderTimeEnd;
@@ -110,35 +100,11 @@ public class UserTicketOrderQuery extends BaseQuery {
 		this.ticketItemPlayTime = ticketItemPlayTime;
 		this.ticketItemPlayTimeStart = ticketItemPlayTimeStart;
 		this.ticketItemPlayTimeEnd = ticketItemPlayTimeEnd;
-		this.ticketItemAddress = ticketItemAddress;
+		this.userOpenid = userOpenid;
 		
     }
 
-    public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public String getUserHeadicon() {
-		return userHeadicon;
-	}
-
-	public void setUserHeadicon(String userHeadicon) {
-		this.userHeadicon = userHeadicon;
-	}
-
-	public String getUserNickname() {
-		return userNickname;
-	}
-
-	public void setUserNickname(String userNickname) {
-		this.userNickname = userNickname;
-	}
-
-	public Long getTicketOrderTicketItemId() {
+    public Long getTicketOrderTicketItemId() {
 		return ticketOrderTicketItemId;
 	}
 
@@ -146,12 +112,20 @@ public class UserTicketOrderQuery extends BaseQuery {
 		this.ticketOrderTicketItemId = ticketOrderTicketItemId;
 	}
 
-	public Long getTicketOrderUserId() {
-		return ticketOrderUserId;
+	public String getTicketOrderOpenid() {
+		return ticketOrderOpenid;
 	}
 
-	public void setTicketOrderUserId(Long ticketOrderUserId) {
-		this.ticketOrderUserId = ticketOrderUserId;
+	public void setTicketOrderOpenid(String ticketOrderOpenid) {
+		this.ticketOrderOpenid = ticketOrderOpenid;
+	}
+
+	public String getTicketOrderOrderNo() {
+		return ticketOrderOrderNo;
+	}
+
+	public void setTicketOrderOrderNo(String ticketOrderOrderNo) {
+		this.ticketOrderOrderNo = ticketOrderOrderNo;
 	}
 
 	public Date getTicketOrderOrderTime() {
@@ -250,12 +224,12 @@ public class UserTicketOrderQuery extends BaseQuery {
 		this.ticketItemPlayTimeEnd = ticketItemPlayTimeEnd;
 	}
 
-	public String getTicketItemAddress() {
-		return ticketItemAddress;
+	public String getUserOpenid() {
+		return userOpenid;
 	}
 
-	public void setTicketItemAddress(String ticketItemAddress) {
-		this.ticketItemAddress = ticketItemAddress;
+	public void setUserOpenid(String userOpenid) {
+		this.userOpenid = userOpenid;
 	}
 
 	

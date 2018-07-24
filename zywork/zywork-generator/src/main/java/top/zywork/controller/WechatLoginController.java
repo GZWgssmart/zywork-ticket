@@ -48,8 +48,6 @@ public class WechatLoginController {
                     userService.save(user);
                 }
                 modelAndView.addObject("user", user);
-                System.out.println(user);
-                System.out.println(original);
                 modelAndView.setViewName(original);
             }
         }

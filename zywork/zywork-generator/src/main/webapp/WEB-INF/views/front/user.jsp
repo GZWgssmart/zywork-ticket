@@ -6,15 +6,12 @@
 
 <html>
     <head>
-        <title>我的</title>
+        <title>个人中心</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
         <link href="<%=path%>/static/css/iconfont/iconfont.css" rel="stylesheet"/>
+        <link href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css" rel="stylesheet"/>
         <style>
-            * {
-                margin: 0;
-                padding: 0;
-            }
             .user-info {
                 width: 100%;
                 text-align: center;
@@ -33,29 +30,6 @@
                 font-size: 16px;
                 color: #2A2E36;
             }
-
-            .ticket-order {
-                width: 100%;
-                padding: 5px;
-                margin-top: 50px;
-            }
-
-            .ticket-order ul li {
-                height: 40px;
-                line-height:40px;
-                padding: 5px;
-                border-bottom: 1px solid #cccccc;
-                list-style: none;
-            }
-
-            .ticket-order li a {
-                display: block;
-            }
-
-            .ticket-order li a:link, .ticket-order li a:visited {
-                color: #ff7700;
-                text-decoration: none;
-            }
         </style>
     </head>
 
@@ -66,21 +40,24 @@
             <br/>
             <span>{{user.nickname}}</span>
         </div>
-        <div class="ticket-order">
-            <ul>
-                <li>
-                    <a href="#">
-                        <span><i class="iconfont icon-icon"></i>&nbsp;手机号</span>
-                        <span><small>{{user.phone}}</small></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span><i class="iconfont icon-icon-"></i>&nbsp;我的购票订单</span>
-                    </a>
-                </li>
-            </ul>
+        <div class="weui-cells">
+
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd"><i class="iconfont icon-icon"></i></div>
+                <div class="weui-cell__bd">
+                    <p>手机号</p>
+                </div>
+                <div class="weui-cell__ft">{{user.phone}}</div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="<%=path%>/ticket-page/ticket-order/${requestScope.user.openid}">
+                <div class="weui-cell__hd"><i class="iconfont icon-icon-"></i></div>
+                <div class="weui-cell__bd">
+                    <p>我的购票订单</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </a>
         </div>
+
     </div>
     </body>
 
@@ -92,6 +69,7 @@
         var nickname = '${requestScope.user.nickname}'
         var headicon = '${requestScope.user.headicon}'
         var phone = '${requestScope.user.phone}'
+        var openid = '${requestScope.user.openid}'
         var app = new Vue(
             {
                 el: '#app',
@@ -100,7 +78,8 @@
                         userid: userid,
                         nickname: nickname,
                         headicon: headicon,
-                        phone: phone
+                        phone: phone,
+                        openid: openid
                     }
                 },
                 methods: {

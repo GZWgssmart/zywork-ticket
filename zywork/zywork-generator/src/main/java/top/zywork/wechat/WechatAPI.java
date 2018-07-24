@@ -11,8 +11,8 @@ public class WechatAPI {
 
     public static final String APP_ID = "wx1fe3af6f9304f32b";
     public static final String APP_KEY = "154c338a151d3c2f5f4fbdbb698acea9";
-    public static final String MCH_ID = "1483257182";
-    public static final String API_KEY = "uktftujnabx9vba6glx5qq28dcodej36";
+    public static final String MCH_ID = "1510233721";
+    public static final String API_KEY = "uktftujnabx9vba6glx5qq28dcodej28";
     public static final String MD5 = "MD5";
     public static final String TRADE_JSAPI = "JSAPI";
     public static final String TRADE_NATIVE = "NATIVE";
@@ -25,10 +25,12 @@ public class WechatAPI {
 
     public static final String ORDER_URL = "https://api.mch.weixin.qq.com/pay/unifiedorder";
 
-    public static final String NOTIFY_URL = URL + "/byjc/pay/result";
+    public static final String NOTIFY_URL = URL + "/byjc/tickeorder/result";
 
     public static final String NOTIFY_RESULT = "<xml>" +
             "  <return_code><![CDATA[SUCCESS]]></return_code>" +
             "  <return_msg><![CDATA[OK]]></return_msg>" +
             "</xml>";
+
+    public static final String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + APP_ID + "&secret=" +  APP_KEY;
 }

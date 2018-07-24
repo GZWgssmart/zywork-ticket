@@ -14,9 +14,16 @@
 </div>
 
 <div class="form-group">
-    <label for="ticketOrderUserIdEdit" class="col-sm-2 control-label">用户编号：</label>
+    <label for="ticketOrderOpenidEdit" class="col-sm-2 control-label">微信openid：</label>
     <div class="col-sm-10">
-        <input id="ticketOrderUserIdEdit" name="ticketOrderUserId" class="form-control" placeholder="请输入用户编号"/>
+        <input id="ticketOrderOpenidEdit" name="ticketOrderOpenid" class="form-control" placeholder="请输入微信openid"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="ticketOrderOrderNoEdit" class="col-sm-2 control-label">订单编号：</label>
+    <div class="col-sm-10">
+        <input id="ticketOrderOrderNoEdit" name="ticketOrderOrderNo" class="form-control" placeholder="请输入订单编号"/>
     </div>
 </div>
 

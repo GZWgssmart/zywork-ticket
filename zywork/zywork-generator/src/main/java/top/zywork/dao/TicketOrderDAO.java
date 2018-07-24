@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * TicketOrderDAO数据访问接口<br/>
  *
- * 创建于2018-07-18<br/>
+ * 创建于2018-07-24<br/>
  *
  * @author http://zywork.top 王振宇
  * @version 1.0
@@ -22,4 +22,6 @@ public interface TicketOrderDAO extends BaseDAO {
 
     @Override
     Long countByCondition(@Param("query") Object queryObj);
+
+    void updateOrderTimeByOrderNo(String orderNo);
 }
