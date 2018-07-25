@@ -99,10 +99,12 @@
         </div>
         <p style="clear:both;"></p>
     </div>
+    <!--
     <div class="pager">
         <a href="#" class="weui-btn weui-btn_plain-primary">上一页</a>
         <a href="#" class="weui-btn weui-btn_plain-primary">下一页</a>
     </div>
+    -->
 </div>
 </body>
 
@@ -119,34 +121,36 @@
                 ticketItems: [],
                 pager: {
                     offset: 0,
-                    limit: 5
+                    limit: 100
                 }
             },
             created () {
-                var currentTime = new Date().getTime()
-                axios.post(
-                    '/byjc/tickeitem/pager',
-                    Qs.stringify(this.pager)
-                ).then(response => {
-                    this.ticketItems = response.data.rows
-                    this.ticketItems.forEach((data, index) =>{
-                            if (data.playTime - currentTime >= 60 * 60 * 1000) {
-                                data.canSelectSeat = true
-                            } else {
-                                data.canSelectSeat = false
-                            }
-                            data.playTime = timestampToDatetime(data.playTime)
-                            data.itemDetailUrl = '<%=path%>/ticket-page/ticket-item-detail/' + data.id + '/' + openid
-                            data.seatUrl = '<%=path%>/ticket-page/seat?itemId=' + data.id + '&floor=' + data.address + '&openid=' + openid
-                            data.headImg = '/byjc/' + data.headImg
-                        }
-                    )
-                }).catch(error => {
-                    console.log(error)
-                });
+                this.getItems()
             },
             methods: {
-
+                getItems () {
+                    var currentTime = new Date().getTime()
+                    axios.post(
+                        '/byjc/tickeitem/pager',
+                        Qs.stringify(this.pager)
+                    ).then(response => {
+                        this.ticketItems = response.data.rows
+                        this.ticketItems.forEach((data, index) =>{
+                                if (data.playTime - currentTime >= 60 * 60 * 1000) {
+                                    data.canSelectSeat = true
+                                } else {
+                                    data.canSelectSeat = false
+                                }
+                                data.playTime = timestampToDatetime(data.playTime)
+                                data.itemDetailUrl = '<%=path%>/ticket-page/ticket-item-detail/' + data.id + '/' + openid
+                                data.seatUrl = '<%=path%>/ticket-page/seat?itemId=' + data.id + '&floor=' + data.address + '&openid=' + openid
+                                data.headImg = '/byjc/' + data.headImg
+                            }
+                        )
+                    }).catch(error => {
+                        console.log(error)
+                    });
+                }
             }
         }
     );
