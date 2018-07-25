@@ -6,14 +6,14 @@ import java.util.Date;
 /**
  * TicketOrderDetailVO值对象类<br/>
  *
- * 创建于2018-07-18<br/>
+ * 创建于2018-07-25<br/>
  *
  * @author http://zywork.top 王振宇
  * @version 1.0
  */
 public class TicketOrderDetailVO extends BaseVO {
 
-    private static final long serialVersionUID = -9223372035991960592L;
+    private static final long serialVersionUID = -9223372036725293777L;
 
     /**
 	 * 编号
@@ -36,15 +36,21 @@ public class TicketOrderDetailVO extends BaseVO {
 	 * 更新时间
 	 */
 	private Date updateTime;
+	/**
+	 * 订单编号
+	 */
+	@Size(min = 0, max = 100, message = "必须小于100个字符")
+	private String orderNo;
 	
-    public TicketOrderDetailVO () {}
+    public TicketOrderDetailVO() {}
 
-    public TicketOrderDetailVO (Long id, Long ticketOrderId, String seat, Date createTime, Date updateTime) {
+    public TicketOrderDetailVO(Long id, Long ticketOrderId, String seat, Date createTime, Date updateTime, String orderNo) {
         this.id = id;
 		this.ticketOrderId = ticketOrderId;
 		this.seat = seat;
 		this.createTime = createTime;
 		this.updateTime = updateTime;
+		this.orderNo = orderNo;
 		
     }
 
@@ -88,6 +94,14 @@ public class TicketOrderDetailVO extends BaseVO {
 		this.updateTime = updateTime;
 	}
 
+	public String getOrderNo() {
+		return orderNo;
+	}
+
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
+	}
+
 	
     @Override
     public String toString() {
@@ -97,6 +111,7 @@ public class TicketOrderDetailVO extends BaseVO {
 				", seat = " + seat + 
 				", createTime = " + createTime + 
 				", updateTime = " + updateTime + 
+				", orderNo = " + orderNo + 
 				"}";
     }
 

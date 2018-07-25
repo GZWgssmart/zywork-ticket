@@ -19,6 +19,9 @@
 			<if test="updateTime != null">
 				update_time,
 			</if>
+			<if test="orderNo != null">
+				order_no,
+			</if>
 			
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -33,6 +36,9 @@
 			</if>
 			<if test="updateTime != null">
 				#{updateTime},
+			</if>
+			<if test="orderNo != null">
+				#{orderNo},
 			</if>
 			
         </trim>
@@ -68,6 +74,9 @@
 			<if test="updateTime != null">
 				update_time = #{updateTime},
 			</if>
+			<if test="orderNo != null">
+				order_no = #{orderNo},
+			</if>
 			
         </set>
         where id = #{id}
@@ -85,7 +94,7 @@
     </update>
 
     <sql id="select_columns">
-        id as id, ticket_order_id as ticketOrderId, seat as seat, create_time as createTime, update_time as updateTime
+        id as id, ticket_order_id as ticketOrderId, seat as seat, create_time as createTime, update_time as updateTime, order_no as orderNo
     </sql>
 
     <sql id="query_where_clause">
@@ -115,6 +124,9 @@
 		</if>
 		<if test="query != null and query.updateTimeStart != null and query.updateTimeEnd != null">
 			and update_time <![CDATA[ >= ]]> #{query.updateTimeStart} and update_time <![CDATA[ <= ]]> #{query.updateTimeEnd}
+		</if>
+		<if test="query != null and query.orderNo != null and query.orderNo != ''">
+			and order_no like concat('%', #{query.orderNo}, '%')
 		</if>
 		
     </sql>

@@ -59,10 +59,13 @@
 
         .bottom {
             width: 100%;
+            height: 45px;
+            line-height:45px;
             position: fixed;
             left: 0;
             bottom: 0;
             font-size: 16px;
+            z-index: 100;
         }
 
         .other-info {
@@ -101,16 +104,18 @@
             <hr/>
             <p>1、演出地点：赣州市章贡区</p>
             <p>2、客服电话：0797-8888888，13888888888（微信同号）</p>
-            <p>3、查询购票订单请点击公众号菜单中的个人中心</p>
-            <p>4、本产品有效期至本场演出结束，过期作废</p>
-            <p>5、大人小孩一人一票持票进场，2周岁内的小孩免票入场，须提前与客户联系登记</p>
-            <p>6、选座购票后，家长须出示个人中心购票订单现场取票。场次一经确定，不予更改，支付出票后不退不换，特此声明</p>
-            <p>7、剧场周边停车位较少，请大家尽量环保出行</p>
-            <p>8、有任何疑问请拨打客户电话或加客户微信</p>
+            <p>3、演出开始前一个小时内，演出开始后不再售票</p>
+            <p>4、查询购票订单请点击公众号菜单中的个人中心</p>
+            <p>5、本产品有效期至本场演出结束，过期作废</p>
+            <p>6、大人小孩一人一票持票进场，2周岁内的小孩免票入场，须提前与客户联系登记</p>
+            <p>7、选座购票后，家长须出示个人中心购票订单现场取票。场次一经确定，不予更改，支付出票后不退不换，特此声明</p>
+            <p>8、剧场周边停车位较少，请大家尽量环保出行</p>
+            <p>9、有任何疑问请拨打客户电话或加客户微信</p>
         </div>
     </div>
     <div class="bottom">
-        <a :href="ticketItemDetail.seatUrl" class="weui-btn weui-btn_primary">选座购票</a>
+        <a v-if="ticketItemDetail.canSelectSeat" :href="ticketItemDetail.seatUrl" class="weui-btn weui-btn_primary">选座购票</a>
+        <p v-else class="des" style="text-align: center;color: #ff7700">马上开演或已演出，无法购票</p>
     </div>
 </div>
 </body>
@@ -130,10 +135,17 @@
                 ticketItemDetail: {}
             },
             created () {
+                var currentTime = new Date().getTime()
                 axios.get('/byjc/tickeitem/one/' + this.itemId).then(response => {
                     this.ticketItemDetail = response.data
+                    if (this.ticketItemDetail.playTime - currentTime >= 60 * 60 * 1000) {
+                        this.ticketItemDetail.canSelectSeat = true
+                    } else {
+                        this.ticketItemDetail.canSelectSeat = false
+                    }
                     this.ticketItemDetail.playTime = timestampToDatetime(this.ticketItemDetail.playTime)
                     this.ticketItemDetail.seatUrl = '<%=path%>/ticket-page/seat?itemId=' + itemId + '&floor=' + this.ticketItemDetail.address + '&openid=' + openid
+                    this.ticketItemDetail.headImg = '/byjc/' + this.ticketItemDetail.headImg
                 }).catch(error => {
                     console.log(error)
                 })

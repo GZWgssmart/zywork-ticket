@@ -11,8 +11,10 @@ import top.zywork.dto.UserDTO;
 import top.zywork.enums.CharsetEnum;
 import top.zywork.enums.HashEncodeEnum;
 import top.zywork.service.UserService;
+import top.zywork.wechat.WechatAPI;
 import top.zywork.wechat.WechatUtil;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 
 @Controller
@@ -25,30 +27,45 @@ public class WechatLoginController {
     @RequestMapping("login")
     public ModelAndView login(ModelAndView modelAndView, String original, String code) throws UnsupportedEncodingException {
         WechatUtil wechatUtil = new WechatUtil();
-        String accessor = wechatUtil.authLogin(code);
-        if (accessor != null) {
-            JSONObject accessorJSON = JSON.parseObject(accessor);
-            String accessToken = accessorJSON.getString("access_token");
-            if (accessToken != null) {
-                String openid = accessorJSON.getString("openid");
-                String userInfo = wechatUtil.getUserInfo(accessToken, openid);
-                userInfo = new String(userInfo.getBytes(CharsetEnum.ISO8859_1.getValue()), CharsetEnum.UTF8.getValue());
-                JSONObject userInfoJSON = JSON.parseObject(userInfo);
-                UserDTO user = new UserDTO();
-                Object obj = userService.getByOpenid(openid);
-                if (obj != null) {
-                    user = (UserDTO) obj;
-                } else {
-                    user.setPassword(HashUtils.md5("123456", HashEncodeEnum.HEX));
-                    user.setOpenid(openid);
-                    user.setNickname(userInfoJSON.getString("nickname"));
-                    user.setHeadicon(userInfoJSON.getString("headimgurl"));
-                    int sex = userInfoJSON.getInteger("sex");
-                    user.setGender((byte)sex);
-                    userService.save(user);
+        if (code == null) {
+            if (original.contains("user")) {
+                modelAndView.setViewName("redirect:" + WechatAPI.ACCESS_LOGIN_URL.replace("{REDIRECT_URL}", WechatAPI.REDIRECT_URL + "?original=/front/user"));
+            } else if (original.contains("ticket_item")) {
+                modelAndView.setViewName("redirect:" + WechatAPI.ACCESS_LOGIN_URL.replace("{REDIRECT_URL}", WechatAPI.REDIRECT_URL + "?original=/front/ticket_item"));
+            }
+        } else {
+            String accessor = wechatUtil.authLogin(code);
+            if (accessor != null) {
+                JSONObject accessorJSON = JSON.parseObject(accessor);
+                String accessToken = accessorJSON.getString("access_token");
+                if (accessToken != null) {
+                    String openid = accessorJSON.getString("openid");
+                    String userInfo = wechatUtil.getUserInfo(accessToken, openid);
+                    userInfo = new String(userInfo.getBytes(CharsetEnum.ISO8859_1.getValue()), CharsetEnum.UTF8.getValue());
+                    JSONObject userInfoJSON = JSON.parseObject(userInfo);
+                    UserDTO user = new UserDTO();
+                    Object obj = userService.getByOpenid(openid);
+                    if (obj != null) {
+                        user = (UserDTO) obj;
+                    } else {
+                        user.setPassword(HashUtils.md5("123456", HashEncodeEnum.HEX));
+                        user.setOpenid(openid);
+                        user.setNickname(userInfoJSON.getString("nickname"));
+                        user.setHeadicon(userInfoJSON.getString("headimgurl"));
+                        int sex = userInfoJSON.getInteger("sex");
+                        user.setGender((byte) sex);
+                        userService.save(user);
+                    }
+                    modelAndView.addObject("user", user);
+                    modelAndView.setViewName(original);
                 }
-                modelAndView.addObject("user", user);
-                modelAndView.setViewName(original);
+            }
+        }
+        if (modelAndView.getViewName() == null) {
+            if (original.contains("user")) {
+                modelAndView.setViewName("redirect:" + WechatAPI.ACCESS_LOGIN_URL.replace("{REDIRECT_URL}", WechatAPI.REDIRECT_URL + "?original=/front/user"));
+            } else if (original.contains("ticket_item")) {
+                modelAndView.setViewName("redirect:" + WechatAPI.ACCESS_LOGIN_URL.replace("{REDIRECT_URL}", WechatAPI.REDIRECT_URL + "?original=/front/ticket_item"));
             }
         }
         return modelAndView;

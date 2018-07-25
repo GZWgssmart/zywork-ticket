@@ -5,14 +5,14 @@ import java.util.Date;
 /**
  * TicketOrderDetailQuery查询对象类<br/>
  *
- * 创建于2018-07-18<br/>
+ * 创建于2018-07-25<br/>
  *
  * @author http://zywork.top 王振宇
  * @version 1.0
  */
 public class TicketOrderDetailQuery extends BaseQuery {
 
-    private static final long serialVersionUID = -9223372036496118345L;
+    private static final long serialVersionUID = -9223372036563905826L;
 
     /**
 	 * 编号
@@ -50,10 +50,14 @@ public class TicketOrderDetailQuery extends BaseQuery {
 	 * 更新时间(结束)
 	 */
 	private Date updateTimeEnd;
+	/**
+	 * 订单编号
+	 */
+	private String orderNo;
 	
-    public TicketOrderDetailQuery () {}
+    public TicketOrderDetailQuery() {}
 
-    public TicketOrderDetailQuery (Long id, Long ticketOrderId, String seat, Date createTime, Date createTimeStart, Date createTimeEnd, Date updateTime, Date updateTimeStart, Date updateTimeEnd) {
+    public TicketOrderDetailQuery(Long id, Long ticketOrderId, String seat, Date createTime, Date createTimeStart, Date createTimeEnd, Date updateTime, Date updateTimeStart, Date updateTimeEnd, String orderNo) {
         this.id = id;
 		this.ticketOrderId = ticketOrderId;
 		this.seat = seat;
@@ -63,6 +67,7 @@ public class TicketOrderDetailQuery extends BaseQuery {
 		this.updateTime = updateTime;
 		this.updateTimeStart = updateTimeStart;
 		this.updateTimeEnd = updateTimeEnd;
+		this.orderNo = orderNo;
 		
     }
 
@@ -136,6 +141,14 @@ public class TicketOrderDetailQuery extends BaseQuery {
 
 	public void setUpdateTimeEnd(Date updateTimeEnd) {
 		this.updateTimeEnd = updateTimeEnd;
+	}
+
+	public String getOrderNo() {
+		return orderNo;
+	}
+
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
 	}
 
 	

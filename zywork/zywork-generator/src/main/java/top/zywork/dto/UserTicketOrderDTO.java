@@ -65,6 +65,8 @@ public class UserTicketOrderDTO extends BaseDTO {
 	 * 微信openid
 	 */
 	private String userOpenid;
+
+	private String userNickname;
 	
     public UserTicketOrderDTO () {}
 
@@ -180,8 +182,15 @@ public class UserTicketOrderDTO extends BaseDTO {
 		this.userOpenid = userOpenid;
 	}
 
-	
-    @Override
+	public String getUserNickname() {
+		return userNickname;
+	}
+
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
+	}
+
+	@Override
     public String toString() {
         return "UserTicketOrderDO{" +
                 "ticketOrderTicketItemId = " + ticketOrderTicketItemId + 

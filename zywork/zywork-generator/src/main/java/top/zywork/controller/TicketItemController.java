@@ -7,9 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import top.zywork.common.BindingResultUtils;
-import top.zywork.common.DozerMapperUtils;
-import top.zywork.common.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
+import top.zywork.common.*;
 import top.zywork.dto.PagerDTO;
 import top.zywork.dto.TicketItemDTO;
 import top.zywork.exception.ServiceException;
@@ -23,6 +22,9 @@ import top.zywork.vo.PagerVO;
 import top.zywork.vo.TicketItemVO;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,15 +71,21 @@ public class TicketItemController extends BaseController {
 
     @PostMapping("save")
     @ResponseBody
-    public ControllerStatusVO save(@Validated TicketItemVO ticketItemVO, BindingResult bindingResult) {
+    public ControllerStatusVO save(@Validated TicketItemVO ticketItemVO, MultipartFile headImgFile, BindingResult bindingResult, HttpServletRequest request) {
         ControllerStatusVO statusVO = new ControllerStatusVO();
         if (bindingResult.hasErrors()) {
             statusVO.dataErrorStatus(500, BindingResultUtils.errorString(bindingResult));
         } else {
             try {
+                if (headImgFile != null && !org.springframework.util.StringUtils.isEmpty(headImgFile.getOriginalFilename())) {
+                    String uploadDir = "static/ticket";
+                    String imgName = DateUtils.currentTimeMillis() + "" + RandomUtils.randomNum(10000, 99999) + FileUtils.getExtension(headImgFile.getOriginalFilename());
+                    headImgFile.transferTo(new File(FileUtils.uploadPath(request, uploadDir) + "/" + imgName));
+                    ticketItemVO.setHeadImg(uploadDir + "/" + imgName);
+                }
                 ticketItemService.save(getBeanMapper().map(ticketItemVO, TicketItemDTO.class));
                 statusVO.okStatus(200, "添加成功");
-            } catch (ServiceException e) {
+            } catch (ServiceException | IOException e) {
                 logger.error("添加失败：{}", e.getMessage());
                 statusVO.errorStatus(500, "添加失败");
             }
@@ -129,15 +137,21 @@ public class TicketItemController extends BaseController {
 
     @PostMapping("update")
     @ResponseBody
-    public ControllerStatusVO update(@Validated TicketItemVO ticketItemVO, BindingResult bindingResult) {
+    public ControllerStatusVO update(@Validated TicketItemVO ticketItemVO, MultipartFile headImgFile, BindingResult bindingResult, HttpServletRequest request) {
         ControllerStatusVO statusVO = new ControllerStatusVO();
         if (bindingResult.hasErrors()) {
             statusVO.dataErrorStatus(500, BindingResultUtils.errorString(bindingResult));
         } else {
             try {
+                if (headImgFile != null && !org.springframework.util.StringUtils.isEmpty(headImgFile.getOriginalFilename())) {
+                    String uploadDir = "static/ticket";
+                    String imgName = DateUtils.currentTimeMillis() + "" + RandomUtils.randomNum(10000, 99999) + FileUtils.getExtension(headImgFile.getOriginalFilename());
+                    headImgFile.transferTo(new File(FileUtils.uploadPath(request, uploadDir) + "/" + imgName));
+                    ticketItemVO.setHeadImg(uploadDir + "/" + imgName);
+                }
                 ticketItemService.update(getBeanMapper().map(ticketItemVO, TicketItemDTO.class));
                 statusVO.okStatus(200, "更新成功");
-            } catch (ServiceException e) {
+            } catch (ServiceException | IOException e) {
                 logger.error("更新失败：{}", e.getMessage());
                 statusVO.errorStatus(500, "更新失败");
             }

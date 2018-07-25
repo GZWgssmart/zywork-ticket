@@ -58,6 +58,8 @@ public class TicketOrderDTO extends BaseDTO {
 	 * 更新时间
 	 */
 	private Date updateTime;
+
+	private String selectedSeats;
 	
     public TicketOrderDTO () {}
 
@@ -164,8 +166,15 @@ public class TicketOrderDTO extends BaseDTO {
 		this.updateTime = updateTime;
 	}
 
-	
-    @Override
+	public String getSelectedSeats() {
+		return selectedSeats;
+	}
+
+	public void setSelectedSeats(String selectedSeats) {
+		this.selectedSeats = selectedSeats;
+	}
+
+	@Override
     public String toString() {
         return "TicketOrderDO{" +
                 "id = " + id + 

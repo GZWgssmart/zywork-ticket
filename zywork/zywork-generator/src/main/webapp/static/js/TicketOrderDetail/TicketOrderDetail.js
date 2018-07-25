@@ -77,6 +77,12 @@ function loadTable() {
 	sortable: true,
 	formatter: formatDate
 },
+{
+	title: '订单编号',
+	field: 'orderNo',
+	align: 'center',
+	sortable: true
+},
                      {
                          title: '操作',
                          field: '_operation',
@@ -110,7 +116,7 @@ function formatOperators(value, row, index) {
     return strArray.join('');
 }
 
-let fieldTitles = {'id':'编号','ticketOrderId':'订单编号','seat':'座位号','createTime-date':'创建时间','updateTime-date':'更新时间'};
+let fieldTitles = {'id':'编号','ticketOrderId':'订单编号','seat':'座位号','createTime-date':'创建时间','updateTime-date':'更新时间','orderNo':'订单编号'};
 
 window.operateEvents = {
     'click .to-detail': function (e, value, row, index) {
@@ -177,6 +183,16 @@ seat: {
 			message: '必须小于45个字符'
 		}
 	}
-}  
+}  ,
+orderNo: {
+	validators: {
+
+		stringLength: {
+			min: 0,
+			max: 100,
+			message: '必须小于100个字符'
+		}
+	}
+}
     };
 }

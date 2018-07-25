@@ -67,6 +67,12 @@ function ticketOrderDetailSearchTable() {
 	align: 'center',
 	sortable: true,
 	formatter: formatDate
+},
+{
+	title: '订单编号',
+	field: 'orderNo',
+	align: 'center',
+	sortable: true
 }
                  ]
     });

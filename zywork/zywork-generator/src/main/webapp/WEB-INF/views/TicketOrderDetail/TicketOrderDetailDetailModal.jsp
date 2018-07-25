@@ -30,6 +30,11 @@
     <span class="col-sm-8" id="updateTimeDetail"></span>
 </div>
 
+<div class="col-sm-6 detail-content">
+    <span class="col-sm-4 row-detail-title">订单编号：</span>
+    <span class="col-sm-8" id="orderNoDetail"></span>
+</div>
+
 
     </div>
 </div>

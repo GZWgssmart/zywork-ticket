@@ -61,13 +61,6 @@
 </div>
 
 <div class="col-sm-6 form-group">
-    <label for="headImgSearch" class="col-sm-4 control-label">封面图片：</label>
-    <div class="col-sm-8">
-        <input id="headImgSearch" name="headImg" class="form-control" placeholder="请输入封面图片">
-    </div>
-</div>
-
-<div class="col-sm-6 form-group">
     <label for="playTimeStartSearch" class="col-sm-4 control-label">放映时间(开始)：</label>
     <div class="input-group date form_datetime col-sm-8" style="padding-left: 15px; padding-right: 15px;">
         <input id="playTimeStartSearch" name="playTimeStart" class="form-control input-datetime" type="text" value="" readonly placeholder="请选择放映时间(开始)"/>

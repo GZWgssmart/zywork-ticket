@@ -112,7 +112,7 @@
     </update>
 
     <sql id="select_columns">
-        t_ticket_order.ticket_item_id as ticketOrderTicketItemId, t_ticket_order.openid as ticketOrderOpenid, t_ticket_order.order_no as ticketOrderOrderNo, t_ticket_order.order_time as ticketOrderOrderTime, t_ticket_order.unit_price as ticketOrderUnitPrice, t_ticket_order.total_seat as ticketOrderTotalSeat, t_ticket_order.total_price as ticketOrderTotalPrice, t_ticket_item.id as ticketItemId, t_ticket_item.title as ticketItemTitle, t_ticket_item.head_img as ticketItemHeadImg, t_ticket_item.play_time as ticketItemPlayTime, t_user.openid as userOpenid
+        t_ticket_order.ticket_item_id as ticketOrderTicketItemId, t_ticket_order.openid as ticketOrderOpenid, t_ticket_order.order_no as ticketOrderOrderNo, t_ticket_order.order_time as ticketOrderOrderTime, t_ticket_order.unit_price as ticketOrderUnitPrice, t_ticket_order.total_seat as ticketOrderTotalSeat, t_ticket_order.total_price as ticketOrderTotalPrice, t_ticket_item.id as ticketItemId, t_ticket_item.title as ticketItemTitle, t_ticket_item.head_img as ticketItemHeadImg, t_ticket_item.play_time as ticketItemPlayTime, t_user.openid as userOpenid, t_user.nickname as userNickname
     </sql>
 
     <sql id="query_where_clause">
@@ -163,6 +163,9 @@
 		</if>
 		<if test="query != null and query.userOpenid != null and query.userOpenid != ''">
 			and t_user.openid like concat('%', #{query.userOpenid}, '%')
+		</if>
+		<if test="query != null and query.userNickname != null and query.userNickname != ''">
+			and t_user.nickname like concat('%', #{query.userNickname}, '%')
 		</if>
 		
         and
@@ -219,10 +222,10 @@
         order by
 		t_ticket_order.order_time desc
         <if test="pager.sort != null and pager.sort != ''">
-            ${pager.sort} ${pager.order}
+            , ${pager.sort} ${pager.order}
         </if>
         <if test="pager.sort == null or pager.sort == ''">
-            t_ticket_order.update_time desc, t_ticket_order.create_time desc
+            , t_ticket_order.update_time desc, t_ticket_order.create_time desc
         </if>
         limit #{pager.beginIndex}, #{pager.pageSize}
     </select>
@@ -232,6 +235,7 @@
         <where>
             <include refid="query_where_clause"/>
         </where>
+		and t_ticket_order.order_time is not null
     </select>
 
 </mapper>

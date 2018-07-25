@@ -61,7 +61,7 @@ function loadTable() {
 	title: '封面图片',
 	field: 'headImg',
 	align: 'center',
-	sortable: true
+    formatter: formatImg
 },
 {
 	title: '放映时间',
@@ -179,6 +179,14 @@ function formatDetail(index, row) {
     return detail;
 }
 
+function formatImg(index, row) {
+    if (row.headImg != null && row.headImg != '') {
+        return '<img src="' + contextPath + '/' + row.headImg + '" style="width:60px;height:60px;"/>';
+    } else {
+        return '-';
+    }
+}
+
 function queryParams(params) {
     let query = {
         limit: params.limit,
@@ -210,11 +218,9 @@ title: {
 headImg: {
 	validators: {
 
-		stringLength: {
-			min: 0,
-			max: 500,
-			message: '必须小于500个字符'
-		}
+        notEmpty: {
+            message: '封面图片是必须项'
+        }
 	}
 },
 playTime: {

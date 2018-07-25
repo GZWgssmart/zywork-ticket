@@ -85,7 +85,7 @@ function loadTable() {
 	title: '头像',
 	field: 'headicon',
 	align: 'center',
-	sortable: true
+	formatter: formatImg
 },
 {
 	title: '昵称',
@@ -135,6 +135,14 @@ function loadTable() {
                      }
                  ]
     });
+}
+
+function formatImg(index, row) {
+    if (row.headicon != null && row.headicon != '') {
+        return '<img src="' + row.headicon + '" style="width:60px;height:60px;"/>';
+    } else {
+        return '-';
+    }
 }
 
 function formatOperators(value, row, index) {

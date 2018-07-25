@@ -205,27 +205,45 @@
                         this.totalPay = (this.currentItem.unitPrice * this.selectedSeat.length).toFixed(2)
                     },
                     submitOrderAndPay () {
-                        axios.post(
-                            '/byjc/tickeorder/save',
-                            Qs.stringify({
-                                openid: this.openid,
-                                itemId: this.itemId,
-                                unitPrice: this.currentItem.unitPrice,
-                                totalSeat: this.selectedSeat.length,
-                                totalPrice: this.totalPay,
-                                allSeatsString: this.selectedSeatString
+                        var currentTime = new Date().getTime()
+                        if (this.currentItem.playTime - currentTime >= 60 * 60 * 1000) {
+                            if (this.totalPay <= 0.0) {
+                                alert('请先选座再支付！')
+                                return;
+                            }
+                            var selectedSeats = ''
+                            this.selectedSeat.forEach((item, index) => {
+                                if (selectedSeats == '') {
+                                    selectedSeats = selectedSeats + item.seat
+                                } else {
+                                    selectedSeats = selectedSeats + ';' +  item.seat
+                                }
                             })
-                        ).then(response => {
-                            this.pay(
-                                response.data.appId,
-                                response.data.timeStamp,
-                                response.data.nonceStr,
-                                response.data.packages,
-                                response.data.paySign
-                            )
-                        }).catch(error => {
-                            console.log(error)
-                        })
+                            axios.post(
+                                '/byjc/tickeorder/save',
+                                Qs.stringify({
+                                    openid: this.openid,
+                                    ticketItemId: this.itemId,
+                                    unitPrice: this.currentItem.unitPrice,
+                                    totalSeat: this.selectedSeat.length,
+                                    totalPrice: this.totalPay,
+                                    allSeatsString: this.selectedSeatString,
+                                    selectedSeats: selectedSeats
+                                })
+                            ).then(response => {
+                                this.pay(
+                                    response.data.appId,
+                                    response.data.timeStamp,
+                                    response.data.nonceStr,
+                                    response.data.packages,
+                                    response.data.paySign
+                                )
+                            }).catch(error => {
+                                console.log(error)
+                            })
+                        } else {
+                            alert('开演前一小时内，或已经演出，无法购票')
+                        }
                     },
                     pay (appId, timestamp, nonceStr, packages, paySign) {
                         if (typeof WeixinJSBridge == "undefined") {

@@ -246,14 +246,16 @@ function saveOrEdit(button, modalId, formId, postUrl, tableId, tableUrl) {
 function saveOrEditWithFile(button, modalId, formId, postUrl, tableId, tableUrl) {
     let form = $('#' + formId);
     form.bootstrapValidator('validate');
+    let formData = new FormData(document.getElementById(formId));
     if (form.data('bootstrapValidator').isValid()) {
         let btn = $(button);
         btn.attr("disabled", "disabled");
-        let formData = new FormData(form[0]);
         $.ajax({
             url: contextPath + postUrl,
             type: 'POST',
             data: formData,
+            async: false,
+            cache: false,
             contentType: false,
             processData: false,
             success: function (data) {

@@ -60,10 +60,10 @@
             <p class="order-time">订单号：{{item.ticketOrderOrderNo}}</p>
             <p class="play-time">演出时间：{{item.ticketItemPlayTime}}</p>
             <p class="order-time">购票时间：{{item.ticketOrderOrderTime}}</p>
+            <p class="total-seat">总座位数：{{item.ticketOrderTotalSeat}}</p>
             <p class="unit-price">单价：{{item.ticketOrderUnitPrice}}</p>
             <p class="unit-price">总价：{{item.ticketOrderTotalPrice}}</p>
-            <p class="total-seat">总座位数：{{item.ticketOrderTotalSeat}}</p>
-            <p class="all-seats">座位信息：{{item.allSeatsString}}</p>
+            <a href="javascript;:" :onclick="showSeats(item.orderNo)">显示座位信息</a>
         </div>
         <p style="clear:both;"></p>
     </div>
@@ -80,8 +80,7 @@
         {
             el: '#app',
             data: {
-                ticketOrders:[],
-                allSeats:[]
+                ticketOrders:[]
             },
             created () {
                 axios.post(
@@ -100,12 +99,32 @@
                         item.ticketOrderOrderTime = timestampToDatetime(item.ticketOrderOrderTime)
                         item.ticketItemHeadImg = '/byjc/' + item.ticketItemHeadImg
                     })
-
                 }).catch(error => {
                     console.log(error)
                 })
             },
             methods: {
+                showSeat (orderNo) {
+                    axios.post(
+                        '/byjc/tickeorder-detail/pager-cond',
+                        Qs.stringify(
+                            {
+                                offset: 0,
+                                limit: 100,
+                                orderNo: orderNo
+                            }
+                        )
+                    ).then(response => {
+                        var selectedSeatString = ''
+                        response.data.rows.selectedSeat.forEach((element, index) => {
+                            selectedSeatString += element.seat.split('-')[0] + '排' + element.seat.split('-')[1] + '座 '
+                        })
+                        alert(selectedSeatString)
+                    }).catch(error => {
+                        console.log(error)
+                    })
+
+                }
             }
         }
     );

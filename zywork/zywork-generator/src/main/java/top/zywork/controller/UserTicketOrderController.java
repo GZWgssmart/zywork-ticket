@@ -3,6 +3,7 @@ package top.zywork.controller;
 import org.dozer.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -10,16 +11,17 @@ import org.springframework.web.bind.annotation.*;
 import top.zywork.common.BindingResultUtils;
 import top.zywork.common.DozerMapperUtils;
 import top.zywork.common.StringUtils;
+import top.zywork.dao.TicketOrderDetailDAO;
 import top.zywork.dto.PagerDTO;
+import top.zywork.dto.TicketOrderDetailDTO;
 import top.zywork.dto.UserTicketOrderDTO;
 import top.zywork.exception.ServiceException;
-import top.zywork.query.PageQuery;
-import top.zywork.query.StatusQueries;
-import top.zywork.query.StatusQuery;
-import top.zywork.query.UserTicketOrderQuery;
+import top.zywork.query.*;
+import top.zywork.service.TicketOrderDetailService;
 import top.zywork.service.UserTicketOrderService;
 import top.zywork.vo.ControllerStatusVO;
 import top.zywork.vo.PagerVO;
+import top.zywork.vo.TicketOrderDetailVO;
 import top.zywork.vo.UserTicketOrderVO;
 
 import javax.annotation.Resource;
@@ -41,6 +43,8 @@ public class UserTicketOrderController extends BaseController {
     private static final Logger logger = LoggerFactory.getLogger(UserTicketOrderController.class);
 
     private UserTicketOrderService userTicketOrderService;
+
+    private TicketOrderDetailService ticketOrderDetailService;
 
     @GetMapping("page")
     public String page() {
@@ -227,7 +231,26 @@ public class UserTicketOrderController extends BaseController {
             PagerDTO pagerDTO = userTicketOrderService.listPageByCondition(pageQuery, userTicketOrderQuery);
             Mapper mapper = getBeanMapper();
             pagerVO = mapper.map(pagerDTO, PagerVO.class);
-            pagerVO.setRows(DozerMapperUtils.mapList(mapper, pagerDTO.getRows(), UserTicketOrderVO.class));
+            List<Object> userTicketOrderVOList = DozerMapperUtils.mapList(mapper, pagerDTO.getRows(), UserTicketOrderVO.class);
+            for (Object obj : userTicketOrderVOList) {
+                UserTicketOrderVO userTicketOrderVO = (UserTicketOrderVO) obj;
+                TicketOrderDetailQuery ticketOrderDetailQuery = new TicketOrderDetailQuery();
+                ticketOrderDetailQuery.setOrderNo(userTicketOrderVO.getTicketOrderOrderNo());
+                PagerDTO allSeats = ticketOrderDetailService.listPageByCondition(new PageQuery(1, 100, null, null), ticketOrderDetailQuery);
+                StringBuilder allSeatString = new StringBuilder();
+                for (Object seatObj : allSeats.getRows()) {
+                    TicketOrderDetailDTO ticketOrderDetailDTO = (TicketOrderDetailDTO) seatObj;
+                    String seat = ticketOrderDetailDTO.getSeat();
+                    if (seat.contains("-")) {
+                        allSeatString.append(ticketOrderDetailDTO.getSeat().split("-")[0])
+                                .append("排")
+                                .append(ticketOrderDetailDTO.getSeat().split("-")[1])
+                                .append("座 ");
+                    }
+                }
+                userTicketOrderVO.setAllSeatsString(allSeatString.toString());
+            }
+            pagerVO.setRows(userTicketOrderVOList);
         } catch (ServiceException e) {
             logger.error("返回指定条件的分页对象JSON数据失败：{}", e.getMessage());
         }
@@ -237,5 +260,10 @@ public class UserTicketOrderController extends BaseController {
     @Resource
     public void setUserTicketOrderService(UserTicketOrderService userTicketOrderService) {
         this.userTicketOrderService = userTicketOrderService;
+    }
+
+    @Autowired
+    public void setTicketOrderDetailService(TicketOrderDetailService ticketOrderDetailService) {
+        this.ticketOrderDetailService = ticketOrderDetailService;
     }
 }

@@ -81,6 +81,8 @@ public class UserTicketOrderQuery extends BaseQuery {
 	 * 微信openid
 	 */
 	private String userOpenid;
+
+	private String userNickname;
 	
     public UserTicketOrderQuery () {}
 
@@ -232,8 +234,15 @@ public class UserTicketOrderQuery extends BaseQuery {
 		this.userOpenid = userOpenid;
 	}
 
-	
-    @Override
+	public String getUserNickname() {
+		return userNickname;
+	}
+
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
+	}
+
+	@Override
     public String toString() {
         return "UserTicketOrderDO{" +
                 "}";

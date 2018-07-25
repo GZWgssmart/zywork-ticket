@@ -77,7 +77,11 @@
                 <img :src="item.headImg">
             </a>
             <br/>
-            <a :href="item.seatUrl" class="weui-btn weui-btn_plain-primary">选座购票</a>
+            <a v-if="item.canSelectSeat" :href="item.seatUrl" class="weui-btn weui-btn_plain-primary">选座购票</a>
+            <span v-else class="des" style="color:#ff7700; text-align:center;">
+                马上开演或已演出<br/>
+                无法购票
+            </span>
         </div>
         <div class="detail">
             <a :href="item.itemDetailUrl">
@@ -119,15 +123,22 @@
                 }
             },
             created () {
+                var currentTime = new Date().getTime()
                 axios.post(
                     '/byjc/tickeitem/pager',
                     Qs.stringify(this.pager)
                 ).then(response => {
                     this.ticketItems = response.data.rows
                     this.ticketItems.forEach((data, index) =>{
+                            if (data.playTime - currentTime >= 60 * 60 * 1000) {
+                                data.canSelectSeat = true
+                            } else {
+                                data.canSelectSeat = false
+                            }
                             data.playTime = timestampToDatetime(data.playTime)
                             data.itemDetailUrl = '<%=path%>/ticket-page/ticket-item-detail/' + data.id + '/' + openid
                             data.seatUrl = '<%=path%>/ticket-page/seat?itemId=' + data.id + '&floor=' + data.address + '&openid=' + openid
+                            data.headImg = '/byjc/' + data.headImg
                         }
                     )
                 }).catch(error => {

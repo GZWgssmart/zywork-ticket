@@ -68,6 +68,10 @@ public class UserTicketOrderVO extends BaseVO {
 	 * 微信openid
 	 */
 	private String userOpenid;
+
+	private String userNickname;
+
+	private String allSeatsString;
 	
     public UserTicketOrderVO () {}
 
@@ -183,8 +187,23 @@ public class UserTicketOrderVO extends BaseVO {
 		this.userOpenid = userOpenid;
 	}
 
-	
-    @Override
+	public String getUserNickname() {
+		return userNickname;
+	}
+
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
+	}
+
+	public String getAllSeatsString() {
+		return allSeatsString;
+	}
+
+	public void setAllSeatsString(String allSeatsString) {
+		this.allSeatsString = allSeatsString;
+	}
+
+	@Override
     public String toString() {
         return "UserTicketOrderDO{" +
                 "ticketOrderTicketItemId = " + ticketOrderTicketItemId + 

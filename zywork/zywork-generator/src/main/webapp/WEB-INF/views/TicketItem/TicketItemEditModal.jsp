@@ -16,7 +16,7 @@
 <div class="form-group">
     <label for="headImg" class="col-sm-2 control-label">封面图片：</label>
     <div class="col-sm-10">
-        <input id="headImg" name="headImg" class="form-control" placeholder="请输入封面图片"/>
+        <input type="file" id="headImg" name="headImgFile" class="form-control" placeholder="请上传封面图片"/>
     </div>
 </div>
 
@@ -62,7 +62,7 @@
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
-    <button id="btn-edit" type="button" class="btn btn-primary" onclick="saveOrEdit('btn-edit', 'edit-modal', 'edit-form', '/tickeitem/update', 'data-list', '/tickeitem/pager-cond')">确认</button>
+    <button id="btn-edit" type="button" class="btn btn-primary" onclick="saveOrEditWithFile('btn-edit', 'edit-modal', 'edit-form', '/tickeitem/update', 'data-list', '/tickeitem/pager-cond')">确认</button>
 </div>
 
 <script>

@@ -103,6 +103,13 @@
     </div>
 </div>
 
+<div class="col-sm-6 form-group">
+    <label for="orderNoSearch" class="col-sm-4 control-label">订单编号：</label>
+    <div class="col-sm-8">
+        <input id="orderNoSearch" name="orderNo" class="form-control" placeholder="请输入订单编号">
+    </div>
+</div>
+
 
 
                 <div class="col-sm-6 form-group text-right" style="padding-right: 30px;">

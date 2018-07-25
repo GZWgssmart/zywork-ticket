@@ -65,6 +65,8 @@ public class UserTicketOrderDO extends BaseDO {
 	 * 微信openid
 	 */
 	private String userOpenid;
+
+	private String userNickname;
 	
     public UserTicketOrderDO () {}
 
@@ -180,8 +182,15 @@ public class UserTicketOrderDO extends BaseDO {
 		this.userOpenid = userOpenid;
 	}
 
-	
-    @Override
+	public String getUserNickname() {
+		return userNickname;
+	}
+
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
+	}
+
+	@Override
     public String toString() {
         return "UserTicketOrderDO{" +
                 "ticketOrderTicketItemId = " + ticketOrderTicketItemId + 

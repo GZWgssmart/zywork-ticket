@@ -52,18 +52,6 @@ function loadTable() {
 	formatter: formatTableIndex
 },
 {
-	title: '剧目编号',
-	field: 'ticketOrderTicketItemId',
-	align: 'center',
-	sortable: true
-},
-{
-	title: '微信openid',
-	field: 'ticketOrderOpenid',
-	align: 'center',
-	sortable: true
-},
-{
 	title: '订单编号',
 	field: 'ticketOrderOrderNo',
 	align: 'center',
@@ -95,12 +83,6 @@ function loadTable() {
 	sortable: true
 },
 {
-	title: '编号',
-	field: 'ticketItemId',
-	align: 'center',
-	sortable: true
-},
-{
 	title: '名称',
 	field: 'ticketItemTitle',
 	align: 'center',
@@ -110,7 +92,7 @@ function loadTable() {
 	title: '封面图片',
 	field: 'ticketItemHeadImg',
 	align: 'center',
-	sortable: true
+	formatter: formatImg
 },
 {
 	title: '放映时间',
@@ -125,6 +107,18 @@ function loadTable() {
 	align: 'center',
 	sortable: true
 },
+            {
+                title: '昵称',
+                field: 'userNickname',
+                align: 'center',
+                sortable: true
+            },
+            {
+                title: '座位信息',
+                field: 'allSeatsString',
+                align: 'center',
+				formatter: formatSeats
+            },
                      {
                          title: '操作',
                          field: '_operation',
@@ -135,6 +129,17 @@ function loadTable() {
                      }
                  ]
     });
+}
+function formatImg(index, row) {
+    if (row.ticketItemHeadImg != null && row.ticketItemHeadImg != '') {
+        return '<img src="' + contextPath + '/' + row.ticketItemHeadImg + '" style="width:60px;height:60px;"/>';
+    } else {
+        return '-';
+    }
+}
+
+function formatSeats(index, row) {
+	return '<div style="width: 200px;">' + row.allSeatsString + '</div>';
 }
 
 function formatOperators(value, row, index) {

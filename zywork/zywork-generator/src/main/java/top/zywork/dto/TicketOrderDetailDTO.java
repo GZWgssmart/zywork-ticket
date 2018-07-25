@@ -5,14 +5,14 @@ import java.util.Date;
 /**
  * TicketOrderDetailDTO数据传输对象类<br/>
  *
- * 创建于2018-07-18<br/>
+ * 创建于2018-07-25<br/>
  *
  * @author http://zywork.top 王振宇
  * @version 1.0
  */
 public class TicketOrderDetailDTO extends BaseDTO {
 
-    private static final long serialVersionUID = -9223372035378399632L;
+    private static final long serialVersionUID = -9223372035278410570L;
 
     /**
 	 * 编号
@@ -34,15 +34,20 @@ public class TicketOrderDetailDTO extends BaseDTO {
 	 * 更新时间
 	 */
 	private Date updateTime;
+	/**
+	 * 订单编号
+	 */
+	private String orderNo;
 	
-    public TicketOrderDetailDTO () {}
+    public TicketOrderDetailDTO() {}
 
-    public TicketOrderDetailDTO (Long id, Long ticketOrderId, String seat, Date createTime, Date updateTime) {
+    public TicketOrderDetailDTO(Long id, Long ticketOrderId, String seat, Date createTime, Date updateTime, String orderNo) {
         this.id = id;
 		this.ticketOrderId = ticketOrderId;
 		this.seat = seat;
 		this.createTime = createTime;
 		this.updateTime = updateTime;
+		this.orderNo = orderNo;
 		
     }
 
@@ -86,6 +91,14 @@ public class TicketOrderDetailDTO extends BaseDTO {
 		this.updateTime = updateTime;
 	}
 
+	public String getOrderNo() {
+		return orderNo;
+	}
+
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
+	}
+
 	
     @Override
     public String toString() {
@@ -95,6 +108,7 @@ public class TicketOrderDetailDTO extends BaseDTO {
 				", seat = " + seat + 
 				", createTime = " + createTime + 
 				", updateTime = " + updateTime + 
+				", orderNo = " + orderNo + 
 				"}";
     }
 

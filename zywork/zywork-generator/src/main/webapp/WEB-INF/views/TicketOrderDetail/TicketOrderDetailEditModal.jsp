@@ -20,6 +20,13 @@
     </div>
 </div>
 
+<div class="form-group">
+    <label for="orderNo" class="col-sm-2 control-label">订单编号：</label>
+    <div class="col-sm-10">
+        <input id="orderNo" name="orderNo" class="form-control" placeholder="请输入订单编号"/>
+    </div>
+</div>
+
 
     </form>
 </div>
