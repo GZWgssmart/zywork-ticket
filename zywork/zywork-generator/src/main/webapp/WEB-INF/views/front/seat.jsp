@@ -179,6 +179,20 @@
                     }).catch (error => {
                         console.log(error)
                     })
+                    axios.get('/byjc/tickeorder-detail/selected-seats/' + this.itemId).then(response => {
+                        for (var k = 0; k < response.data.length; k++) {
+                            for (var i = 0; i < this.seats.length; i++) {
+                                for (var j = 0; j < this.seats[i].length; j++) {
+                                    if (this.seats[i][j].seat == response.data[k].seat) {
+                                        this.seats[i][j].status = 3
+                                        break
+                                    }
+                                }
+                            }
+                        }
+                    }).catch(error => {
+                        console.log(error)
+                    })
                 },
                 methods: {
                     selectSeat (seat, col, event) {
