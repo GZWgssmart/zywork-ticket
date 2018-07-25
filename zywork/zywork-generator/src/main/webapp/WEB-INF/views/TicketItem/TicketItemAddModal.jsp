@@ -45,7 +45,7 @@
 <div class="form-group">
     <label for="address" class="col-sm-2 control-label">放映地点：</label>
     <div class="col-sm-10">
-        <input id="address" name="address" class="form-control" placeholder="请输入放映地点"/>
+        <select id="address" name="address" class="form-control" data-placeholder="请选择放映地点"></select>
     </div>
 </div>
 
@@ -66,4 +66,20 @@
 
 <script>
     initDatetime();
+    $("#address").select2({
+        data: [
+            {
+                id: '1',
+                text: '剧场一楼'
+            },
+            {
+                id: '2',
+                text: '剧场二楼'
+            }
+        ],
+        language: 'zh-CN',
+        placeholder:'请选择数据表',
+        width: '100%',
+        theme: "bootstrap"
+    });
 </script>

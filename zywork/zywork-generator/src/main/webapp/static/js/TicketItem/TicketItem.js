@@ -86,7 +86,8 @@ function loadTable() {
 	title: '放映地点',
 	field: 'address',
 	align: 'center',
-	sortable: true
+	sortable: true,
+    formatter: formatAddress
 },
 {
 	title: '描述',
@@ -120,6 +121,14 @@ function loadTable() {
     });
 }
 
+function formatAddress(index, row) {
+    if (row.address == 1) {
+        return "剧场一楼"
+    } else if (row.address == 2) {
+        return '剧场二楼'
+    }
+}
+
 function formatOperators(value, row, index) {
     let strArray = [];
     strArray.push('<div class="btn-group">');
@@ -143,12 +152,46 @@ function formatOperators(value, row, index) {
 
 let fieldTitles = {'id':'编号','title':'名称','headImg':'封面图片','playTime-date':'放映时间','price':'原价','unitPrice':'优惠价','address':'放映地点','description':'描述','createTime-date':'创建时间','updateTime-date':'更新时间'};
 
+function showRemoteEditModalTicketItem(modalId, url, formId, row, validateFields) {
+    let modal = $('#' + modalId);
+    modal.on('shown.bs.modal', function (e) {
+        $('#' + formId).autofill(row);
+        showDatetimeInEditModal(formId, row);
+        $("#address").select2({
+            data: [
+                {
+                    id: '1',
+                    text: '剧场一楼',
+                    selected: row.address == 1
+                },
+                {
+                    id: '2',
+                    text: '剧场二楼',
+                    selected: row.address == 2
+                }
+            ],
+            language: 'zh-CN',
+            placeholder:'请选择数据表',
+            width: '100%',
+            theme: "bootstrap"
+        });
+        validateForm(formId, 'edit-save', validateFields);
+    });
+    modal.on('hidden.bs.modal', function (e) {
+        $('#' + formId)[0].reset();
+        resetValidateForm(formId);
+    });
+    modal.modal({
+        remote: contextPath + url
+    });
+}
+
 window.operateEvents = {
     'click .to-detail': function (e, value, row, index) {
         showRemoteDetailModal('detail-modal', '/tickeitem/detail-modal', row, fieldTitles);
     },
     'click .to-edit': function (e, value, row, index) {
-        showRemoteEditModal('edit-modal', '/tickeitem/edit-modal', 'edit-form', row, validateFields());
+        showRemoteEditModalTicketItem('edit-modal', '/tickeitem/edit-modal', 'edit-form', row, validateFields());
     },
     'click .to-inactive': function (e, value, row, index) {
         active('/tickeitem/active', row.id, 1, 'data-list', '/tickeitem/pager-cond');
