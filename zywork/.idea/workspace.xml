@@ -9,7 +9,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3891c4bd-30e2-4dc3-9494-cb36e46aec05" name="Default" comment="" />
+    <list default="true" id="3891c4bd-30e2-4dc3-9494-cb36e46aec05" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/User.js" afterPath="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/User.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/zywork-common/target/" />
@@ -114,11 +116,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ticket_order.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ticket_order.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_order.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="90" column="25" lean-forward="true" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+            <state relative-caret-position="303">
+              <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -126,14 +128,61 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="User.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/User.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="70" column="2" lean-forward="false" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
+              <folding>
+                <marker date="1532566756483" expanded="true" signature="2697:2720" ph="..." />
+                <marker date="1532566756483" expanded="true" signature="3131:3137" ph="&amp;nbsp;" />
+                <marker date="1532566756483" expanded="true" signature="3596:3602" ph="&amp;nbsp;" />
+                <marker date="1532566756483" expanded="true" signature="3797:3803" ph="&amp;nbsp;" />
+                <marker date="1532566756483" expanded="true" signature="3988:3994" ph="&amp;nbsp;" />
+                <marker date="1532566756483" expanded="true" signature="4158:4164" ph="&amp;nbsp;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ticket_item_detail.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item_detail.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="987">
+              <caret line="144" column="21" lean-forward="true" selection-start-line="140" selection-start-column="20" selection-end-line="144" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="seat.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/seat.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="280" column="33" lean-forward="true" selection-start-line="280" selection-start-column="33" selection-end-line="280" selection-end-column="33" />
+            <state relative-caret-position="565">
+              <caret line="125" column="32" lean-forward="true" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#i#3;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ticket_item.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1233">
+              <caret line="153" column="13" lean-forward="false" selection-start-line="126" selection-start-column="12" selection-end-line="153" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/user.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-281">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -308,7 +357,6 @@
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dto/UserTicketOrderDTO.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/query/UserTicketOrderQuery.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/UserTicketOrder/UserTicketOrder.js" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/User.js" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/UserTicketOrderDAOMapper.xml" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/TicketOrderController.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item.jsp" />
@@ -323,6 +371,7 @@
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/seat.jsp" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDetailDAOMapper.xml" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_order.jsp" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/User.js" />
       </list>
     </option>
   </component>
@@ -545,6 +594,17 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
@@ -931,7 +991,7 @@
       <workItem from="1531381460513" duration="15247000" />
       <workItem from="1531884632574" duration="43521000" />
       <workItem from="1532320764721" duration="55829000" />
-      <workItem from="1532509318363" duration="15967000" />
+      <workItem from="1532509318363" duration="16745000" />
     </task>
     <servers />
   </component>
@@ -968,7 +1028,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1079147000" />
+    <option name="totallyTimeSpent" value="1079925000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1115,13 +1175,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/TicketOrder/TicketOrder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-394">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/TicketOrderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1351,21 +1404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="144" column="5" lean-forward="true" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
-          <folding>
-            <marker date="1532521901428" expanded="true" signature="2744:2767" ph="..." />
-            <marker date="1532521901428" expanded="true" signature="3031:3037" ph="&amp;nbsp;" />
-            <marker date="1532521901428" expanded="true" signature="3496:3502" ph="&amp;nbsp;" />
-            <marker date="1532521901428" expanded="true" signature="3697:3703" ph="&amp;nbsp;" />
-            <marker date="1532521901428" expanded="true" signature="3888:3894" ph="&amp;nbsp;" />
-            <marker date="1532521901428" expanded="true" signature="4058:4064" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/UserTicketOrder/UserTicketOrder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -1379,14 +1417,6 @@
             <marker date="1532521759067" expanded="true" signature="4281:4287" ph="&amp;nbsp;" />
             <marker date="1532521759067" expanded="true" signature="4451:4457" ph="&amp;nbsp;" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item_detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="144" column="21" lean-forward="true" selection-start-line="140" selection-start-column="20" selection-end-line="144" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,14 +1444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="93" column="65" lean-forward="false" selection-start-line="93" selection-start-column="65" selection-end-line="93" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="153" column="13" lean-forward="false" selection-start-line="126" selection-start-column="12" selection-end-line="153" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1555,16 +1577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/seat.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="280" column="33" lean-forward="true" selection-start-line="280" selection-start-column="33" selection-end-line="280" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#i#3;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDetailDAOMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -1588,12 +1600,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/seat.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="125" column="32" lean-forward="true" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#i#3;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1233">
+          <caret line="153" column="13" lean-forward="false" selection-start-line="126" selection-start-column="12" selection-end-line="153" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-281">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item_detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="144" column="21" lean-forward="true" selection-start-line="140" selection-start-column="20" selection-end-line="144" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_order.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="90" column="25" lean-forward="true" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+        <state relative-caret-position="303">
+          <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/static/js/User/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="70" column="2" lean-forward="false" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
+          <folding>
+            <marker date="1532566756483" expanded="true" signature="2697:2720" ph="..." />
+            <marker date="1532566756483" expanded="true" signature="3131:3137" ph="&amp;nbsp;" />
+            <marker date="1532566756483" expanded="true" signature="3596:3602" ph="&amp;nbsp;" />
+            <marker date="1532566756483" expanded="true" signature="3797:3803" ph="&amp;nbsp;" />
+            <marker date="1532566756483" expanded="true" signature="3988:3994" ph="&amp;nbsp;" />
+            <marker date="1532566756483" expanded="true" signature="4158:4164" ph="&amp;nbsp;" />
           </folding>
         </state>
       </provider>

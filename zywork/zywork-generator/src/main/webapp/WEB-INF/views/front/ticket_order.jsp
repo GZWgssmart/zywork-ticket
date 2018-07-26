@@ -53,21 +53,23 @@
 
 <body>
 <div id="app">
-    <div v-if="ticketOrders.length > 0" v-for="(item, index) in ticketOrders" class="order">
-        <img :src="item.ticketItemHeadImg"/>
-        <div class="detail">
-            <p class="title">{{item.ticketItemTitle}}</p>
-            <p class="order-time">订单号：{{item.ticketOrderOrderNo}}</p>
-            <p class="play-time">演出时间：{{item.ticketItemPlayTime}}</p>
-            <p class="order-time">购票时间：{{item.ticketOrderOrderTime}}</p>
-            <p class="unit-price">单价：{{item.ticketOrderUnitPrice}}</p>
-            <p class="unit-price">总价：{{item.ticketOrderTotalPrice}}</p>
-            <p class="total-seat">总座位数：{{item.ticketOrderTotalSeat}}</p>
-            <p class="all-seats">座位信息：{{item.allSeatsString}}</p>
+    <div v-if="ticketOrders.length > 0">
+        <div v-for="(item, index) in ticketOrders" class="order">
+            <img :src="item.ticketItemHeadImg"/>
+            <div class="detail">
+                <p class="title">{{item.ticketItemTitle}}</p>
+                <p class="order-time">订单号：{{item.ticketOrderOrderNo}}</p>
+                <p class="play-time">演出时间：{{item.ticketItemPlayTime}}</p>
+                <p class="order-time">购票时间：{{item.ticketOrderOrderTime}}</p>
+                <p class="unit-price">单价：{{item.ticketOrderUnitPrice}}</p>
+                <p class="unit-price">总价：{{item.ticketOrderTotalPrice}}</p>
+                <p class="total-seat">总座位数：{{item.ticketOrderTotalSeat}}</p>
+                <p class="all-seats">座位信息：{{item.allSeatsString}}</p>
+            </div>
+            <p style="clear:both;"></p>
         </div>
-        <p style="clear:both;"></p>
     </div>
-    <div v-else class="title" style="text-align:center;">您暂无购票订单，去公众号菜单我要购票中选择购票吧</div>
+    <div v-else class="title" style="text-align:center;">您暂无购票订单，去公众号菜单我要购票中选座购票吧</div>
 </div>
 </body>
 

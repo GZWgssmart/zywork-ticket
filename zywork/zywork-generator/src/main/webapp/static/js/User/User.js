@@ -70,12 +70,6 @@ function loadTable() {
 	sortable: true
 },
 {
-	title: '密码',
-	field: 'password',
-	align: 'center',
-	sortable: true
-},
-{
 	title: '加密盐值',
 	field: 'salt',
 	align: 'center',
@@ -97,7 +91,8 @@ function loadTable() {
 	title: '性别',
 	field: 'gender',
 	align: 'center',
-	sortable: true
+	sortable: true,
+	formatter: formatGender
 },
 {
 	title: '微信openid',
@@ -143,6 +138,16 @@ function formatImg(index, row) {
     } else {
         return '-';
     }
+}
+
+function formatGender(index, row) {
+	if (row.gender == 1) {
+		return '男'
+	} else if (row.gender == 2) {
+		return '女'
+	} else {
+		return '未知'
+	}
 }
 
 function formatOperators(value, row, index) {
