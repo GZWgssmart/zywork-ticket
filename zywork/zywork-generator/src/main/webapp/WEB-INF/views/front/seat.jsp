@@ -262,10 +262,10 @@
                     pay (appId, timestamp, nonceStr, packages, paySign) {
                         if (typeof WeixinJSBridge == "undefined") {
                             if (document.addEventListener) {
-                                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+                                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false)
                             } else if (document.attachEvent) {
-                                document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
-                                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+                                document.attachEvent('WeixinJSBridgeReady', onBridgeReady)
+                                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady)
                             }
                         } else {
                             WeixinJSBridge.invoke(
@@ -278,11 +278,12 @@
                                     "paySign": paySign
                                 }, function (res) {
                                     if (res.err_msg == "get_brand_wcpay_request:ok") {
-                                        alert('您已支付成功');
+                                        alert('您已支付成功')
+                                        window.location.reload()
                                     } else if (res.err_msg == "get_brand_wcpay_request:cancel") {
-                                        alert('您已取消支付');
+                                        alert('您已取消支付')
                                     } else if (res.err_msg == "get_brand_wcpay_request:fail") {
-                                        alert('您支付失败');
+                                        alert('您支付失败')
                                     }
                                 });
                         }

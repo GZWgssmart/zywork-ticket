@@ -191,6 +191,7 @@
         where t_ticket_order_detail.order_no = t_ticket_order.order_no
         and t_ticket_order.ticket_item_id = t_ticket_item.id
         and t_ticket_item.id = #{ticketItemId}
+        and t_ticket_order.order_time is not null
     </select>
 
 </mapper>

@@ -114,11 +114,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="seat.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ticket_order.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_order.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="90" column="25" lean-forward="true" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seat.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/seat.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="200" column="29" lean-forward="false" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="29" />
+            <state relative-caret-position="533">
+              <caret line="280" column="33" lean-forward="true" selection-start-line="280" selection-start-column="33" selection-end-line="280" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#i#3;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -151,23 +163,23 @@
       <file leaf-file-name="TicketOrderDetailDAOMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDetailDAOMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="192" column="46" lean-forward="true" selection-start-line="192" selection-start-column="46" selection-end-line="192" selection-end-column="46" />
+            <state relative-caret-position="468">
+              <caret line="192" column="46" lean-forward="true" selection-start-line="192" selection-start-column="46" selection-end-line="193" selection-end-column="49" />
               <folding>
-                <marker date="1532526558982" expanded="true" signature="1133:1183" ph="delete from " />
-                <marker date="1532526558982" expanded="true" signature="1257:1307" ph="delete from " />
-                <marker date="1532526558982" expanded="true" signature="1608:2065" ph="update t_tic... " />
-                <marker date="1532526558982" expanded="true" signature="2171:2242" ph="update t_tic... " />
-                <marker date="1532526558982" expanded="true" signature="4424:4524" ph="select from t_ticket_order_detail" />
-                <marker date="1532526558982" expanded="true" signature="4607:4742" ph="select from t_ticket_order_detail" />
-                <marker date="1532526558982" expanded="true" signature="4869:5209" ph="select from t_ticket_order_detail" />
-                <marker date="1532526558982" expanded="true" signature="5275:5317" ph="select count... t_ticket_order_detail" />
-                <marker date="1532526558982" expanded="true" signature="5412:5883" ph="select from t_ticket_order_detail" />
-                <marker date="1532526558982" expanded="true" signature="5960:6002" ph="select count... t_ticket_order_detail" />
-                <marker date="1532526558982" expanded="true" signature="6201:6258" ph="select * fro... t_ticket_order_detail" />
-                <marker date="1532526558982" expanded="true" signature="6201:6355" ph="select * fro... t_ticket_order_detail" />
-                <marker date="1532526558982" expanded="true" signature="6201:6433" ph="select * fro... t_ticket_order_detail" />
-                <marker date="1532526558982" expanded="true" signature="6201:6468" ph="select t_tic... t_ticket_order_detail" />
+                <marker date="1532563153902" expanded="true" signature="1133:1183" ph="delete from " />
+                <marker date="1532563153902" expanded="true" signature="1257:1307" ph="delete from " />
+                <marker date="1532563153902" expanded="true" signature="1608:2065" ph="update t_tic... " />
+                <marker date="1532563153902" expanded="true" signature="2171:2242" ph="update t_tic... " />
+                <marker date="1532563153902" expanded="true" signature="4424:4524" ph="select from t_ticket_order_detail" />
+                <marker date="1532563153902" expanded="true" signature="4607:4742" ph="select from t_ticket_order_detail" />
+                <marker date="1532563153902" expanded="true" signature="4869:5209" ph="select from t_ticket_order_detail" />
+                <marker date="1532563153902" expanded="true" signature="5275:5317" ph="select count... t_ticket_order_detail" />
+                <marker date="1532563153902" expanded="true" signature="5412:5883" ph="select from t_ticket_order_detail" />
+                <marker date="1532563153902" expanded="true" signature="5960:6002" ph="select count... t_ticket_order_detail" />
+                <marker date="1532563153902" expanded="true" signature="6201:6258" ph="select * fro... t_ticket_order_detail" />
+                <marker date="1532563153902" expanded="true" signature="6201:6355" ph="select * fro... t_ticket_order_detail" />
+                <marker date="1532563153902" expanded="true" signature="6201:6433" ph="select * fro... t_ticket_order_detail" />
+                <marker date="1532563153902" expanded="true" signature="6201:6518" ph="select t_tic... t_ticket_order_detail" />
               </folding>
             </state>
           </provider>
@@ -289,7 +301,6 @@
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/TicketOrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/UserTicketOrderController.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/WechatLoginController.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_order.jsp" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/TicketItemController.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_item_detail.jsp" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/vo/UserTicketOrderVO.java" />
@@ -307,10 +318,11 @@
         <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/config/jdbc.properties" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/dao/TicketOrderDetailDAO.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/TicketOrderDetailService.java" />
-        <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDetailDAOMapper.xml" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/service/impl/TicketOrderDetailServiceImpl.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/java/top/zywork/controller/TicketOrderDetailController.java" />
         <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/seat.jsp" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDetailDAOMapper.xml" />
+        <option value="$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_order.jsp" />
       </list>
     </option>
   </component>
@@ -552,6 +564,17 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zywork" type="462c0819:PsiDirectoryNode" />
+              <item name="zywork-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zywork" type="b2602c69:ProjectViewProjectNode" />
@@ -908,7 +931,7 @@
       <workItem from="1531381460513" duration="15247000" />
       <workItem from="1531884632574" duration="43521000" />
       <workItem from="1532320764721" duration="55829000" />
-      <workItem from="1532509318363" duration="14888000" />
+      <workItem from="1532509318363" duration="15967000" />
     </task>
     <servers />
   </component>
@@ -945,7 +968,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1078068000" />
+    <option name="totallyTimeSpent" value="1079147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1234,14 +1257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_order.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="64" column="72" lean-forward="false" selection-start-line="64" selection-start-column="72" selection-end-line="64" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/common/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
@@ -1490,29 +1505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDetailDAOMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="192" column="46" lean-forward="true" selection-start-line="192" selection-start-column="46" selection-end-line="192" selection-end-column="46" />
-          <folding>
-            <marker date="1532526558982" expanded="true" signature="1133:1183" ph="delete from " />
-            <marker date="1532526558982" expanded="true" signature="1257:1307" ph="delete from " />
-            <marker date="1532526558982" expanded="true" signature="1608:2065" ph="update t_tic... " />
-            <marker date="1532526558982" expanded="true" signature="2171:2242" ph="update t_tic... " />
-            <marker date="1532526558982" expanded="true" signature="4424:4524" ph="select from t_ticket_order_detail" />
-            <marker date="1532526558982" expanded="true" signature="4607:4742" ph="select from t_ticket_order_detail" />
-            <marker date="1532526558982" expanded="true" signature="4869:5209" ph="select from t_ticket_order_detail" />
-            <marker date="1532526558982" expanded="true" signature="5275:5317" ph="select count... t_ticket_order_detail" />
-            <marker date="1532526558982" expanded="true" signature="5412:5883" ph="select from t_ticket_order_detail" />
-            <marker date="1532526558982" expanded="true" signature="5960:6002" ph="select count... t_ticket_order_detail" />
-            <marker date="1532526558982" expanded="true" signature="6201:6258" ph="select * fro... t_ticket_order_detail" />
-            <marker date="1532526558982" expanded="true" signature="6201:6355" ph="select * fro... t_ticket_order_detail" />
-            <marker date="1532526558982" expanded="true" signature="6201:6433" ph="select * fro... t_ticket_order_detail" />
-            <marker date="1532526558982" expanded="true" signature="6201:6468" ph="select t_tic... t_ticket_order_detail" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zywork-common/src/main/java/top/zywork/service/AbstractBaseService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -1565,10 +1557,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/seat.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="200" column="29" lean-forward="false" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="29" />
+        <state relative-caret-position="533">
+          <caret line="280" column="33" lean-forward="true" selection-start-line="280" selection-start-column="33" selection-end-line="280" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#i#3;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/resources/mapper/TicketOrderDetailDAOMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="192" column="46" lean-forward="true" selection-start-line="192" selection-start-column="46" selection-end-line="193" selection-end-column="49" />
+          <folding>
+            <marker date="1532563153902" expanded="true" signature="1133:1183" ph="delete from " />
+            <marker date="1532563153902" expanded="true" signature="1257:1307" ph="delete from " />
+            <marker date="1532563153902" expanded="true" signature="1608:2065" ph="update t_tic... " />
+            <marker date="1532563153902" expanded="true" signature="2171:2242" ph="update t_tic... " />
+            <marker date="1532563153902" expanded="true" signature="4424:4524" ph="select from t_ticket_order_detail" />
+            <marker date="1532563153902" expanded="true" signature="4607:4742" ph="select from t_ticket_order_detail" />
+            <marker date="1532563153902" expanded="true" signature="4869:5209" ph="select from t_ticket_order_detail" />
+            <marker date="1532563153902" expanded="true" signature="5275:5317" ph="select count... t_ticket_order_detail" />
+            <marker date="1532563153902" expanded="true" signature="5412:5883" ph="select from t_ticket_order_detail" />
+            <marker date="1532563153902" expanded="true" signature="5960:6002" ph="select count... t_ticket_order_detail" />
+            <marker date="1532563153902" expanded="true" signature="6201:6258" ph="select * fro... t_ticket_order_detail" />
+            <marker date="1532563153902" expanded="true" signature="6201:6355" ph="select * fro... t_ticket_order_detail" />
+            <marker date="1532563153902" expanded="true" signature="6201:6433" ph="select * fro... t_ticket_order_detail" />
+            <marker date="1532563153902" expanded="true" signature="6201:6518" ph="select t_tic... t_ticket_order_detail" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zywork-generator/src/main/webapp/WEB-INF/views/front/ticket_order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="90" column="25" lean-forward="true" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

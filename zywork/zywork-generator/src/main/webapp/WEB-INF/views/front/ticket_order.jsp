@@ -53,7 +53,7 @@
 
 <body>
 <div id="app">
-    <div v-for="(item, index) in ticketOrders" class="order">
+    <div v-if="ticketOrders.length > 0" v-for="(item, index) in ticketOrders" class="order">
         <img :src="item.ticketItemHeadImg"/>
         <div class="detail">
             <p class="title">{{item.ticketItemTitle}}</p>
@@ -67,6 +67,7 @@
         </div>
         <p style="clear:both;"></p>
     </div>
+    <div v-else class="title" style="text-align:center;">您暂无购票订单，去公众号菜单我要购票中选择购票吧</div>
 </div>
 </body>
 
