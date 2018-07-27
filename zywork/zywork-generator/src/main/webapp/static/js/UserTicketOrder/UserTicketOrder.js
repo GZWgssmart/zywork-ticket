@@ -133,7 +133,7 @@ function formatImg(index, row) {
 }
 
 function formatSeats(index, row) {
-	return '<div style="width: 200px;">' + row.allSeatsString + '</div>';
+	return '<div style="width: 200px;word-break:break-all;overflow:auto;">' + row.allSeatsString + '</div>';
 }
 
 function formatOperators(value, row, index) {

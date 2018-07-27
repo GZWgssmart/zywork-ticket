@@ -67,7 +67,8 @@ function loadTable() {
 	title: '放映时间',
 	field: 'playTimeStr',
 	align: 'center',
-	sortable: true
+	sortable: true,
+    formatter: formatPlayTime
 },
 {
 	title: 'A区原价',
@@ -136,6 +137,10 @@ function loadTable() {
                      }
                  ]
     });
+}
+
+function formatPlayTime(index, row) {
+    return '<div style="width: 200px;word-break:break-all;overflow:auto;">' + row.playTimeStr + '</div>';
 }
 
 function formatOperators(value, row, index) {
