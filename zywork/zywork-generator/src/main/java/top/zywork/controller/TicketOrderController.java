@@ -3,6 +3,7 @@ package top.zywork.controller;
 import org.dozer.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -10,11 +11,13 @@ import org.springframework.web.bind.annotation.*;
 import top.zywork.common.*;
 import top.zywork.dto.PagerDTO;
 import top.zywork.dto.TicketOrderDTO;
+import top.zywork.dto.TicketOrderDetailDTO;
 import top.zywork.exception.ServiceException;
 import top.zywork.query.PageQuery;
 import top.zywork.query.StatusQueries;
 import top.zywork.query.StatusQuery;
 import top.zywork.query.TicketOrderQuery;
+import top.zywork.service.TicketOrderDetailService;
 import top.zywork.service.TicketOrderService;
 import top.zywork.vo.ControllerStatusVO;
 import top.zywork.vo.PagerVO;
@@ -45,6 +48,8 @@ public class TicketOrderController extends BaseController {
     private static final Logger logger = LoggerFactory.getLogger(TicketOrderController.class);
 
     private TicketOrderService ticketOrderService;
+
+    private TicketOrderDetailService ticketOrderDetailService;
 
     @GetMapping("page")
     public String page() {
@@ -79,6 +84,17 @@ public class TicketOrderController extends BaseController {
             return null;
         } else {
             try {
+                List<Object> ticketOrderDetailDTOList = ticketOrderDetailService.listSelectedSeats(ticketOrderVO.getTicketItemId() + "", ticketOrderVO.getPlayTimeStr());
+                String[] strArray = ticketOrderVO.getSelectedSeats().split(";");
+                for (String seat : strArray) {
+                    for (Object obj : ticketOrderDetailDTOList) {
+                        TicketOrderDetailDTO ticketOrderDetailDTO = (TicketOrderDetailDTO) obj;
+                        if (ticketOrderDetailDTO.getSeat().equals(seat)) {
+                            returnPayData.setAppId("none");
+                            return returnPayData;
+                        }
+                    }
+                }
                 ticketOrderVO.setOrderNo(System.currentTimeMillis() + "" + RandomUtils.randomNum(100000, 999999));
                 ticketOrderService.save(getBeanMapper().map(ticketOrderVO, TicketOrderDTO.class));
                 WechatUtil wechatUtil = new WechatUtil();
@@ -268,5 +284,10 @@ public class TicketOrderController extends BaseController {
     @Resource
     public void setTicketOrderService(TicketOrderService ticketOrderService) {
         this.ticketOrderService = ticketOrderService;
+    }
+
+    @Autowired
+    public void setTicketOrderDetailService(TicketOrderDetailService ticketOrderDetailService) {
+        this.ticketOrderDetailService = ticketOrderDetailService;
     }
 }

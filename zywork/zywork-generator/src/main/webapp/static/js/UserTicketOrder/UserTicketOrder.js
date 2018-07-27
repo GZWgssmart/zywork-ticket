@@ -90,10 +90,9 @@ function loadTable() {
 },
 {
 	title: '放映时间',
-	field: 'ticketItemPlayTime',
+	field: 'ticketOrderPlayTimeStr',
 	align: 'center',
-	sortable: true,
-	formatter: formatDate
+	sortable: true
 },
 {
 	title: '微信openid',
@@ -157,7 +156,7 @@ function formatOperators(value, row, index) {
     return strArray.join('');
 }
 
-let fieldTitles = {'ticketOrderTicketItemId':'剧目编号','ticketOrderOpenid':'微信openid','ticketOrderOrderNo':'订单编号','ticketOrderOrderTime-date':'下单时间','ticketOrderUnitPrice':'单价','ticketOrderTotalSeat':'总座位数','ticketOrderTotalPrice':'支付总额','ticketItemId':'编号','ticketItemTitle':'名称','ticketItemHeadImg':'封面图片','ticketItemPlayTime-date':'放映时间','userOpenid':'微信openid'};
+let fieldTitles = {'ticketOrderTicketItemId':'剧目编号','ticketOrderOpenid':'微信openid','ticketOrderOrderNo':'订单编号','ticketOrderOrderTime-date':'下单时间','ticketOrderUnitPrice':'单价','ticketOrderTotalSeat':'总座位数','ticketOrderTotalPrice':'支付总额','ticketItemId':'编号','ticketItemTitle':'名称','ticketItemHeadImg':'封面图片','ticketOrderPlayTimeStr':'放映时间','userOpenid':'微信openid'};
 
 window.operateEvents = {
     'click .to-detail': function (e, value, row, index) {

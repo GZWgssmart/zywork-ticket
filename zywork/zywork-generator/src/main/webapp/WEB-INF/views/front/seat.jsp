@@ -315,13 +315,18 @@
                                     playTimeStr: time
                                 })
                             ).then(response => {
-                                this.pay(
-                                    response.data.appId,
-                                    response.data.timeStamp,
-                                    response.data.nonceStr,
-                                    response.data.packages,
-                                    response.data.paySign
-                                )
+                                if (response.data.appId == 'none') {
+                                    alert('您选择的座位已经被人抢先购买了，请重新选择座位')
+                                    window.location.reload()
+                                } else {
+                                    this.pay(
+                                        response.data.appId,
+                                        response.data.timeStamp,
+                                        response.data.nonceStr,
+                                        response.data.packages,
+                                        response.data.paySign
+                                    )
+                                }
                             }).catch(error => {
                                 console.log(error)
                             })
