@@ -27,6 +27,7 @@ public class UserTicketOrderDO extends BaseDO {
 	 * 订单编号
 	 */
 	private String ticketOrderOrderNo;
+	private String ticketOrderPlayTimeStr;
 	/**
 	 * 下单时间
 	 */
@@ -188,6 +189,14 @@ public class UserTicketOrderDO extends BaseDO {
 
 	public void setUserNickname(String userNickname) {
 		this.userNickname = userNickname;
+	}
+
+	public String getTicketOrderPlayTimeStr() {
+		return ticketOrderPlayTimeStr;
+	}
+
+	public void setTicketOrderPlayTimeStr(String ticketOrderPlayTimeStr) {
+		this.ticketOrderPlayTimeStr = ticketOrderPlayTimeStr;
 	}
 
 	@Override

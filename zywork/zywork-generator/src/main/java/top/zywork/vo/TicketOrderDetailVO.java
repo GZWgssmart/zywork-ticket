@@ -41,7 +41,8 @@ public class TicketOrderDetailVO extends BaseVO {
 	 */
 	@Size(min = 0, max = 100, message = "必须小于100个字符")
 	private String orderNo;
-	
+	private String area;
+
     public TicketOrderDetailVO() {}
 
     public TicketOrderDetailVO(Long id, Long ticketOrderId, String seat, Date createTime, Date updateTime, String orderNo) {
@@ -102,8 +103,15 @@ public class TicketOrderDetailVO extends BaseVO {
 		this.orderNo = orderNo;
 	}
 
-	
-    @Override
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	@Override
     public String toString() {
         return "TicketOrderDetailDO{" +
                 "id = " + id + 

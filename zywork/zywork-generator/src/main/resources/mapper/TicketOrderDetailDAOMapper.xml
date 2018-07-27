@@ -13,6 +13,9 @@
 			<if test="seat != null">
 				seat,
 			</if>
+            <if test="area != null">
+                area,
+            </if>
 			<if test="createTime != null">
 				create_time,
 			</if>
@@ -31,6 +34,9 @@
 			<if test="seat != null">
 				#{seat},
 			</if>
+            <if test="area != null">
+                #{area},
+            </if>
 			<if test="createTime != null">
 				#{createTime},
 			</if>
@@ -68,6 +74,9 @@
 			<if test="seat != null">
 				seat = #{seat},
 			</if>
+            <if test="area != null">
+                area = #{area},
+            </if>
 			<if test="createTime != null">
 				create_time = #{createTime},
 			</if>
@@ -94,7 +103,7 @@
     </update>
 
     <sql id="select_columns">
-        id as id, ticket_order_id as ticketOrderId, seat as seat, create_time as createTime, update_time as updateTime, order_no as orderNo
+        id as id, ticket_order_id as ticketOrderId, seat as seat, area as area, create_time as createTime, update_time as updateTime, order_no as orderNo
     </sql>
 
     <sql id="query_where_clause">
@@ -107,6 +116,9 @@
 		<if test="query != null and query.seat != null and query.seat != ''">
 			and seat like concat('%', #{query.seat}, '%')
 		</if>
+        <if test="query != null and query.area != null and query.area != ''">
+            and area like concat('%', #{query.area}, '%')
+        </if>
 		<if test="query != null and query.createTimeStart != null and query.createTimeEnd == null">
 			and create_time <![CDATA[ >= ]]> #{query.createTimeStart}
 		</if>
@@ -186,11 +198,12 @@
         </where>
     </select>
 
-    <select id="listSelectedSeats" parameterType="string" resultType="ticketOrderDetailDO">
+    <select id="listSelectedSeats" resultType="ticketOrderDetailDO">
         select t_ticket_order_detail.* from t_ticket_order_detail, t_ticket_item, t_ticket_order
         where t_ticket_order_detail.order_no = t_ticket_order.order_no
         and t_ticket_order.ticket_item_id = t_ticket_item.id
         and t_ticket_item.id = #{ticketItemId}
+        and t_ticket_order.play_time_str = #{playTimeStr}
         and t_ticket_order.order_time is not null
     </select>
 

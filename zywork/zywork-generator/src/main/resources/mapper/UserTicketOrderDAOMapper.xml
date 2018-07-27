@@ -16,6 +16,9 @@
 			<if test="ticketOrderOrderNo != null">
 				order_no,
 			</if>
+			<if test="ticketOrderPlayTimeStr != null">
+				play_time_str,
+			</if>
 			<if test="ticketOrderOrderTime != null">
 				order_time,
 			</if>
@@ -39,6 +42,9 @@
 			</if>
 			<if test="ticketOrderOrderNo != null">
 				#{ticketOrderOrderNo},
+			</if>
+			<if test="ticketOrderPlayTimeStr != null">
+				#{ticketOrderPlayTimeStr},
 			</if>
 			<if test="ticketOrderOrderTime != null">
 				#{ticketOrderOrderTime},
@@ -83,6 +89,9 @@
 			<if test="ticketOrderOrderNo != null">
 				order_no = #{ticketOrderOrderNo},
 			</if>
+			<if test="ticketOrderPlayTimeStr != null">
+				play_time_str = #{ticketOrderPlayTimeStr},
+			</if>
 			<if test="ticketOrderOrderTime != null">
 				order_time = #{ticketOrderOrderTime},
 			</if>
@@ -112,7 +121,7 @@
     </update>
 
     <sql id="select_columns">
-        t_ticket_order.ticket_item_id as ticketOrderTicketItemId, t_ticket_order.openid as ticketOrderOpenid, t_ticket_order.order_no as ticketOrderOrderNo, t_ticket_order.order_time as ticketOrderOrderTime, t_ticket_order.unit_price as ticketOrderUnitPrice, t_ticket_order.total_seat as ticketOrderTotalSeat, t_ticket_order.total_price as ticketOrderTotalPrice, t_ticket_item.id as ticketItemId, t_ticket_item.title as ticketItemTitle, t_ticket_item.head_img as ticketItemHeadImg, t_ticket_item.play_time as ticketItemPlayTime, t_user.openid as userOpenid, t_user.nickname as userNickname
+        t_ticket_order.ticket_item_id as ticketOrderTicketItemId, t_ticket_order.openid as ticketOrderOpenid, t_ticket_order.order_no as ticketOrderOrderNo,  t_ticket_order.play_time_str as ticketOrderPlayTimeStr, t_ticket_order.order_time as ticketOrderOrderTime, t_ticket_order.unit_price as ticketOrderUnitPrice, t_ticket_order.total_seat as ticketOrderTotalSeat, t_ticket_order.total_price as ticketOrderTotalPrice, t_ticket_item.id as ticketItemId, t_ticket_item.title as ticketItemTitle, t_ticket_item.head_img as ticketItemHeadImg, t_ticket_item.play_time as ticketItemPlayTime, t_user.openid as userOpenid, t_user.nickname as userNickname
     </sql>
 
     <sql id="query_where_clause">
@@ -124,6 +133,9 @@
 		</if>
 		<if test="query != null and query.ticketOrderOrderNo != null and query.ticketOrderOrderNo != ''">
 			and t_ticket_order.order_no like concat('%', #{query.ticketOrderOrderNo}, '%')
+		</if>
+		<if test="query != null and query.ticketOrderPlayTimeStr != null and query.ticketOrderPlayTimeStr != ''">
+			and t_ticket_order.play_time_str like concat('%', #{query.ticketOrderPlayTimeStr}, '%')
 		</if>
 		<if test="query != null and query.ticketOrderOrderTimeStart != null and query.ticketOrderOrderTimeEnd == null">
 			and t_ticket_order.order_time <![CDATA[ >= ]]> #{query.ticketOrderOrderTimeStart}

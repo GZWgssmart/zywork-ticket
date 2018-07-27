@@ -1,4 +1,4 @@
-const contextPath = '';
+const contextPath = '/byjc';
 
 function loadTable(tableId, url, columns) {
     destroyTable(tableId);

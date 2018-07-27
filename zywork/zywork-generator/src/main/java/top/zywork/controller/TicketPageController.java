@@ -13,15 +13,6 @@ import java.io.IOException;
 @RequestMapping("/ticket-page")
 public class TicketPageController {
 
-    @GetMapping("seat")
-    public ModelAndView seat(ModelAndView modelAndView, String itemId, String floor, String openid) {
-        modelAndView.setViewName("/front/seat");
-        modelAndView.addObject("itemId", itemId);
-        modelAndView.addObject("floor", floor);
-        modelAndView.addObject("openid", openid);
-        return modelAndView;
-    }
-
     @GetMapping("user")
     public ModelAndView user(ModelAndView modelAndView) throws IOException {
         modelAndView.setViewName("redirect:" + WechatAPI.ACCESS_LOGIN_URL.replace("{REDIRECT_URL}", WechatAPI.REDIRECT_URL + "?original=/front/user"));
@@ -41,6 +32,23 @@ public class TicketPageController {
         modelAndView.setViewName("/front/ticket_item_detail");
         modelAndView.addObject("itemId", itemId);
         modelAndView.addObject("openid", openid);
+        return modelAndView;
+    }
+
+    @GetMapping("ticket-item-detail-time")
+    public ModelAndView ticketItemDetailTime(ModelAndView modelAndView, String itemId, String openid) {
+        modelAndView.setViewName("/front/ticket_item_detail_time");
+        modelAndView.addObject("itemId", itemId);
+        modelAndView.addObject("openid", openid);
+        return modelAndView;
+    }
+
+    @GetMapping("seat")
+    public ModelAndView seat(ModelAndView modelAndView, String itemId,  String openid, String time) {
+        modelAndView.setViewName("/front/seat");
+        modelAndView.addObject("itemId", itemId);
+        modelAndView.addObject("openid", openid);
+        modelAndView.addObject("time", time);
         return modelAndView;
     }
 

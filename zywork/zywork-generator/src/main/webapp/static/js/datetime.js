@@ -17,3 +17,8 @@ function timestampToDatetime(value) {
         return year + '-' + month + '-' + day + ' ' + hour + ':' + minute;
     }
 }
+
+function strToTimestamp(str) {
+    str = str.replace(/-/g,'/');
+    return new Date(str).getTime();
+}

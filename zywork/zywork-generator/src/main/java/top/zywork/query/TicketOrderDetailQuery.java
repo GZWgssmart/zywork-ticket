@@ -54,6 +54,7 @@ public class TicketOrderDetailQuery extends BaseQuery {
 	 * 订单编号
 	 */
 	private String orderNo;
+	private String area;
 	
     public TicketOrderDetailQuery() {}
 
@@ -151,8 +152,15 @@ public class TicketOrderDetailQuery extends BaseQuery {
 		this.orderNo = orderNo;
 	}
 
-	
-    @Override
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	@Override
     public String toString() {
         return "TicketOrderDetailDO{" +
                 "}";

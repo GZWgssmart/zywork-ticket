@@ -48,6 +48,12 @@ function ticketOrderDetailSearchTable() {
 	align: 'center',
 	sortable: true
 },
+            {
+                title: '座位区',
+                field: 'area',
+                align: 'center',
+                sortable: true
+            },
 {
 	title: '座位号',
 	field: 'seat',

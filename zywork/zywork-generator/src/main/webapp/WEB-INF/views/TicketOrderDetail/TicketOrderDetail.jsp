@@ -59,13 +59,20 @@
         <input id="ticketOrderIdSearch" name="ticketOrderId" class="form-control" placeholder="请输入订单编号">
     </div>
 </div>
+                <div class="col-sm-6 form-group">
+                    <label for="areaSearch" class="col-sm-4 control-label">座位区：</label>
+                    <div class="col-sm-8">
+                        <input id="areaSearch" name="area" class="form-control" placeholder="请输入座位区">
+                    </div>
+                </div>
 
-<div class="col-sm-6 form-group">
-    <label for="seatSearch" class="col-sm-4 control-label">座位号：</label>
-    <div class="col-sm-8">
-        <input id="seatSearch" name="seat" class="form-control" placeholder="请输入座位号">
-    </div>
-</div>
+
+                <div class="col-sm-6 form-group">
+                    <label for="seatSearch" class="col-sm-4 control-label">座位号：</label>
+                    <div class="col-sm-8">
+                        <input id="seatSearch" name="seat" class="form-control" placeholder="请输入座位号">
+                    </div>
+                </div>
 
 <div class="col-sm-6 form-group">
     <label for="createTimeStartSearch" class="col-sm-4 control-label">创建时间(开始)：</label>

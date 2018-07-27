@@ -60,6 +60,8 @@ public class TicketOrderDO extends BaseDO {
 	private Date updateTime;
 
 	private String selectedSeats;
+
+	private String playTimeStr;
 	
     public TicketOrderDO () {}
 
@@ -172,6 +174,14 @@ public class TicketOrderDO extends BaseDO {
 
 	public void setSelectedSeats(String selectedSeats) {
 		this.selectedSeats = selectedSeats;
+	}
+
+	public String getPlayTimeStr() {
+		return playTimeStr;
+	}
+
+	public void setPlayTimeStr(String playTimeStr) {
+		this.playTimeStr = playTimeStr;
 	}
 
 	@Override

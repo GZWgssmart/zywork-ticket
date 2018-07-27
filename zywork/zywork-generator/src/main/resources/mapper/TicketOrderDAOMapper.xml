@@ -19,6 +19,9 @@
 			<if test="orderNo != null">
 				order_no,
 			</if>
+			<if test="playTimeStr != null">
+				play_time_str,
+			</if>
 			<if test="orderTime != null">
 				order_time,
 			</if>
@@ -51,6 +54,9 @@
 			</if>
 			<if test="orderNo != null">
 				#{orderNo},
+			</if>
+			<if test="playTimeStr != null">
+				#{playTimeStr},
 			</if>
 			<if test="orderTime != null">
 				#{orderTime},
@@ -104,6 +110,9 @@
 			<if test="orderNo != null">
 				order_no = #{orderNo},
 			</if>
+			<if test="playTimeStr != null">
+				play_time_str = #{playTimeStr},
+			</if>
 			<if test="orderTime != null">
 				order_time = #{orderTime},
 			</if>
@@ -139,7 +148,7 @@
     </update>
 
     <sql id="select_columns">
-        id as id, ticket_item_id as ticketItemId, user_id as userId, openid as openid, order_no as orderNo, order_time as orderTime, unit_price as unitPrice, total_seat as totalSeat, total_price as totalPrice, create_time as createTime, update_time as updateTime
+        id as id, ticket_item_id as ticketItemId, user_id as userId, openid as openid, order_no as orderNo, play_time_str as playTimeStr, order_time as orderTime, unit_price as unitPrice, total_seat as totalSeat, total_price as totalPrice, create_time as createTime, update_time as updateTime
     </sql>
 
     <sql id="query_where_clause">
@@ -157,6 +166,9 @@
 		</if>
 		<if test="query != null and query.orderNo != null and query.orderNo != ''">
 			and order_no like concat('%', #{query.orderNo}, '%')
+		</if>
+		<if test="query != null and query.playTimeStr != null and query.playTimeStr != ''">
+			and play_time_str like concat('%', #{query.playTimeStr}, '%')
 		</if>
 		<if test="query != null and query.orderTimeStart != null and query.orderTimeEnd == null">
 			and order_time <![CDATA[ >= ]]> #{query.orderTimeStart}

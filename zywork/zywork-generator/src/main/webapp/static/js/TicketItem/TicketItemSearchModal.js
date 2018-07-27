@@ -56,29 +56,46 @@ function ticketItemSearchTable() {
 },
 {
 	title: '放映时间',
-	field: 'playTime',
+	field: 'playTimeStr',
 	align: 'center',
-	sortable: true,
-	formatter: formatDate
+	sortable: true
 },
 {
-	title: '原价',
+	title: 'A区原价',
 	field: 'price',
 	align: 'center',
 	sortable: true
 },
 {
-	title: '优惠价',
+	title: 'A区优惠价',
 	field: 'unitPrice',
 	align: 'center',
 	sortable: true
 },
-{
-	title: '放映地点',
-	field: 'address',
-	align: 'center',
-	sortable: true
-},
+            {
+                title: 'B区原价',
+                field: 'priceB',
+                align: 'center',
+                sortable: true
+            },
+            {
+                title: 'B区优惠价',
+                field: 'unitPriceB',
+                align: 'center',
+                sortable: true
+            },
+            {
+                title: 'C区原价',
+                field: 'priceC',
+                align: 'center',
+                sortable: true
+            },
+            {
+                title: 'C区优惠价',
+                field: 'unitPriceC',
+                align: 'center',
+                sortable: true
+            },
 {
 	title: '描述',
 	field: 'description',

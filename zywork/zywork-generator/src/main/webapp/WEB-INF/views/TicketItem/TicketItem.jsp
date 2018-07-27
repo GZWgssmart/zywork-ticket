@@ -60,44 +60,53 @@
     </div>
 </div>
 
-<div class="col-sm-6 form-group">
-    <label for="playTimeStartSearch" class="col-sm-4 control-label">放映时间(开始)：</label>
-    <div class="input-group date form_datetime col-sm-8" style="padding-left: 15px; padding-right: 15px;">
-        <input id="playTimeStartSearch" name="playTimeStart" class="form-control input-datetime" type="text" value="" readonly placeholder="请选择放映时间(开始)"/>
-        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-    </div>
-</div>
+                <div class="col-sm-6 form-group">
+                    <label for="playTimeStrSearch" class="col-sm-4 control-label">放映时间：</label>
+                    <div class="col-sm-8">
+                        <input id="playTimeStrSearch" name="playTimeStr" class="form-control" placeholder="请输入放映时间">
+                    </div>
+                </div>
 
 <div class="col-sm-6 form-group">
-    <label for="playTimeEndSearch" class="col-sm-4 control-label">放映时间(结束)：</label>
-    <div class="input-group date form_datetime col-sm-8" style="padding-left: 15px; padding-right: 15px;">
-        <input id="playTimeEndSearch" name="playTimeEnd" class="form-control input-datetime" type="text" value="" readonly placeholder="请选择放映时间(结束)"/>
-        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-    </div>
-</div>
-
-<div class="col-sm-6 form-group">
-    <label for="priceSearch" class="col-sm-4 control-label">原价：</label>
+    <label for="priceSearch" class="col-sm-4 control-label">A区原价：</label>
     <div class="col-sm-8">
-        <input id="priceSearch" name="price" class="form-control" placeholder="请输入原价">
+        <input id="priceSearch" name="price" class="form-control" placeholder="请输入A区原价">
     </div>
 </div>
 
 <div class="col-sm-6 form-group">
-    <label for="unitPriceSearch" class="col-sm-4 control-label">优惠价：</label>
+    <label for="unitPriceSearch" class="col-sm-4 control-label">A区优惠价：</label>
     <div class="col-sm-8">
-        <input id="unitPriceSearch" name="unitPrice" class="form-control" placeholder="请输入优惠价">
+        <input id="unitPriceSearch" name="unitPrice" class="form-control" placeholder="请输入A区优惠价">
     </div>
 </div>
+                <div class="col-sm-6 form-group">
+                    <label for="priceBSearch" class="col-sm-4 control-label">B区原价：</label>
+                    <div class="col-sm-8">
+                        <input id="priceBSearch" name="priceB" class="form-control" placeholder="请输入B区原价">
+                    </div>
+                </div>
 
-<div class="col-sm-6 form-group">
-    <label for="addressSearch" class="col-sm-4 control-label">放映地点：</label>
-    <div class="col-sm-8">
-        <input id="addressSearch" name="address" class="form-control" placeholder="请输入放映地点">
-    </div>
-</div>
+                <div class="col-sm-6 form-group">
+                    <label for="unitPriceBSearch" class="col-sm-4 control-label">B区优惠价：</label>
+                    <div class="col-sm-8">
+                        <input id="unitPriceBSearch" name="unitPriceB" class="form-control" placeholder="请输入B区优惠价">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 form-group">
+                    <label for="priceCSearch" class="col-sm-4 control-label">C区原价：</label>
+                    <div class="col-sm-8">
+                        <input id="priceCSearch" name="priceC" class="form-control" placeholder="请输入C区原价">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 form-group">
+                    <label for="unitPriceCSearch" class="col-sm-4 control-label">C区优惠价：</label>
+                    <div class="col-sm-8">
+                        <input id="unitPriceCSearch" name="unitPriceC" class="form-control" placeholder="请输入C区优惠价">
+                    </div>
+                </div>
 
 <div class="col-sm-6 form-group">
     <label for="descriptionSearch" class="col-sm-4 control-label">描述：</label>

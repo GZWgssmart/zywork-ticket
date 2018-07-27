@@ -30,6 +30,7 @@ public class UserTicketOrderVO extends BaseVO {
 	 */
 	@Size(min = 0, max = 100, message = "必须小于100个字符")
 	private String ticketOrderOrderNo;
+	private String ticketOrderPlayTimeStr;
 	/**
 	 * 下单时间
 	 */
@@ -201,6 +202,14 @@ public class UserTicketOrderVO extends BaseVO {
 
 	public void setAllSeatsString(String allSeatsString) {
 		this.allSeatsString = allSeatsString;
+	}
+
+	public String getTicketOrderPlayTimeStr() {
+		return ticketOrderPlayTimeStr;
+	}
+
+	public void setTicketOrderPlayTimeStr(String ticketOrderPlayTimeStr) {
+		this.ticketOrderPlayTimeStr = ticketOrderPlayTimeStr;
 	}
 
 	@Override

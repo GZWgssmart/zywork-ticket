@@ -20,7 +20,7 @@
             .seats {
                 width: 1300px;
                 height: 300px;
-                margin-top: 10px;
+                margin-top: 60px;
                 overflow: scroll;
             }
 
@@ -67,6 +67,7 @@
             .footer .content {
                 padding-left:5px;
                 padding-right: 5px;
+                font-size: 12px;
             }
 
             .footer .bottom {
@@ -100,11 +101,44 @@
                 font-size: 16px;
                 line-height:60px;
             }
+
+            .area {
+                font-size: 12px;
+            }
+
+            .area-chg {
+                margin-bottom:5px;
+                font-size: 12px;
+            }
+
+            .area-chg a {
+                display: inline-block;
+                font-size: 16px;
+                margin-right: 10px;
+                background-color:#ff7700;
+                color: #fff;
+                border-radius:10px;
+                padding: 0 5px;
+            }
         </style>
     </head>
 
     <body>
         <div id="app">
+            <div style="position: fixed; top:0px;left:5px;">
+                <div class="area">
+                    <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#00ff00;"></i>已选
+                    <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#ff0000;"></i>已售
+                    <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#dddddd;"></i>A区{{currentItem.unitPrice}}元
+                    <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#ADD7F0;"></i>B区{{currentItem.unitPriceB}}元
+                    <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#e4b9c0;"></i>C区{{currentItem.unitPriceC}}元
+                </div>
+                <div class="area-chg">
+                    <a href="javascript:;" @click="changeArea(1)">一楼A区和B区</a>
+                    <a href="javascript:;" @click="changeArea(2)">二楼C区</a>
+                    {{time}}
+                </div>
+            </div>
             <div class="seats">
                 <div class="left">
                     <div v-for="(rowData, row) in seats" class="seat-row">
@@ -114,7 +148,9 @@
                 <div class="right">
                     <div v-for="(rowData, row) in seats" class="seat-row">
                             <span class="seat" v-for="(seat, col) in rowData">
-                                <i v-if="seat.seat != '0-0' && seat.status == 1" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)"></i>
+                                <i v-if="seat.seat != '0-0' && seat.status == 1 && seat.area == 'A'" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#dddddd;"></i>
+                                <i v-else-if="seat.seat != '0-0' && seat.status == 1 && seat.area == 'B'" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#ADD7F0;"></i>
+                                <i v-else-if="seat.seat != '0-0' && seat.status == 1 && seat.area == 'C'" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#e4b9c0;"></i>
                                 <i v-else-if="seat.seat != '0-0' && seat.status == 2" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#00ff00;"></i>
                                 <i v-else-if="seat.seat == '0-0'" class="iconfont icon-zuowei1" style="color:rgba(0,0,0,0);"></i>
                                 <i v-else-if="seat.seat != '0-0' && seat.status == 3" class="iconfont icon-zuowei1" style="color:#ff0000;"></i>
@@ -131,7 +167,7 @@
                     </p>
                     <p v-else>您还未选座</p>
                     <p>
-                        共选座<span class="pay">{{ selectedSeat.length }}</span>个，单价：<span class="pay">{{ currentItem.unitPrice }}元</span>
+                        共选座<span class="pay">{{ selectedSeat.length }}</span>个</span>
                     </p>
                 </div>
                 <div class="bottom">
@@ -153,56 +189,86 @@
     <script src="<%=path%>/static/js/seats.js"></script>
     <script>
         var itemId = '${requestScope.itemId}'
-        var floor = '${requestScope.floor}'
         var openid = '${requestScope.openid}'
+        var time = '${requestScope.time}'
         var app = new Vue(
             {
                 el: '#app',
                 data: {
                     itemId: itemId,
-                    floor: floor,
-                    seats: [],
+                    seats: seats1,
                     selectedSeat: [],
                     selectedSeatString: '',
                     totalPay: 0.0,
                     currentItem: {},
-                    openid: openid
+                    openid: openid,
+                    time: time,
+                    allSelectedSeats: []
                 },
                 created () {
-                    if (this.floor == '1') {
-                        this.seats = seats1
-                    } else {
-                        this.seats = seats2
-                    }
                     axios.get('/byjc/tickeitem/one/' + this.itemId).then(response => {
                         this.currentItem = response.data
                     }).catch (error => {
                         console.log(error)
                     })
-                    axios.get('/byjc/tickeorder-detail/selected-seats/' + this.itemId).then(response => {
-                        for (var k = 0; k < response.data.length; k++) {
-                            for (var i = 0; i < this.seats.length; i++) {
-                                for (var j = 0; j < this.seats[i].length; j++) {
-                                    if (this.seats[i][j].seat == response.data[k].seat) {
-                                        this.seats[i][j].status = 3
-                                        break
-                                    }
-                                }
-                            }
-                        }
+                    axios.get('/byjc/tickeorder-detail/selected-seats/' + this.itemId + '/' + this.time).then(response => {
+                        this.allSelectedSeats = response.data
+                        this.changeArea(1)
                     }).catch(error => {
                         console.log(error)
                     })
                 },
                 methods: {
+                    changeArea (floor) {
+                        if (floor == 1) {
+                            this.seats = seats1
+                            for (var k = 0; k < this.allSelectedSeats.length; k++) {
+                                for (var i = 0; i < this.seats.length; i++) {
+                                    for (var j = 0; j < this.seats[i].length; j++) {
+                                        if ('A-' + this.seats[i][j].seat == this.allSelectedSeats[k].seat
+                                            || 'B-' + this.seats[i][j].seat == this.allSelectedSeats[k].seat) {
+                                            this.seats[i][j].status = 3
+                                            break
+                                        }
+                                    }
+                                }
+                            }
+                        } else if (floor == 2) {
+                            this.seats = seats2
+                            for (var k = 0; k < this.allSelectedSeats.length; k++) {
+                                for (var i = 0; i < this.seats.length; i++) {
+                                    for (var j = 0; j < this.seats[i].length; j++) {
+                                        if ('C-' + this.seats[i][j].seat == this.allSelectedSeats[k].seat) {
+                                            this.seats[i][j].status = 3
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    },
                     selectSeat (seat, col, event) {
                         if (seat.status == 1) {
                             event.currentTarget.style.color = '#00ff00'
                             seat.status = 2
                             // 放入已选中的座位
                             this.selectedSeat.push(seat)
+                            if (seat.area == 'A') {
+                                this.totalPay = (this.currentItem.unitPrice * 1.0 + this.totalPay * 1.0).toFixed(2)
+                            } else if (seat.area == 'B') {
+                                this.totalPay = (this.currentItem.unitPriceB * 1.0 + this.totalPay * 1.0).toFixed(2)
+                            } else if (seat.area == 'C') {
+                                this.totalPay = (this.currentItem.unitPriceC * 1.0 + this.totalPay * 1.0).toFixed(2)
+                            }
                         } else if (seat.status == 2){
-                            event.currentTarget.style.color = '#ccc'
+                            if (seat.area == 'A') {
+                                event.currentTarget.style.color = '#dddddd'
+                            } else if (seat.area == 'B') {
+                                event.currentTarget.style.color = '#ADD7F0'
+                            } else if (seat.area == 'C') {
+                                event.currentTarget.style.color = '#e4b9c0'
+                            }
                             seat.status = 1
                             // 从已选中的座位中移除
                             this.selectedSeat.forEach((element, index) => {
@@ -210,17 +276,20 @@
                                     this.selectedSeat.splice(index, 1)
                                 }
                             });
+                            if (seat.area == 'A') {
+                                this.totalPay = (this.totalPay * 1.0 - this.currentItem.unitPrice * 1.0).toFixed(2)
+                            } else if (seat.area == 'B') {
+                                this.totalPay = (this.totalPay * 1.0 - this.currentItem.unitPriceB * 1.0).toFixed(2)
+                            } else if (seat.area == 'C') {
+                                this.totalPay = (this.totalPay * 1.0 - this.currentItem.unitPriceC * 1.0).toFixed(2)
+                            }
                         }
-                        console.log(this.selectedSeat)
                         this.selectedSeatString = ''
                         this.selectedSeat.forEach((element, index) => {
-                            this.selectedSeatString += element.seat.split('-')[0] + '排' + element.seat.split('-')[1] + '座\n'
+                            this.selectedSeatString += element.area + '区' + element.seat.split('-')[0] + '排' + element.seat.split('-')[1] + '座\n'
                         })
-                        this.totalPay = (this.currentItem.unitPrice * this.selectedSeat.length).toFixed(2)
                     },
                     submitOrderAndPay () {
-                        var currentTime = new Date().getTime()
-                        if (this.currentItem.playTime - currentTime >= 60 * 60 * 1000) {
                             if (this.totalPay <= 0.0) {
                                 alert('请先选座再支付！')
                                 return;
@@ -228,9 +297,9 @@
                             var selectedSeats = ''
                             this.selectedSeat.forEach((item, index) => {
                                 if (selectedSeats == '') {
-                                    selectedSeats = selectedSeats + item.seat
+                                    selectedSeats = selectedSeats + item.area + '-' + item.seat
                                 } else {
-                                    selectedSeats = selectedSeats + ';' +  item.seat
+                                    selectedSeats = selectedSeats + ';' +  item.area + '-' + item.seat
                                 }
                             })
                             axios.post(
@@ -242,7 +311,8 @@
                                     totalSeat: this.selectedSeat.length,
                                     totalPrice: this.totalPay,
                                     allSeatsString: this.selectedSeatString,
-                                    selectedSeats: selectedSeats
+                                    selectedSeats: selectedSeats,
+                                    playTimeStr: time
                                 })
                             ).then(response => {
                                 this.pay(
@@ -255,9 +325,6 @@
                             }).catch(error => {
                                 console.log(error)
                             })
-                        } else {
-                            alert('开演前一小时内，或已经演出，无法购票')
-                        }
                     },
                     pay (appId, timestamp, nonceStr, packages, paySign) {
                         if (typeof WeixinJSBridge == "undefined") {

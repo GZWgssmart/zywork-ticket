@@ -234,12 +234,12 @@ public class TicketOrderDetailController extends BaseController {
         return pagerVO;
     }
 
-    @RequestMapping("selected-seats/{ticketItemId}")
+    @RequestMapping("selected-seats/{ticketItemId}/{playTimeStr}")
     @ResponseBody
-    public List<TicketOrderDetailVO> listSelectedSeats(@PathVariable("ticketItemId") String ticketItemId) {
+    public List<TicketOrderDetailVO> listSelectedSeats(@PathVariable("ticketItemId") String ticketItemId, @PathVariable("playTimeStr") String playTimeStr) {
         List<TicketOrderDetailVO> ticketOrderDetailVOList = new ArrayList<>();
         try {
-            List<Object> objectList = ticketOrderDetailService.listSelectedSeats(ticketItemId);
+            List<Object> objectList = ticketOrderDetailService.listSelectedSeats(ticketItemId, playTimeStr);
             ticketOrderDetailVOList =  DozerMapperUtils.map(getBeanMapper(), objectList, TicketOrderDetailVO.class);
         } catch (ServiceException e) {
             logger.error("返回所有对象JSON数据失败：{}", e.getMessage());

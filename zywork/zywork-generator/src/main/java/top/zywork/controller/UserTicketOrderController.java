@@ -243,8 +243,10 @@ public class UserTicketOrderController extends BaseController {
                     String seat = ticketOrderDetailDTO.getSeat();
                     if (seat.contains("-")) {
                         allSeatString.append(ticketOrderDetailDTO.getSeat().split("-")[0])
-                                .append("排")
+                                .append("区")
                                 .append(ticketOrderDetailDTO.getSeat().split("-")[1])
+                                .append("排")
+                                .append(ticketOrderDetailDTO.getSeat().split("-")[2])
                                 .append("座 ");
                     }
                 }

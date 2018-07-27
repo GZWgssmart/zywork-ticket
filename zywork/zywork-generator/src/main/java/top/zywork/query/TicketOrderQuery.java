@@ -82,6 +82,8 @@ public class TicketOrderQuery extends BaseQuery {
 	 * 更新时间(结束)
 	 */
 	private Date updateTimeEnd;
+
+	private String playTimeStr;
 	
     public TicketOrderQuery () {}
 
@@ -242,8 +244,15 @@ public class TicketOrderQuery extends BaseQuery {
 		this.updateTimeEnd = updateTimeEnd;
 	}
 
-	
-    @Override
+	public String getPlayTimeStr() {
+		return playTimeStr;
+	}
+
+	public void setPlayTimeStr(String playTimeStr) {
+		this.playTimeStr = playTimeStr;
+	}
+
+	@Override
     public String toString() {
         return "TicketOrderDO{" +
                 "}";

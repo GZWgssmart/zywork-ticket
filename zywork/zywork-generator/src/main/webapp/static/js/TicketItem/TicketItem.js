@@ -65,30 +65,47 @@ function loadTable() {
 },
 {
 	title: '放映时间',
-	field: 'playTime',
+	field: 'playTimeStr',
 	align: 'center',
-	sortable: true,
-	formatter: formatDate
+	sortable: true
 },
 {
-	title: '原价',
+	title: 'A区原价',
 	field: 'price',
 	align: 'center',
 	sortable: true
 },
 {
-	title: '优惠价',
+	title: 'A区优惠价',
 	field: 'unitPrice',
 	align: 'center',
 	sortable: true
 },
-{
-	title: '放映地点',
-	field: 'address',
-	align: 'center',
-	sortable: true,
-    formatter: formatAddress
-},
+            {
+                title: 'B区原价',
+                field: 'priceB',
+                align: 'center',
+                sortable: true
+            },
+            {
+                title: 'B区优惠价',
+                field: 'unitPriceB',
+                align: 'center',
+                sortable: true
+            },
+            {
+                title: 'C区原价',
+                field: 'priceC',
+                align: 'center',
+                sortable: true
+            },
+            {
+                title: 'C区优惠价',
+                field: 'unitPriceC',
+                align: 'center',
+                sortable: true
+            },
+
 {
 	title: '描述',
 	field: 'description',
@@ -121,14 +138,6 @@ function loadTable() {
     });
 }
 
-function formatAddress(index, row) {
-    if (row.address == 1) {
-        return "剧场一楼"
-    } else if (row.address == 2) {
-        return '剧场二楼'
-    }
-}
-
 function formatOperators(value, row, index) {
     let strArray = [];
     strArray.push('<div class="btn-group">');
@@ -152,46 +161,12 @@ function formatOperators(value, row, index) {
 
 let fieldTitles = {'id':'编号','title':'名称','headImg':'封面图片','playTime-date':'放映时间','price':'原价','unitPrice':'优惠价','address':'放映地点','description':'描述','createTime-date':'创建时间','updateTime-date':'更新时间'};
 
-function showRemoteEditModalTicketItem(modalId, url, formId, row, validateFields) {
-    let modal = $('#' + modalId);
-    modal.on('shown.bs.modal', function (e) {
-        $('#' + formId).autofill(row);
-        showDatetimeInEditModal(formId, row);
-        $("#address").select2({
-            data: [
-                {
-                    id: '1',
-                    text: '剧场一楼',
-                    selected: row.address == 1
-                },
-                {
-                    id: '2',
-                    text: '剧场二楼',
-                    selected: row.address == 2
-                }
-            ],
-            language: 'zh-CN',
-            placeholder:'请选择数据表',
-            width: '100%',
-            theme: "bootstrap"
-        });
-        validateForm(formId, 'edit-save', validateFields);
-    });
-    modal.on('hidden.bs.modal', function (e) {
-        $('#' + formId)[0].reset();
-        resetValidateForm(formId);
-    });
-    modal.modal({
-        remote: contextPath + url
-    });
-}
-
 window.operateEvents = {
     'click .to-detail': function (e, value, row, index) {
         showRemoteDetailModal('detail-modal', '/tickeitem/detail-modal', row, fieldTitles);
     },
     'click .to-edit': function (e, value, row, index) {
-        showRemoteEditModalTicketItem('edit-modal', '/tickeitem/edit-modal', 'edit-form', row, validateFields());
+        showRemoteEditModal('edit-modal', '/tickeitem/edit-modal', 'edit-form', row, validateFields());
     },
     'click .to-inactive': function (e, value, row, index) {
         active('/tickeitem/active', row.id, 1, 'data-list', '/tickeitem/pager-cond');
@@ -245,60 +220,76 @@ function queryParams(params) {
 
 function validateFields() {
     return {
-        
-title: {
-	validators: {
-		notEmpty: {
-			message: '名称是必须项'
-		},
-		stringLength: {
-			min: 1,
-			max: 100,
-			message: '必须是1-100个字符'
-		}
-	}
-},
-headImg: {
-	validators: {
 
-        notEmpty: {
-            message: '封面图片是必须项'
-        }
-	}
-},
-playTime: {
-	validators: {
-		notEmpty: {
-			message: '放映时间是必须项'
-		}
-	}
-},
-price: {
-	validators: {
-		notEmpty: {
-			message: '原价是必须项'
-		}
-	}
-},
-unitPrice: {
-	validators: {
-		notEmpty: {
-			message: '优惠价是必须项'
-		}
-	}
-},
-address: {
-	validators: {
-		notEmpty: {
-			message: '放映地点是必须项'
-		},
-		stringLength: {
-			min: 1,
-			max: 100,
-			message: '必须是1-100个字符'
-		}
-	}
-},
+        title: {
+            validators: {
+                notEmpty: {
+                    message: '名称是必须项'
+                },
+                stringLength: {
+                    min: 1,
+                    max: 100,
+                    message: '必须是1-100个字符'
+                }
+            }
+        },
+        headImg: {
+            validators: {
+
+                notEmpty: {
+                    message: '封面图片是必须项'
+                }
+            }
+        },
+        playTimeStr: {
+            validators: {
+                notEmpty: {
+                    message: '放映时间是必须项'
+                }
+            }
+        },
+        price: {
+            validators: {
+                notEmpty: {
+                    message: 'A区原价是必须项'
+                }
+            }
+        },
+        unitPrice: {
+            validators: {
+                notEmpty: {
+                    message: 'A区优惠价是必须项'
+                }
+            }
+        },
+        priceB: {
+            validators: {
+                notEmpty: {
+                    message: 'B区原价是必须项'
+                }
+            }
+        },
+        unitPriceB: {
+            validators: {
+                notEmpty: {
+                    message: 'B区优惠价是必须项'
+                }
+            }
+        },
+        priceC: {
+            validators: {
+                notEmpty: {
+                    message: 'C区原价是必须项'
+                }
+            }
+        },
+        unitPriceC: {
+            validators: {
+                notEmpty: {
+                    message: 'C区优惠价是必须项'
+                }
+            }
+        },
 description: {
 	validators: {
 

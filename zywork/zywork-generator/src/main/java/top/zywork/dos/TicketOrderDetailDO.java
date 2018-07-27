@@ -38,6 +38,8 @@ public class TicketOrderDetailDO extends BaseDO {
 	 * 订单编号
 	 */
 	private String orderNo;
+
+	private String area;
 	
     public TicketOrderDetailDO() {}
 
@@ -99,8 +101,15 @@ public class TicketOrderDetailDO extends BaseDO {
 		this.orderNo = orderNo;
 	}
 
-	
-    @Override
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	@Override
     public String toString() {
         return "TicketOrderDetailDO{" +
                 "id = " + id + 

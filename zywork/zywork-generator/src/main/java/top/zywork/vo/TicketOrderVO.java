@@ -63,6 +63,7 @@ public class TicketOrderVO extends BaseVO {
 	private Date updateTime;
 
 	private String selectedSeats;
+	private String playTimeStr;
 	
     public TicketOrderVO () {}
 
@@ -175,6 +176,14 @@ public class TicketOrderVO extends BaseVO {
 
 	public void setSelectedSeats(String selectedSeats) {
 		this.selectedSeats = selectedSeats;
+	}
+
+	public String getPlayTimeStr() {
+		return playTimeStr;
+	}
+
+	public void setPlayTimeStr(String playTimeStr) {
+		this.playTimeStr = playTimeStr;
 	}
 
 	@Override

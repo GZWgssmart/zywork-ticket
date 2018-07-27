@@ -27,6 +27,7 @@ public class UserTicketOrderQuery extends BaseQuery {
 	 * 订单编号
 	 */
 	private String ticketOrderOrderNo;
+	private String ticketOrderPlayTimeStr;
 	/**
 	 * 下单时间
 	 */
@@ -240,6 +241,14 @@ public class UserTicketOrderQuery extends BaseQuery {
 
 	public void setUserNickname(String userNickname) {
 		this.userNickname = userNickname;
+	}
+
+	public String getTicketOrderPlayTimeStr() {
+		return ticketOrderPlayTimeStr;
+	}
+
+	public void setTicketOrderPlayTimeStr(String ticketOrderPlayTimeStr) {
+		this.ticketOrderPlayTimeStr = ticketOrderPlayTimeStr;
 	}
 
 	@Override

@@ -27,8 +27,8 @@ public class TicketOrderDetailServiceImpl extends AbstractBaseService implements
     private TicketOrderDetailDAO ticketOrderDetailDAO;
 
     @Override
-    public List<Object> listSelectedSeats(String ticketItemId) {
-        List<Object> doObjList = ticketOrderDetailDAO.listSelectedSeats(ticketItemId);
+    public List<Object> listSelectedSeats(String ticketItemId, String playTimeStr) {
+        List<Object> doObjList = ticketOrderDetailDAO.listSelectedSeats(ticketItemId, playTimeStr);
         List<Object> dtoObjList = new ArrayList<>();
         if (doObjList != null && doObjList.size() > 0) {
             if (doObjList != null && doObjList.size() > 0) {

@@ -96,12 +96,40 @@
                 font-size: 16px;
                 line-height:60px;
             }
+
+            .area {
+                font-size: 12px;
+            }
+
+            .area-chg {
+                margin-bottom:5px;
+            }
+
+            .area-chg a {
+                display: inline-block;
+                margin-right: 10px;
+                background-color:#ff7700;
+                color: #fff;
+                border-radius:10px;
+                padding: 0 5px;
+            }
         </style>
     </head>
 
     <body>
         <div id="app">
             <div class="seats">
+                <div class="area">
+                    <i class="iconfont icon-zuowei1" style="color:#00ff00;"></i>已选
+                    <i class="iconfont icon-zuowei1" style="color:#ff0000;"></i>已售
+                    <i class="iconfont icon-zuowei1" style="color:#dddddd;"></i>A区
+                    <i class="iconfont icon-zuowei1" style="color:#ADD7F0;"></i>B区
+                    <i class="iconfont icon-zuowei1" style="color:#e4b9c0;"></i>C区
+                </div>
+                <div class="area-chg">
+                    <a href="javascript:;" @click="changeArea(1)">A区和B区</a>
+                    <a href="javascript:;" @click="changeArea(2)">C区</a>
+                </div>
                 <div class="left">
                     <div v-for="(rowData, row) in seats" class="seat-row">
                         <span class="num">{{row + 1}}</span>
@@ -109,12 +137,14 @@
                 </div>
                 <div class="right">
                     <div v-for="(rowData, row) in seats" class="seat-row">
-                        <span class="seat" v-for="(seat, col) in rowData">
-                            <i v-if="seat.seat != '0-0' && seat.status == 1" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)"></i>
-                            <i v-else-if="seat.seat != '0-0' && seat.status == 2" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#00ff00;"></i>
-                            <i v-else-if="seat.seat == '0-0'" class="iconfont icon-zuowei1" style="color:#fff;"></i>
-                            <i v-else-if="seat.seat != '0-0' && seat.status == 3" class="iconfont icon-zuowei1" style="color:#ff0000;"></i>
-                        </span>
+                            <span class="seat" v-for="(seat, col) in rowData">
+                                <i v-if="seat.seat != '0-0' && seat.status == 1 && seat.area == 'A'" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#dddddd;"></i>
+                                <i v-else-if="seat.seat != '0-0' && seat.status == 1 && seat.area == 'B'" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#ADD7F0;"></i>
+                                <i v-else-if="seat.seat != '0-0' && seat.status == 1 && seat.area == 'C'" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#e4b9c0;"></i>
+                                <i v-else-if="seat.seat != '0-0' && seat.status == 2" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#00ff00;"></i>
+                                <i v-else-if="seat.seat == '0-0'" class="iconfont icon-zuowei1" style="color:rgba(0,0,0,0);"></i>
+                                <i v-else-if="seat.seat != '0-0' && seat.status == 3" class="iconfont icon-zuowei1" style="color:#ff0000;"></i>
+                            </span>
                     </div>
                 </div>
                 <p style="clear:both;"></p>
@@ -157,6 +187,14 @@
                     unitPay: 30.99
                 },
                 methods: {
+                    changeArea (floor) {
+                        alert(floor)
+                        if (floor == 1) {
+                            this.seats = seats1
+                        } else if (floor == 2) {
+                            this.seats = seats2
+                        }
+                    },
                     selectSeat (seat, col, event) {
                         if (seat.status == 1) {
                             event.currentTarget.style.color = '#00ff00'
@@ -164,7 +202,13 @@
                             // 放入已选中的座位
                             this.selectedSeat.push(seat)
                         } else if (seat.status == 2){
-                            event.currentTarget.style.color = '#ccc'
+                            if (seat.area == 'A') {
+                                event.currentTarget.style.color = '#dddddd'
+                            } else if (seat.area == 'B') {
+                                event.currentTarget.style.color = '#ADD7F0'
+                            } else if (seat.area == 'C') {
+                                event.currentTarget.style.color = '#e4b9c0'
+                            }
                             seat.status = 1
                             // 从已选中的座位中移除
                             this.selectedSeat.forEach((element, index) => {

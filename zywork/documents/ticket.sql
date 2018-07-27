@@ -229,22 +229,27 @@ CREATE TABLE `t_ticket_item` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '编号',
   `title` varchar(100) NOT NULL COMMENT '名称',
   `head_img` varchar(500) DEFAULT NULL COMMENT '封面图片',
-  `play_time` datetime NOT NULL COMMENT '放映时间',
-  `price` double NOT NULL COMMENT '原价',
-  `unit_price` double NOT NULL COMMENT '优惠价',
-  `address` varchar(100) NOT NULL COMMENT '放映地点',
+  `play_time` datetime DEFAULT NULL COMMENT '放映时间',
+  `play_time_str` varchar(500) DEFAULT NULL COMMENT '演出时间',
+  `price` double DEFAULT NULL COMMENT 'A区原价',
+  `unit_price` double DEFAULT NULL COMMENT 'A区优惠价',
+  `price_b` double DEFAULT NULL COMMENT 'B区原价',
+  `unit_price_b` double DEFAULT NULL COMMENT 'B区优惠价',
+  `price_c` double DEFAULT NULL COMMENT 'C区原价',
+  `unit_price_c` double DEFAULT NULL COMMENT 'C区优惠价',
+  `address` varchar(100) DEFAULT NULL COMMENT '放映地点',
   `description` varchar(500) DEFAULT NULL COMMENT '描述',
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `t_ticket_item`
 --
 
-INSERT INTO `t_ticket_item` VALUES (1,'丑小鸭','','2018-07-21 08:57:06',89,69,'1楼','最新剧目','2018-07-21 08:57:34',NULL);
+INSERT INTO `t_ticket_item` VALUES (1,'丑小鸭','','2018-07-21 08:57:06',NULL,89,69,NULL,NULL,NULL,NULL,'2','最新剧目','2018-07-21 08:57:34',NULL),(2,'小蝌蚪找妈妈',NULL,'2018-07-25 12:46:05',NULL,89,49,NULL,NULL,NULL,NULL,'2','','2018-07-25 12:46:12',NULL),(4,'一号酒店','static/ticket/153249753524588257.jpeg','2018-07-25 13:27:09',NULL,89,69,NULL,NULL,NULL,NULL,'2','','2018-07-25 13:27:17',NULL),(5,'小蝌蚪找妈妈','static/ticket/153249760782649739.jpeg','2018-07-25 13:46:37',NULL,99,59,NULL,NULL,NULL,NULL,'2','','2018-07-25 13:47:14',NULL),(6,'aaaa','static/ticket/153251960361990450.jpeg','2018-07-25 19:40:05',NULL,89,69,NULL,NULL,NULL,NULL,'1','','2018-07-25 19:40:10',NULL),(7,'aaaa','static/ticket/153259973315750167.jpeg',NULL,'2017-07-28 17:00;2017-07-28 20:00',89,69,89,69,89,68,NULL,'最新剧目','2018-07-26 18:08:53',NULL);
 
 --
 -- Table structure for table `t_ticket_order`
@@ -257,6 +262,8 @@ CREATE TABLE `t_ticket_order` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '编号',
   `ticket_item_id` bigint(20) DEFAULT NULL COMMENT '剧目编号',
   `user_id` bigint(20) DEFAULT NULL COMMENT '用户编号',
+  `openid` varchar(200) DEFAULT NULL COMMENT '微信openid',
+  `order_no` varchar(100) DEFAULT NULL COMMENT '订单编号',
   `order_time` datetime DEFAULT NULL COMMENT '下单时间',
   `unit_price` double DEFAULT NULL COMMENT '单价',
   `total_seat` int(11) DEFAULT NULL COMMENT '总座位数',
@@ -264,13 +271,14 @@ CREATE TABLE `t_ticket_order` (
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `t_ticket_order`
 --
 
+INSERT INTO `t_ticket_order` VALUES (1,1,NULL,'1','1','2018-07-25 17:05:56',NULL,NULL,NULL,'2018-07-25 17:05:56',NULL);
 
 --
 -- Table structure for table `t_ticket_order_detail`
@@ -282,17 +290,20 @@ DROP TABLE IF EXISTS `t_ticket_order_detail`;
 CREATE TABLE `t_ticket_order_detail` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '编号',
   `ticket_order_id` bigint(20) DEFAULT NULL COMMENT '订单编号',
+  `area` char(1) DEFAULT NULL COMMENT '座位区',
   `seat` varchar(45) DEFAULT NULL COMMENT '座位号',
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  `order_no` varchar(100) DEFAULT NULL COMMENT '订单编号',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `t_ticket_order_detail`
 --
 
+INSERT INTO `t_ticket_order_detail` VALUES (1,NULL,NULL,'1-1','2018-07-25 17:06:18',NULL,'1'),(2,NULL,NULL,'1-2','2018-07-25 17:06:18',NULL,'1');
 
 --
 -- Table structure for table `t_user`
@@ -323,7 +334,7 @@ CREATE TABLE `t_user` (
 -- Dumping data for table `t_user`
 --
 
-INSERT INTO `t_user` VALUES (1,NULL,'13672297775',NULL,'4QrcOUm6Wau+VuBX8g+IPg==','',NULL,NULL,NULL,NULL,'2017-12-11 19:13:08',NULL,0);
+INSERT INTO `t_user` VALUES (1,NULL,'13672297775',NULL,'4QrcOUm6Wau+VuBX8g+IPg==','',NULL,NULL,NULL,'1','2017-12-11 19:13:08',NULL,0);
 
 --
 -- Table structure for table `t_user_detail`
@@ -414,4 +425,4 @@ CREATE TABLE `t_user_social` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-21 11:08:47
+-- Dump completed

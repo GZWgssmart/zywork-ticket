@@ -65,12 +65,6 @@ function loadTable() {
 	formatter: formatDate
 },
 {
-	title: '单价',
-	field: 'ticketOrderUnitPrice',
-	align: 'center',
-	sortable: true
-},
-{
 	title: '总座位数',
 	field: 'ticketOrderTotalSeat',
 	align: 'center',

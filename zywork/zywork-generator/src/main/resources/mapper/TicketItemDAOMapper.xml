@@ -22,6 +22,21 @@
 			<if test="unitPrice != null">
 				unit_price,
 			</if>
+			<if test="playTimeStr != null">
+				play_time_str,
+			</if>
+			<if test="priceB != null">
+				price_b,
+			</if>
+			<if test="unitPriceB != null">
+				unit_price_b,
+			</if>
+			<if test="priceC != null">
+				price_c,
+			</if>
+			<if test="unitPriceC != null">
+				unit_price_c,
+			</if>
 			<if test="address != null">
 				address,
 			</if>
@@ -51,6 +66,21 @@
 			</if>
 			<if test="unitPrice != null">
 				#{unitPrice},
+			</if>
+			<if test="playTimeStr != null">
+				#{playTimeStr},
+			</if>
+			<if test="priceB != null">
+				#{priceB},
+			</if>
+			<if test="unitPriceB != null">
+				#{unitPriceB},
+			</if>
+			<if test="priceC != null">
+				#{priceC},
+			</if>
+			<if test="unitPriceC != null">
+				#{unitPriceC},
 			</if>
 			<if test="address != null">
 				#{address},
@@ -101,6 +131,21 @@
 			<if test="unitPrice != null">
 				unit_price = #{unitPrice},
 			</if>
+			<if test="playTimeStr != null">
+				play_time_str = #{playTimeStr},
+			</if>
+			<if test="priceB != null">
+				price_b = #{priceB},
+			</if>
+			<if test="unitPriceB != null">
+				unit_price_b = #{unitPriceB},
+			</if>
+			<if test="priceC != null">
+				price_c = #{priceC},
+			</if>
+			<if test="unitPriceC != null">
+				unit_price_c = #{unitPriceC},
+			</if>
 			<if test="address != null">
 				address = #{address},
 			</if>
@@ -130,7 +175,7 @@
     </update>
 
     <sql id="select_columns">
-        id as id, title as title, head_img as headImg, play_time as playTime, price as price, unit_price as unitPrice, address as address, description as description, create_time as createTime, update_time as updateTime
+        id as id, title as title, head_img as headImg, play_time as playTime, play_time_str as playTimeStr, price as price, unit_price as unitPrice,price_b as priceB, unit_price_b as unitPriceB, price_c as priceC, unit_price_c as unitPriceC,address as address, description as description, create_time as createTime, update_time as updateTime
     </sql>
 
     <sql id="query_where_clause">
@@ -152,11 +197,26 @@
 		<if test="query != null and query.playTimeStart != null and query.playTimeEnd != null">
 			and play_time <![CDATA[ >= ]]> #{query.playTimeStart} and play_time <![CDATA[ <= ]]> #{query.playTimeEnd}
 		</if>
+		<if test="query != null and query.playTimeStr != null and query.playTimeStr != ''">
+			and play_time_str like concat('%', #{query.playTimeStr}, '%')
+		</if>
 		<if test="query != null and query.price != null">
 			and price = #{query.price}
 		</if>
 		<if test="query != null and query.unitPrice != null">
 			and unit_price = #{query.unitPrice}
+		</if>
+		<if test="query != null and query.priceB != null">
+			and price_b = #{query.priceB}
+		</if>
+		<if test="query != null and query.unitPriceB != null">
+			and unit_price_b = #{query.unitPriceB}
+		</if>
+		<if test="query != null and query.priceC != null">
+			and price_c = #{query.priceC}
+		</if>
+		<if test="query != null and query.unitPriceC != null">
+			and unit_price_c = #{query.unitPriceC}
 		</if>
 		<if test="query != null and query.address != null and query.address != ''">
 			and address like concat('%', #{query.address}, '%')

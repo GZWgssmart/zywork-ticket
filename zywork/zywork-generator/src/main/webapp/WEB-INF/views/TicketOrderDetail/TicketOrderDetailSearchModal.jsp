@@ -25,6 +25,13 @@
     </div>
 </div>
 
+            <div class="col-sm-6 form-group">
+                <label for="areaSearch" class="col-sm-4 control-label">座位区：</label>
+                <div class="col-sm-8">
+                    <input id="areaSearch" name="area" class="form-control" placeholder="请输入座位区">
+                </div>
+            </div>
+
 <div class="col-sm-6 form-group">
     <label for="seatSearch" class="col-sm-4 control-label">座位号：</label>
     <div class="col-sm-8">

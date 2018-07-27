@@ -13,6 +13,13 @@
     </div>
 </div>
 
+        <div class="form-group">
+            <label for="area" class="col-sm-2 control-label">座位区：</label>
+            <div class="col-sm-10">
+                <input id="area" name="area" class="form-control" placeholder="请输入座位区"/>
+            </div>
+        </div>
+
 <div class="form-group">
     <label for="seat" class="col-sm-2 control-label">座位号：</label>
     <div class="col-sm-10">

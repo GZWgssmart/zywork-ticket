@@ -18,13 +18,14 @@
         }
 
         .order img {
-            width:80px;
-            height: 100px;
+            width:20%;
+            height: auto;
             float: left;
             margin-right: 10px;
         }
 
         .detail {
+            width: 70%;
             float: left;
         }
 
@@ -59,11 +60,10 @@
             <div class="detail">
                 <p class="title">{{item.ticketItemTitle}}</p>
                 <p class="order-time">订单号：{{item.ticketOrderOrderNo}}</p>
-                <p class="play-time">演出时间：{{item.ticketItemPlayTime}}</p>
+                <p class="play-time">演出时间：{{item.ticketOrderPlayTimeStr}}</p>
                 <p class="order-time">购票时间：{{item.ticketOrderOrderTime}}</p>
-                <p class="unit-price">单价：{{item.ticketOrderUnitPrice}}</p>
-                <p class="unit-price">总价：{{item.ticketOrderTotalPrice}}</p>
                 <p class="total-seat">总座位数：{{item.ticketOrderTotalSeat}}</p>
+                <p class="unit-price">总价：{{item.ticketOrderTotalPrice}}</p>
                 <p class="all-seats">座位信息：{{item.allSeatsString}}</p>
             </div>
             <p style="clear:both;"></p>
@@ -99,7 +99,6 @@
                 ).then(response => {
                     this.ticketOrders = response.data.rows
                     this.ticketOrders.forEach((item, index) => {
-                        item.ticketItemPlayTime = timestampToDatetime(item.ticketItemPlayTime)
                         item.ticketOrderOrderTime = timestampToDatetime(item.ticketOrderOrderTime)
                         item.ticketItemHeadImg = '/byjc/' + item.ticketItemHeadImg
                     })

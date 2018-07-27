@@ -150,7 +150,51 @@ public class TicketItemDTO extends BaseDTO {
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
+	private String playTimeStr;
+	private Double priceB;
+	private Double unitPriceB;
+	private Double priceC;
+	private Double unitPriceC;
 
+	public String getPlayTimeStr() {
+		return playTimeStr;
+	}
+
+	public void setPlayTimeStr(String playTimeStr) {
+		this.playTimeStr = playTimeStr;
+	}
+
+	public Double getPriceB() {
+		return priceB;
+	}
+
+	public void setPriceB(Double priceB) {
+		this.priceB = priceB;
+	}
+
+	public Double getUnitPriceB() {
+		return unitPriceB;
+	}
+
+	public void setUnitPriceB(Double unitPriceB) {
+		this.unitPriceB = unitPriceB;
+	}
+
+	public Double getPriceC() {
+		return priceC;
+	}
+
+	public void setPriceC(Double priceC) {
+		this.priceC = priceC;
+	}
+
+	public Double getUnitPriceC() {
+		return unitPriceC;
+	}
+
+	public void setUnitPriceC(Double unitPriceC) {
+		this.unitPriceC = unitPriceC;
+	}
 	
     @Override
     public String toString() {

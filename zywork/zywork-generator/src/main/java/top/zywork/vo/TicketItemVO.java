@@ -36,7 +36,6 @@ public class TicketItemVO extends BaseVO {
 	/**
 	 * 放映时间
 	 */
-	@NotNull(message = "此项是必须项")
 	private Date playTime;
 	/**
 	 * 原价
@@ -51,7 +50,6 @@ public class TicketItemVO extends BaseVO {
 	/**
 	 * 放映地点
 	 */
-	@NotBlank(message = "此项是必须项")
 	private String address;
 	/**
 	 * 描述
@@ -66,8 +64,8 @@ public class TicketItemVO extends BaseVO {
 	 * 更新时间
 	 */
 	private Date updateTime;
-	
-    public TicketItemVO() {}
+
+	public TicketItemVO() {}
 
     public TicketItemVO(Long id, String title, String headImg, Date playTime, Double price, Double unitPrice, String address, String description, Date createTime, Date updateTime) {
         this.id = id;
@@ -163,6 +161,51 @@ public class TicketItemVO extends BaseVO {
 		this.updateTime = updateTime;
 	}
 
+	private String playTimeStr;
+	private Double priceB;
+	private Double unitPriceB;
+	private Double priceC;
+	private Double unitPriceC;
+
+	public String getPlayTimeStr() {
+		return playTimeStr;
+	}
+
+	public void setPlayTimeStr(String playTimeStr) {
+		this.playTimeStr = playTimeStr;
+	}
+
+	public Double getPriceB() {
+		return priceB;
+	}
+
+	public void setPriceB(Double priceB) {
+		this.priceB = priceB;
+	}
+
+	public Double getUnitPriceB() {
+		return unitPriceB;
+	}
+
+	public void setUnitPriceB(Double unitPriceB) {
+		this.unitPriceB = unitPriceB;
+	}
+
+	public Double getPriceC() {
+		return priceC;
+	}
+
+	public void setPriceC(Double priceC) {
+		this.priceC = priceC;
+	}
+
+	public Double getUnitPriceC() {
+		return unitPriceC;
+	}
+
+	public void setUnitPriceC(Double unitPriceC) {
+		this.unitPriceC = unitPriceC;
+	}
 	
     @Override
     public String toString() {

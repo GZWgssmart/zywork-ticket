@@ -23,5 +23,5 @@ public interface TicketOrderDetailDAO extends BaseDAO {
     @Override
     Long countByCondition(@Param("query") Object queryObj);
 
-    List<Object> listSelectedSeats(String ticketItemId);
+    List<Object> listSelectedSeats(@Param("ticketItemId") String ticketItemId, @Param("playTimeStr") String playTimeStr);
 }
