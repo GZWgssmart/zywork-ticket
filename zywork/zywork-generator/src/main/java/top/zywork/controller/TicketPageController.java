@@ -58,4 +58,9 @@ public class TicketPageController {
         modelAndView.addObject("openid", openid);
         return modelAndView;
     }
+
+    @GetMapping("map")
+    public String map() {
+        return "/front/map";
+    }
 }
