@@ -20,7 +20,7 @@
             .seats {
                 width: 1300px;
                 height: 300px;
-                margin-top: 60px;
+                margin-top: 70px;
                 overflow: scroll;
             }
 
@@ -72,7 +72,7 @@
 
             .footer .bottom {
                 width: 100%;
-                height: 60px;
+                height: 40px;
                 color: #fff;
                 background-color: rgba(26, 173, 25, 0.6);
                 padding-left: 5px;
@@ -85,8 +85,8 @@
             }
 
             .total-pay {
-                height: 60px;
-                line-height:60px;
+                height: 40px;
+                line-height:40px;
                 font-size: 16px;
                 float: left;
             }
@@ -97,9 +97,9 @@
 
             .to-pay a {
                 width: 160px;
-                height: 60px;
+                height: 40px;
                 font-size: 16px;
-                line-height:60px;
+                line-height:40px;
             }
 
             .area {
@@ -137,6 +137,8 @@
                     <a href="javascript:;" @click="changeArea(1)">一楼A区和B区</a>
                     <a href="javascript:;" @click="changeArea(2)">二楼C区</a>
                     {{time}}
+                    <br/>
+                    座位可上下左右移动哦
                 </div>
             </div>
             <div class="seats">
