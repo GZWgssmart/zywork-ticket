@@ -2,6 +2,7 @@ package top.zywork.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.vdurmont.emoji.EmojiParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,8 @@ import top.zywork.wechat.WechatUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Controller
 @RequestMapping("/wechat")
@@ -50,7 +53,7 @@ public class WechatLoginController {
                     } else {
                         user.setPassword(HashUtils.md5("123456", HashEncodeEnum.HEX));
                         user.setOpenid(openid);
-                        user.setNickname(userInfoJSON.getString("nickname"));
+                        user.setNickname(EmojiParser.parseToAliases(userInfoJSON.getString("nickname"), EmojiParser.FitzpatrickAction.REMOVE));
                         user.setHeadicon(userInfoJSON.getString("headimgurl"));
                         int sex = userInfoJSON.getInteger("sex");
                         user.setGender((byte) sex);
