@@ -117,6 +117,38 @@ public class TicketOrderController extends BaseController {
         return null;
     }
 
+    @PostMapping("save-admin")
+    @ResponseBody
+    public PayData saveAdmin(@Validated TicketOrderVO ticketOrderVO, BindingResult bindingResult, String allSeatsString) {
+        PayData returnPayData = new PayData();
+        if (bindingResult.hasErrors()) {
+            return null;
+        } else {
+            try {
+                List<Object> ticketOrderDetailDTOList = ticketOrderDetailService.listSelectedSeats(ticketOrderVO.getTicketItemId() + "", ticketOrderVO.getPlayTimeStr());
+                String[] strArray = ticketOrderVO.getSelectedSeats().split(";");
+                for (String seat : strArray) {
+                    for (Object obj : ticketOrderDetailDTOList) {
+                        TicketOrderDetailDTO ticketOrderDetailDTO = (TicketOrderDetailDTO) obj;
+                        if (ticketOrderDetailDTO.getSeat().equals(seat)) {
+                            returnPayData.setAppId("none");
+                            return returnPayData;
+                        }
+                    }
+                }
+                ticketOrderDetailService.removeSelectedSeatsAdmin(ticketOrderVO.getTicketItemId() + "", ticketOrderVO.getPlayTimeStr());
+                ticketOrderVO.setOrderNo(System.currentTimeMillis() + "" + RandomUtils.randomNum(100000, 999999));
+                ticketOrderVO.setOrderTime(DateUtils.currentDate());
+                ticketOrderService.save(getBeanMapper().map(ticketOrderVO, TicketOrderDTO.class));
+                returnPayData.setAppId("ok");
+                return returnPayData;
+            } catch (ServiceException e) {
+                logger.error("添加失败：{}", e.getMessage());
+            }
+        }
+        return null;
+    }
+
     @RequestMapping("result")
     public void payResult(HttpServletRequest request, HttpServletResponse response) {
         System.out.println("***********************notify_url*************************");

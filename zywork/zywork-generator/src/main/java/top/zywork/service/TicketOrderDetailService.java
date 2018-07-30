@@ -12,4 +12,6 @@ import java.util.List;
  */
 public interface TicketOrderDetailService extends BaseService {
     List<Object> listSelectedSeats(String ticketItemId, String playTimeStr);
+    List<Object> listSelectedSeatsAdmin(String ticketItemId, String playTimeStr);
+    void removeSelectedSeatsAdmin(String ticketItemId, String playTimeStr);
 }

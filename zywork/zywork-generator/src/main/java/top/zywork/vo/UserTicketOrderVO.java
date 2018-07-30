@@ -64,6 +64,7 @@ public class UserTicketOrderVO extends BaseVO {
 	 * 放映时间
 	 */
 	private Date ticketItemPlayTime;
+	private String ticketItemAddress;
 	//t_user表的字段对应的属性
 	/**
 	 * 微信openid
@@ -210,6 +211,14 @@ public class UserTicketOrderVO extends BaseVO {
 
 	public void setTicketOrderPlayTimeStr(String ticketOrderPlayTimeStr) {
 		this.ticketOrderPlayTimeStr = ticketOrderPlayTimeStr;
+	}
+
+	public String getTicketItemAddress() {
+		return ticketItemAddress;
+	}
+
+	public void setTicketItemAddress(String ticketItemAddress) {
+		this.ticketItemAddress = ticketItemAddress;
 	}
 
 	@Override

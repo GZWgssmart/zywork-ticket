@@ -21,7 +21,7 @@
 
         .img {
             float: left;
-            width: 30%;
+            width: 15%;
         }
 
         .img img {
@@ -36,7 +36,7 @@
         .detail {
             padding: 0 10px;
             float: left;
-            width: 60%;
+            width: 75%;
         }
 
         .detail a {
@@ -76,43 +76,55 @@
             font-size: 12px;
             padding-right: 5px;
         }
+
+        .time {
+            background-color:#fff;
+            width: 98%;
+            height: 30px;
+            line-height:30px;
+            margin: 5px;
+            padding: 5px;
+            color:#ff7700;
+            font-size: 14px;
+        }
+
+        h4 {
+            color:#ff7700;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        .time a {
+            display: inline-block;
+            margin-left: 100px;
+            padding:0 5px;
+            background-color: #ff7700;
+            border-radius: 10px;
+            color: white;
+        }
+
     </style>
 </head>
 
 <body>
 <div id="app">
-    <div class="item">
-        <div class="img">
-            <img :src="ticketItemDetail.headImg">
-        </div>
-        <div class="detail">
-            <p class="title">{{ticketItemDetail.title}}</p>
-            <p class="play-time">演出时间：{{ticketItemDetail.playTimeStr}}</p>
-            <p class="address">
-                演出地点：{{ticketItemDetail.address}}
-            </p>
-            <p class="unit-price"><strong>现价：￥{{ticketItemDetail.unitPriceC}}起</strong></p>
-        </div>
-        <p style="clear:both;"></p>
-        <div>
-            <p class="des">简介：{{ticketItemDetail.description}}</p>
-        </div>
-        <div class="other-info">
-            <h4>其他信息</h4>
-            <hr/>
-            <p>1、演出地点：{{ticketItemDetail.address}}</p>
-            <p>2、客服电话：13607070913（微信同号）</p>
-            <p>3、演出开始后不再售票</p>
-            <p>4、查询购票订单请点击公众号菜单中的个人中心</p>
-            <p>5、本产品有效期至本场演出结束，过期作废</p>
-            <p>6、大人小孩一人一票持票进场，2周岁内的小孩免票入场，须提前与客服联系登记</p>
-            <p>7、选座购票后，家长须出示个人中心购票订单现场取票。场次一经确定，不予更改，支付出票后不退不换，特此声明</p>
-            <p>8、剧场周边停车位较少，请大家尽量环保出行</p>
-            <p>9、有任何疑问请拨打客服电话或加客服微信</p>
-        </div>
+    <div class="img">
+        <img :src="ticketItemDetail.headImg">
     </div>
-    <div class="bottom">
-        <a :href="ticketItemDetail.seatUrl" class="weui-btn weui-btn_primary">立即购票</a>
+    <div class="detail">
+        <p class="title">{{ticketItemDetail.title}}</p>
+        <p class="play-time">演出时间：{{ticketItemDetail.playTimeStr}}</p>
+        <p class="address">
+            演出地点：{{ticketItemDetail.addressStr}}
+        </p>
+        <p class="unit-price"><strong>现价：￥{{ticketItemDetail.unitPriceC}}起</strong></p>
+    </div>
+    <p style="clear:both;"></p>
+    <h4>请选择演出时段</h4>
+    <hr/>
+    <div class="time" v-for="(item, index) in allTimes">
+        {{item}}
+        <a href="javascript:;" @click="toSelectSeat(item)">座位设置</a>
     </div>
 </div>
 </body>
@@ -124,26 +136,33 @@
 <script src="<%=path%>/static/js/address.js"></script>
 <script>
     var itemId = '${requestScope.itemId}'
-    var openid = '${requestScope.openid}'
     var app = new Vue(
         {
             el: '#app',
             data: {
                 itemId: itemId,
-                ticketItemDetail: {}
+                ticketItemDetail: {},
+                allTimes: []
             },
             created () {
                 axios.get('/byjc/tickeitem/one/' + this.itemId).then(response => {
                     this.ticketItemDetail = response.data
-                    this.ticketItemDetail.seatUrl = '<%=path%>/ticket-page/ticket-item-detail-time?itemId=' + itemId + '&openid=' + openid
                     this.ticketItemDetail.headImg = '/byjc/' + this.ticketItemDetail.headImg
-                    this.ticketItemDetail.address = allAddrs[this.ticketItemDetail.address]
+                    this.ticketItemDetail.addressStr = allAddrs[this.ticketItemDetail.address]
+                    this.allTimes = response.data.playTimeStr.split(';')
                 }).catch(error => {
                     console.log(error)
                 })
             },
             methods: {
-
+                toSelectSeat (time) {
+                    var currentTime = new Date()
+                    if (currentTime >= strToTimestamp(time)) {
+                        alert('演出已开始，无需设置已售座位')
+                    } else {
+                        window.location.href = '<%=path%>/ticket-page/seat-admin?itemId=' + itemId + '&time=' + time + '&address=' + this.ticketItemDetail.address
+                    }
+                }
             }
         }
     );

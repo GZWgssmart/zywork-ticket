@@ -26,7 +26,15 @@
             </div>
         </div>
 
-<div class="form-group">
+        <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">放映地点：</label>
+            <div class="col-sm-10">
+                <select id="address" name="address" class="form-control" data-placeholder="请选择放映地点"></select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
     <label for="price" class="col-sm-2 control-label">A区原价：</label>
     <div class="col-sm-10">
         <input id="price" name="price" class="form-control" placeholder="请输入A区原价"/>
@@ -86,16 +94,20 @@
     $("#address").select2({
         data: [
             {
-                id: '1',
-                text: '剧场一楼'
+                id: 'ganzhou',
+                text: allAddrs['ganzhou']
             },
             {
-                id: '2',
-                text: '剧场二楼'
+                id: 'nankang',
+                text: allAddrs['nankang']
+            },
+            {
+                id: 'xinfeng',
+                text: allAddrs['xinfeng']
             }
         ],
         language: 'zh-CN',
-        placeholder:'请选择数据表',
+        placeholder:'请选择放映地点',
         width: '100%',
         theme: "bootstrap"
     });

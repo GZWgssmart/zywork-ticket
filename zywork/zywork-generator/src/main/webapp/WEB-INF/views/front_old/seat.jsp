@@ -134,7 +134,8 @@
                     <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#e4b9c0;"></i>C区{{currentItem.unitPriceC}}元
                 </div>
                 <div class="area-chg">
-                    <a v-for="(item, index) in areas" href="javascript:;" @click="changeArea(index)">{{item}}</a>
+                    <a href="javascript:;" @click="changeArea(1)">一楼A区和B区</a>
+                    <a href="javascript:;" @click="changeArea(2)">二楼C区</a>
                     {{time}}
                     <br/>
                     座位可上下左右移动哦
@@ -188,7 +189,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
     <script src="https://cdn.bootcss.com/qs/6.5.2/qs.min.js"></script>
-    <script src="<%=path%>/static/js/seats-${requestScope.address}.js"></script>
+    <script src="<%=path%>/static/js/seats.js"></script>
     <script>
         var itemId = '${requestScope.itemId}'
         var openid = '${requestScope.openid}'
@@ -198,8 +199,7 @@
                 el: '#app',
                 data: {
                     itemId: itemId,
-                    areas: [],
-                    seats: allSeats[0].seats,
+                    seats: seats1,
                     selectedSeat: [],
                     selectedSeatString: '',
                     totalPay: 0.0,
@@ -212,9 +212,6 @@
                     presentNum: 1
                 },
                 created () {
-                    allSeats.forEach((item, index) => {
-                        this.areas.push(item.floor + '楼' + item.areaStr + '区')
-                    })
                     axios.get('/byjc/tickeitem/one/' + this.itemId).then(response => {
                         this.currentItem = response.data
                     }).catch (error => {
@@ -222,36 +219,35 @@
                     })
                     axios.get('/byjc/tickeorder-detail/selected-seats/' + this.itemId + '/' + this.time).then(response => {
                         this.allSelectedSeats = response.data
-                        this.changeArea(0)
+                        this.changeArea(1)
                     }).catch(error => {
                         console.log(error)
                     })
                 },
                 methods: {
                     changeArea (floor) {
-                        this.seats = allSeats[floor].seats
-                        var areas = allSeats[floor].areas
-                        if (this.allSelectedSeats != undefined && this.allSelectedSeats.length > 0) {
-                            // 对所有选中的座位进行循环
+                        if (floor == 1) {
+                            this.seats = seats1
                             for (var k = 0; k < this.allSelectedSeats.length; k++) {
-                                var isSetStatus = false
-                                // 对原始座位进行二维数组的循环
                                 for (var i = 0; i < this.seats.length; i++) {
                                     for (var j = 0; j < this.seats[i].length; j++) {
-                                        // 对区域进行循环
-                                        for (var m = 0; m < areas.length; m++) {
-                                            if (areas[m] + '-' + this.seats[i][j].seat == this.allSelectedSeats[k].seat) {
-                                                this.seats[i][j].status = 3
-                                                isSetStatus = true
-                                                break
-                                            }
-                                        }
-                                        if (isSetStatus) {
+                                        if ('A-' + this.seats[i][j].seat == this.allSelectedSeats[k].seat
+                                            || 'B-' + this.seats[i][j].seat == this.allSelectedSeats[k].seat) {
+                                            this.seats[i][j].status = 3
                                             break
                                         }
                                     }
-                                    if (isSetStatus) {
-                                        break
+                                }
+                            }
+                        } else if (floor == 2) {
+                            this.seats = seats2
+                            for (var k = 0; k < this.allSelectedSeats.length; k++) {
+                                for (var i = 0; i < this.seats.length; i++) {
+                                    for (var j = 0; j < this.seats[i].length; j++) {
+                                        if ('C-' + this.seats[i][j].seat == this.allSelectedSeats[k].seat) {
+                                            this.seats[i][j].status = 3
+                                            break;
+                                        }
                                     }
                                 }
                             }

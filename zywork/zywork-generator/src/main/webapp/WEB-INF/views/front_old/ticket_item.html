@@ -1,0 +1,139 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>我的</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+        <link href="../../../static/css/iconfont/iconfont.css" rel="stylesheet"/>
+        <link href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css" rel="stylesheet"/>
+        <style>
+            .item {
+                background-color:#fff;
+                width: 98%;
+                margin: 5px 5px 20px 5px;
+                padding: 5px;
+            }
+
+            .img {
+                float: left;
+            }
+
+            .img img {
+                width: 120px;
+                height: 150px;
+            }
+
+            .img a {
+                font-size: 14px;
+            }
+
+            .detail {
+                padding: 0 10px;
+                float: left;
+            }
+
+            .detail a {
+                display: block;
+            }
+
+            .title {
+                font-size: 16px;
+                font-weight: bold;
+                color: #ff7700;
+            }
+
+            .des, .address, .play-time {
+                font-size: 12px;
+                color: #9d9d9d;
+            }
+
+            .price{
+                color: #9d9d9d;
+            }
+
+            .unit-price {
+                color: #ff7700;
+            }
+
+            .pager {
+                text-align: center;
+            }
+
+            .pager a {
+                width: 150px;
+                font-size: 14px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            <div v-for="(item, index) in ticketItems" class="item">
+                <div class="img">
+                    <a href="#">
+                        <img :src="item.headImg">
+                    </a>
+                    <br/>
+                    <a href="javascript:;" class="weui-btn weui-btn_plain-primary">选座购票</a>
+                </div>
+                <div class="detail">
+                    <a href="#">
+                        <p class="title">{{item.title}}</p>
+                        <p class="des">简介：{{item.description}}</p>
+                        <p class="play-time">放映时间：{{item.playTime}}</p>
+                        <p class="address">放映地点：{{item.address}}</p>
+                        <p class="price"><small>原价：{{item.price}}</small></p>
+                        <p class="unit-price"><strong>现价：{{item.unitPrice}}</strong></p>
+                    </a>
+                </div>
+                <p style="clear:both;"></p>
+            </div>
+            <div class="pager">
+                <a href="#" class="weui-btn weui-btn_plain-primary">上一页</a>
+                <a href="#" class="weui-btn weui-btn_plain-primary">下一页</a>
+            </div>
+        </div>
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+    <script src="https://cdn.bootcss.com/qs/6.5.2/qs.min.js"></script>
+    <script src="../../../static/js/datetime.js"></script>
+    <script>
+        var app = new Vue(
+            {
+                el: '#app',
+                data: {
+                    ticketItems:[
+                        {
+                            headImg: '../../../static/img/profile_small.jpeg',
+                            title: '小蝌蚪找妈妈',
+                            playTime: '2018-07-28 18:00',
+                            price: 69,
+                            unitPrice: 39,
+                            description: '小蝌蚪找妈妈',
+                            address: '1楼'
+                        },
+                        {
+                            headImg: '../../../static/img/profile_small.jpeg',
+                            title: '小蝌蚪找妈妈',
+                            playTime: '2018-07-28 18:00',
+                            price: 69,
+                            unitPrice: 39,
+                            description: '小蝌蚪找妈妈',
+                            address: '1楼'
+                        }
+                    ]
+                },
+                created () {
+                   console.log(new Date().getTime())
+                },
+                methods: {
+
+                }
+            }
+        );
+    </script>
+</html>

@@ -61,7 +61,6 @@
                 <p class="title">{{item.ticketItemTitle}}</p>
                 <p class="order-time">订单号：{{item.ticketOrderOrderNo}}</p>
                 <p class="play-time">演出时间：{{item.ticketOrderPlayTimeStr}}</p>
-                <p class="play-time">演出地点：{{item.ticketItemAddress}}</p>
                 <p class="order-time">购票时间：{{item.ticketOrderOrderTime}}</p>
                 <p class="total-seat">总座位数：{{item.ticketOrderTotalSeat}}</p>
                 <p class="unit-price">总价：{{item.ticketOrderTotalPrice}}</p>
@@ -78,7 +77,6 @@
 <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 <script src="https://cdn.bootcss.com/qs/6.5.2/qs.min.js"></script>
 <script src="<%=path%>/static/js/datetime.js"></script>
-<script src="<%=path%>/static/js/address.js"></script>
 <script>
     var openid = '${requestScope.openid}'
     var app = new Vue(
@@ -103,7 +101,6 @@
                     this.ticketOrders.forEach((item, index) => {
                         item.ticketOrderOrderTime = timestampToDatetime(item.ticketOrderOrderTime)
                         item.ticketItemHeadImg = '/byjc/' + item.ticketItemHeadImg
-                        item.ticketItemAddress = allAddrs[item.ticketItemAddress]
                     })
 
                 }).catch(error => {

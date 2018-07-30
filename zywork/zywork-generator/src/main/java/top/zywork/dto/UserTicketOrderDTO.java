@@ -61,6 +61,8 @@ public class UserTicketOrderDTO extends BaseDTO {
 	 * 放映时间
 	 */
 	private Date ticketItemPlayTime;
+
+	private String ticketItemAddress;
 	//t_user表的字段对应的属性
 	/**
 	 * 微信openid
@@ -197,6 +199,14 @@ public class UserTicketOrderDTO extends BaseDTO {
 
 	public void setTicketOrderPlayTimeStr(String ticketOrderPlayTimeStr) {
 		this.ticketOrderPlayTimeStr = ticketOrderPlayTimeStr;
+	}
+
+	public String getTicketItemAddress() {
+		return ticketItemAddress;
+	}
+
+	public void setTicketItemAddress(String ticketItemAddress) {
+		this.ticketItemAddress = ticketItemAddress;
 	}
 
 	@Override

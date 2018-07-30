@@ -69,6 +69,8 @@ public class UserTicketOrderQuery extends BaseQuery {
 	 * 放映时间
 	 */
 	private Date ticketItemPlayTime;
+
+	private String ticketItemAddress;
 	/**
 	 * 放映时间(开始)
 	 */
@@ -249,6 +251,14 @@ public class UserTicketOrderQuery extends BaseQuery {
 
 	public void setTicketOrderPlayTimeStr(String ticketOrderPlayTimeStr) {
 		this.ticketOrderPlayTimeStr = ticketOrderPlayTimeStr;
+	}
+
+	public String getTicketItemAddress() {
+		return ticketItemAddress;
+	}
+
+	public void setTicketItemAddress(String ticketItemAddress) {
+		this.ticketItemAddress = ticketItemAddress;
 	}
 
 	@Override

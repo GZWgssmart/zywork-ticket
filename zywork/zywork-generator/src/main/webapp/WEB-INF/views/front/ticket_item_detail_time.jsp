@@ -113,9 +113,9 @@
     </div>
     <div class="detail">
         <p class="title">{{ticketItemDetail.title}}</p>
-        <p class="play-time">放映时间：{{ticketItemDetail.playTimeStr}}</p>
+        <p class="play-time">演出时间：{{ticketItemDetail.playTimeStr}}</p>
         <p class="address">
-            放映地点：赣州市青少年活动中心
+            演出地点：{{ticketItemDetail.addressStr}}
         </p>
         <p class="unit-price"><strong>现价：￥{{ticketItemDetail.unitPriceC}}起</strong></p>
     </div>
@@ -133,6 +133,7 @@
 <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 <script src="https://cdn.bootcss.com/qs/6.5.2/qs.min.js"></script>
 <script src="<%=path%>/static/js/datetime.js"></script>
+<script src="<%=path%>/static/js/address.js"></script>
 <script>
     var itemId = '${requestScope.itemId}'
     var openid = '${requestScope.openid}'
@@ -148,6 +149,7 @@
                 axios.get('/byjc/tickeitem/one/' + this.itemId).then(response => {
                     this.ticketItemDetail = response.data
                     this.ticketItemDetail.headImg = '/byjc/' + this.ticketItemDetail.headImg
+                    this.ticketItemDetail.addressStr = allAddrs[this.ticketItemDetail.address]
                     this.allTimes = response.data.playTimeStr.split(';')
                 }).catch(error => {
                     console.log(error)
@@ -159,7 +161,7 @@
                     if (currentTime >= strToTimestamp(time)) {
                         alert('演出已开始，无法购票，请购买其他场次')
                     } else {
-                        window.location.href = '<%=path%>/ticket-page/seat?itemId=' + itemId + '&openid=' + openid + '&time=' + time
+                        window.location.href = '<%=path%>/ticket-page/seat?itemId=' + itemId + '&openid=' + openid + '&time=' + time + '&address=' + this.ticketItemDetail.address
                     }
                 }
             }

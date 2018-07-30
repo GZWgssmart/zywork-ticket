@@ -27,6 +27,13 @@
         </div>
 
         <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">放映地点：</label>
+            <div class="col-sm-10">
+                <select id="address" name="address" class="form-control" data-placeholder="请选择放映地点"></select>
+            </div>
+        </div>
+
+        <div class="form-group">
             <label for="price" class="col-sm-2 control-label">A区原价：</label>
             <div class="col-sm-10">
                 <input id="price" name="price" class="form-control" placeholder="请输入A区原价"/>

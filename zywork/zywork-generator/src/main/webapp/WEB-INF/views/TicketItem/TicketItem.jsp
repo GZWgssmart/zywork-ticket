@@ -108,7 +108,15 @@
                     </div>
                 </div>
 
-<div class="col-sm-6 form-group">
+                <div class="col-sm-6 form-group">
+                    <label for="addressSearch" class="col-sm-4 control-label">放映地点：</label>
+                    <div class="col-sm-8">
+                        <input id="addressSearch" name="address" class="form-control" placeholder="请输入放映地点">
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 form-group">
     <label for="descriptionSearch" class="col-sm-4 control-label">描述：</label>
     <div class="col-sm-8">
         <input id="descriptionSearch" name="description" class="form-control" placeholder="请输入描述">
@@ -196,5 +204,6 @@
 
 </body>
 <%@include file="../master/include-js.jsp"%>
+<script src="<%=path%>/static/js/address.js"></script>
 <script src="<%=path%>/static/js/TicketItem/TicketItem.js"></script>
 </html>

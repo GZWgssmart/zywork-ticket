@@ -169,15 +169,11 @@
                     <p v-else>您还未选座</p>
                     <p>
                         共选座<span class="pay">{{ selectedSeat.length }}</span>个&nbsp;
-                        <span v-if="selectedSeat.length / presentTotalNum >= 1" class="pay">可享受满{{ presentTotalNum }}免{{ presentNum }}优惠，原总支付：￥{{totalPay}}，共减免￥{{totalPay - discountTotalPay}}</span>
                     </p>
                 </div>
                 <div class="bottom">
-                    <div class="total-pay">
-                        共需支付：<span class="pay">￥{{ discountTotalPay }}</span>
-                    </div>
                     <div class="to-pay">
-                        <a href="javascript:;" class="weui-btn weui-btn_primary" @click="submitOrderAndPay">立即支付</a>
+                        <a href="javascript:;" class="weui-btn weui-btn_primary" @click="submitOrderAndPay">添加已售</a>
                     </div>
                     <p style="clear:both;"></p>
                 </div>
@@ -202,8 +198,6 @@
                     seats: allSeats[0].seats,
                     selectedSeat: [],
                     selectedSeatString: '',
-                    totalPay: 0.0,
-                    discountTotalPay: 0.0,
                     currentItem: {},
                     openid: openid,
                     time: time,
@@ -231,28 +225,26 @@
                     changeArea (floor) {
                         this.seats = allSeats[floor].seats
                         var areas = allSeats[floor].areas
-                        if (this.allSelectedSeats != undefined && this.allSelectedSeats.length > 0) {
-                            // 对所有选中的座位进行循环
-                            for (var k = 0; k < this.allSelectedSeats.length; k++) {
-                                var isSetStatus = false
-                                // 对原始座位进行二维数组的循环
-                                for (var i = 0; i < this.seats.length; i++) {
-                                    for (var j = 0; j < this.seats[i].length; j++) {
-                                        // 对区域进行循环
-                                        for (var m = 0; m < areas.length; m++) {
-                                            if (areas[m] + '-' + this.seats[i][j].seat == this.allSelectedSeats[k].seat) {
-                                                this.seats[i][j].status = 3
-                                                isSetStatus = true
-                                                break
-                                            }
-                                        }
-                                        if (isSetStatus) {
+                        // 对所有选中的座位进行循环
+                        for (var k = 0; k < this.allSelectedSeats.length; k++) {
+                            var isSetStatus = false
+                            // 对原始座位进行二维数组的循环
+                            for (var i = 0; i < this.seats.length; i++) {
+                                for (var j = 0; j < this.seats[i].length; j++) {
+                                    // 对区域进行循环
+                                    for (var m = 0; m < areas.length; m++) {
+                                        if (areas[m] + '-' + this.seats[i][j].seat == this.allSelectedSeats[k].seat) {
+                                            this.seats[i][j].status = 3
+                                            isSetStatus = true
                                             break
                                         }
                                     }
                                     if (isSetStatus) {
                                         break
                                     }
+                                }
+                                if (isSetStatus) {
+                                    break
                                 }
                             }
                         }
@@ -264,13 +256,6 @@
                             seat.status = 2
                             // 放入已选中的座位
                             this.selectedSeat.push(seat)
-                            if (seat.area == 'A') {
-                                this.totalPay = (this.currentItem.unitPrice * 1.0 + this.totalPay * 1.0).toFixed(2)
-                            } else if (seat.area == 'B') {
-                                this.totalPay = (this.currentItem.unitPriceB * 1.0 + this.totalPay * 1.0).toFixed(2)
-                            } else if (seat.area == 'C') {
-                                this.totalPay = (this.currentItem.unitPriceC * 1.0 + this.totalPay * 1.0).toFixed(2)
-                            }
                         } else if (seat.status == 2){
                             if (seat.area == 'A') {
                                 event.currentTarget.style.color = '#dddddd'
@@ -286,51 +271,17 @@
                                     this.selectedSeat.splice(index, 1)
                                 }
                             });
-                            if (seat.area == 'A') {
-                                this.totalPay = (this.totalPay * 1.0 - this.currentItem.unitPrice * 1.0).toFixed(2)
-                            } else if (seat.area == 'B') {
-                                this.totalPay = (this.totalPay * 1.0 - this.currentItem.unitPriceB * 1.0).toFixed(2)
-                            } else if (seat.area == 'C') {
-                                this.totalPay = (this.totalPay * 1.0 - this.currentItem.unitPriceC * 1.0).toFixed(2)
-                            }
                         }
                         this.selectedSeatString = ''
                         this.selectedSeat.forEach((element, index) => {
                             this.selectedSeatString += element.area + '区' + element.seat.split('-')[0] + '排' + element.seat.split('-')[1] + '座\n'
                         })
-                        this.present()
-                    },
-                    present () {
-                        if (this.presentTotalNum != 0) {
-                            var base = parseInt(this.selectedSeat.length / this.presentTotalNum)
-                            var totalPresentNum = base * this.presentNum
-                            if (totalPresentNum > 0) {
-                                var area = 'A'
-                                this.selectedSeat.forEach((item, index) => {
-                                    if (item.area > area) {
-                                        area = item.area
-                                    }
-                                })
-                                if (area == 'C') {
-                                    this.discountTotalPay = (this.totalPay * 1.0 - this.currentItem.unitPriceC * 1.0 * totalPresentNum).toFixed(2)
-                                } else if (area == 'B') {
-                                    this.discountTotalPay = (this.totalPay * 1.0 - this.currentItem.unitPriceB * 1.0 * totalPresentNum).toFixed(2)
-                                } else if (area == 'A') {
-                                    this.discountTotalPay = (this.totalPay * 1.0 - this.currentItem.unitPrice * 1.0 * totalPresentNum).toFixed(2)
-                                }
-                            } else {
-                                this.discountTotalPay = this.totalPay
-                            }
-                        } else {
-                            this.discountTotalPay = this.totalPay
-                        }
                     },
                     submitOrderAndPay () {
-                            if (this.totalPay <= 0.0) {
-                                alert('请先选座再支付！')
+                            if (this.selectedSeat.length <= 0) {
+                                alert('请先选座再设置！')
                                 return;
                             }
-                            // this.present()
                             var selectedSeats = ''
                             this.selectedSeat.forEach((item, index) => {
                                 if (selectedSeats == '') {
@@ -340,63 +291,27 @@
                                 }
                             })
                             axios.post(
-                                '/byjc/tickeorder/save',
+                                '/byjc/tickeorder/save-admin',
                                 Qs.stringify({
                                     openid: this.openid,
                                     ticketItemId: this.itemId,
                                     unitPrice: this.currentItem.unitPrice,
                                     totalSeat: this.selectedSeat.length,
-                                    totalPrice: this.discountTotalPay,
                                     allSeatsString: this.selectedSeatString,
                                     selectedSeats: selectedSeats,
                                     playTimeStr: time
                                 })
                             ).then(response => {
                                 if (response.data.appId == 'none') {
-                                    alert('您选择的座位已经被人抢先购买了，请重新选择座位')
+                                    alert('您选择的座位有已经被人购买了，请重新设置已售座位')
                                     window.location.reload()
                                 } else {
-                                    this.pay(
-                                        response.data.appId,
-                                        response.data.timeStamp,
-                                        response.data.nonceStr,
-                                        response.data.packages,
-                                        response.data.paySign
-                                    )
+                                    alert('设置已售座位成功')
+                                    window.location.reload()
                                 }
                             }).catch(error => {
                                 console.log(error)
                             })
-                    },
-                    pay (appId, timestamp, nonceStr, packages, paySign) {
-                        if (typeof WeixinJSBridge == "undefined") {
-                            if (document.addEventListener) {
-                                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false)
-                            } else if (document.attachEvent) {
-                                document.attachEvent('WeixinJSBridgeReady', onBridgeReady)
-                                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady)
-                            }
-                        } else {
-                            WeixinJSBridge.invoke(
-                                'getBrandWCPayRequest', {
-                                    "appId": appId,
-                                    "timeStamp": timestamp,
-                                    "nonceStr": nonceStr,
-                                    "package": packages,
-                                    "signType": "MD5",
-                                    "paySign": paySign
-                                }, function (res) {
-                                    if (res.err_msg == "get_brand_wcpay_request:ok") {
-                                        alert('您已支付成功')
-                                        window.location.reload()
-                                    } else if (res.err_msg == "get_brand_wcpay_request:cancel") {
-                                        alert('您已取消支付')
-                                    } else if (res.err_msg == "get_brand_wcpay_request:fail") {
-                                        alert('您支付失败')
-                                        alert(JSON.stringify(res))
-                                    }
-                                });
-                        }
                     }
                 }
             }

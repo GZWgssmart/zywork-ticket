@@ -87,9 +87,9 @@
         </div>
         <div class="detail">
             <p class="title">{{ticketItemDetail.title}}</p>
-            <p class="play-time">演出时间：{{ticketItemDetail.playTimeStr}}</p>
+            <p class="play-time">放映时间：{{ticketItemDetail.playTimeStr}}</p>
             <p class="address">
-                演出地点：{{ticketItemDetail.address}}
+                放映地点：赣州市青少年活动中心
             </p>
             <p class="unit-price"><strong>现价：￥{{ticketItemDetail.unitPriceC}}起</strong></p>
         </div>
@@ -100,7 +100,7 @@
         <div class="other-info">
             <h4>其他信息</h4>
             <hr/>
-            <p>1、演出地点：{{ticketItemDetail.address}}</p>
+            <p>1、演出地点：赣州市青少年活动中心</p>
             <p>2、客服电话：13607070913（微信同号）</p>
             <p>3、演出开始后不再售票</p>
             <p>4、查询购票订单请点击公众号菜单中的个人中心</p>
@@ -121,7 +121,6 @@
 <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 <script src="https://cdn.bootcss.com/qs/6.5.2/qs.min.js"></script>
 <script src="<%=path%>/static/js/datetime.js"></script>
-<script src="<%=path%>/static/js/address.js"></script>
 <script>
     var itemId = '${requestScope.itemId}'
     var openid = '${requestScope.openid}'
@@ -137,7 +136,6 @@
                     this.ticketItemDetail = response.data
                     this.ticketItemDetail.seatUrl = '<%=path%>/ticket-page/ticket-item-detail-time?itemId=' + itemId + '&openid=' + openid
                     this.ticketItemDetail.headImg = '/byjc/' + this.ticketItemDetail.headImg
-                    this.ticketItemDetail.address = allAddrs[this.ticketItemDetail.address]
                 }).catch(error => {
                     console.log(error)
                 })

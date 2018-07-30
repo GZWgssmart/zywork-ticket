@@ -94,6 +94,12 @@ function loadTable() {
 	align: 'center',
 	sortable: true
 },
+            {
+                title: '放映地点',
+                field: 'ticketItemAddress',
+                align: 'center',
+                formatter:formatAddress
+            },
 {
 	title: '微信openid',
 	field: 'userOpenid',
@@ -133,6 +139,10 @@ function formatImg(index, row) {
 
 function formatSeats(index, row) {
 	return '<div style="width: 200px;word-break:break-all;overflow:auto;">' + row.allSeatsString + '</div>';
+}
+
+function formatAddress(index, row) {
+    return allAddrs[row.ticketItemAddress]
 }
 
 function formatOperators(value, row, index) {

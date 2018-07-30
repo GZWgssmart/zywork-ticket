@@ -84,9 +84,9 @@
             <a :href="item.itemDetailUrl">
                 <p class="title">{{item.title}}</p>
                 <p class="des">简介：{{item.description}}</p>
-                <p class="play-time">演出时间：{{item.playTimeStr}}</p>
+                <p class="play-time">放映时间：{{item.playTimeStr}}</p>
                 <p class="address">
-                    演出地点：{{item.address}}
+                    放映地点：赣州市青少年活动中心
                 </p>
                 <p class="unit-price"><strong>现价：￥{{item.unitPriceC}}起</strong></p>
             </a>
@@ -106,7 +106,6 @@
 <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 <script src="https://cdn.bootcss.com/qs/6.5.2/qs.min.js"></script>
 <script src="<%=path%>/static/js/datetime.js"></script>
-<script src="<%=path%>/static/js/address.js"></script>
 <script>
     var openid = '${requestScope.user.openid}'
     var app = new Vue(
@@ -120,7 +119,6 @@
                 }
             },
             created () {
-
                 this.getItems()
             },
             methods: {
@@ -133,7 +131,6 @@
                         this.ticketItems.forEach((data, index) =>{
                                 data.itemDetailUrl = '<%=path%>/ticket-page/ticket-item-detail?itemId=' + data.id + '&openid=' + openid
                                 data.headImg = '/byjc/' + data.headImg
-                                data.address = allAddrs[data.address]
                             }
                         )
                     }).catch(error => {

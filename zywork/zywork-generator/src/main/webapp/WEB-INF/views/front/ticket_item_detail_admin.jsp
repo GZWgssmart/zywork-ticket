@@ -21,7 +21,7 @@
 
         .img {
             float: left;
-            width: 30%;
+            width: 15%;
         }
 
         .img img {
@@ -36,7 +36,7 @@
         .detail {
             padding: 0 10px;
             float: left;
-            width: 60%;
+            width: 75%;
         }
 
         .detail a {
@@ -100,7 +100,7 @@
         <div class="other-info">
             <h4>其他信息</h4>
             <hr/>
-            <p>1、演出地点：{{ticketItemDetail.address}}</p>
+            <p>1、演出地点：赣州市青少年活动中心</p>
             <p>2、客服电话：13607070913（微信同号）</p>
             <p>3、演出开始后不再售票</p>
             <p>4、查询购票订单请点击公众号菜单中的个人中心</p>
@@ -112,7 +112,7 @@
         </div>
     </div>
     <div class="bottom">
-        <a :href="ticketItemDetail.seatUrl" class="weui-btn weui-btn_primary">立即购票</a>
+        <a :href="ticketItemDetail.seatUrl" class="weui-btn weui-btn_primary">立即设置已售座位</a>
     </div>
 </div>
 </body>
@@ -124,7 +124,6 @@
 <script src="<%=path%>/static/js/address.js"></script>
 <script>
     var itemId = '${requestScope.itemId}'
-    var openid = '${requestScope.openid}'
     var app = new Vue(
         {
             el: '#app',
@@ -135,7 +134,7 @@
             created () {
                 axios.get('/byjc/tickeitem/one/' + this.itemId).then(response => {
                     this.ticketItemDetail = response.data
-                    this.ticketItemDetail.seatUrl = '<%=path%>/ticket-page/ticket-item-detail-time?itemId=' + itemId + '&openid=' + openid
+                    this.ticketItemDetail.seatUrl = '<%=path%>/ticket-page/ticket-item-detail-time-admin?itemId=' + itemId
                     this.ticketItemDetail.headImg = '/byjc/' + this.ticketItemDetail.headImg
                     this.ticketItemDetail.address = allAddrs[this.ticketItemDetail.address]
                 }).catch(error => {

@@ -21,7 +21,7 @@
 
         .img {
             float: left;
-            width: 30%;
+            width: 15%;
         }
 
         .img img {
@@ -36,7 +36,7 @@
         .detail {
             padding: 0 10px;
             float: left;
-            width: 60%;
+            width: 75%;
         }
 
         .detail a {
@@ -108,7 +108,6 @@
 <script src="<%=path%>/static/js/datetime.js"></script>
 <script src="<%=path%>/static/js/address.js"></script>
 <script>
-    var openid = '${requestScope.user.openid}'
     var app = new Vue(
         {
             el: '#app',
@@ -131,7 +130,7 @@
                     ).then(response => {
                         this.ticketItems = response.data.rows
                         this.ticketItems.forEach((data, index) =>{
-                                data.itemDetailUrl = '<%=path%>/ticket-page/ticket-item-detail?itemId=' + data.id + '&openid=' + openid
+                                data.itemDetailUrl = '<%=path%>/ticket-page/ticket-item-detail-admin?itemId=' + data.id
                                 data.headImg = '/byjc/' + data.headImg
                                 data.address = allAddrs[data.address]
                             }

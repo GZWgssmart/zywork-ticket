@@ -204,7 +204,26 @@
         and t_ticket_order.ticket_item_id = t_ticket_item.id
         and t_ticket_item.id = #{ticketItemId}
         and t_ticket_order.play_time_str = #{playTimeStr}
-        and t_ticket_order.order_time is not null
+        and t_ticket_order.order_time is not null and t_ticket_order.openid is not null
     </select>
+
+    <select id="listSelectedSeatsAdmin" resultType="ticketOrderDetailDO">
+        select t_ticket_order_detail.* from t_ticket_order_detail, t_ticket_item, t_ticket_order
+        where t_ticket_order_detail.order_no = t_ticket_order.order_no
+        and t_ticket_order.ticket_item_id = t_ticket_item.id
+        and t_ticket_item.id = #{ticketItemId}
+        and t_ticket_order.play_time_str = #{playTimeStr}
+        and t_ticket_order.order_time is not null and t_ticket_order.openid is null
+    </select>
+
+    <delete id="removeSelectedSeatsAdmin">
+        delete from t_ticket_order_detail
+        where t_ticket_order_detail.order_no in (select t_ticket_order.order_no
+        from t_ticket_item, t_ticket_order
+        where t_ticket_order.ticket_item_id = t_ticket_item.id
+        and t_ticket_item.id = #{ticketItemId}
+        and t_ticket_order.play_time_str = #{playTimeStr}
+        and t_ticket_order.order_time is not null and t_ticket_order.openid is null)
+    </delete>
 
 </mapper>

@@ -158,5 +158,6 @@
 
 </body>
 <%@include file="../master/include-js.jsp"%>
+<script src="<%=path%>/static/js/address.js"></script>
 <script src="<%=path%>/static/js/UserTicketOrder/UserTicketOrder.js"></script>
 </html>

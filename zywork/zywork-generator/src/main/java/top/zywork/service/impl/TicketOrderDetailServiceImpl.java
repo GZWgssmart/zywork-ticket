@@ -38,6 +38,23 @@ public class TicketOrderDetailServiceImpl extends AbstractBaseService implements
         return dtoObjList;
     }
 
+    @Override
+    public List<Object> listSelectedSeatsAdmin(String ticketItemId, String playTimeStr) {
+        List<Object> doObjList = ticketOrderDetailDAO.listSelectedSeatsAdmin(ticketItemId, playTimeStr);
+        List<Object> dtoObjList = new ArrayList<>();
+        if (doObjList != null && doObjList.size() > 0) {
+            if (doObjList != null && doObjList.size() > 0) {
+                dtoObjList = DozerMapperUtils.mapList(getBeanMapper(), doObjList, TicketOrderDetailDTO.class);
+            }
+        }
+        return dtoObjList;
+    }
+
+    @Override
+    public void removeSelectedSeatsAdmin(String ticketItemId, String playTimeStr) {
+        ticketOrderDetailDAO.removeSelectedSeatsAdmin(ticketItemId, playTimeStr);
+    }
+
     @Autowired
     public void setTicketOrderDetailDAO(TicketOrderDetailDAO ticketOrderDetailDAO) {
         super.setBaseDAO(ticketOrderDetailDAO);

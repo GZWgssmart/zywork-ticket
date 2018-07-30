@@ -56,6 +56,9 @@
                             <a class="J_menuItem" href="<%=path%>/tickeitem/page" data-index="0">剧目管理</a>
                         </li>
                         <li>
+                            <a class="J_menuItem" href="<%=path%>/ticket-page/ticket-item-admin" data-index="0">座位管理</a>
+                        </li>
+                        <li>
                             <a class="J_menuItem" href="<%=path%>/user-order/page" data-index="0">订单管理</a>
                         </li>
                     </ul>

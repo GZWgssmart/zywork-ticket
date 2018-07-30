@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>购票订单</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link href="../../../static/css/iconfont/iconfont.css" rel="stylesheet"/>
+    <link href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css" rel="stylesheet"/>
+    <style>
+        .order {
+            padding: 5px;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .order img {
+            width:80px;
+            height: 100px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .detail {
+            float: left;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #ff7700;
+        }
+
+        .order-time, .play-time, .total-seat, .all-seats {
+            font-size: 12px;
+            color: #9d9d9d;
+        }
+
+        .all-seats {
+            color: #cc0000;
+            font-weight:bold;
+        }
+
+        .unit-price {
+            font-size: 14px;
+            color: #ff7700;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <div v-for="(item, index) in ticketOrders" class="order">
+        <img :src="item.ticketItemHeadImg"/>
+        <div class="detail">
+            <p class="title">{{item.ticketItemTitle}}</p>
+            <p class="play-time">演出时间：{{item.ticketItemPlayTime}}</p>
+            <p class="order-time">购票时间：{{item.ticketOrderOrderTime}}</p>
+            <p class="total-seat">总座位数：{{item.ticketOrderTotalSeat}}</p>
+            <p class="unit-price">单价：{{item.ticketOrderUnitPrice}}</p>
+            <p class="unit-price">总价：{{item.ticketOrderTotalPrice}}</p>
+            <p class="all-seats">座位信息：8排1座 8排2座 8排3座</p>
+        </div>
+        <p style="clear:both;"></p>
+    </div>
+</div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/qs/6.5.2/qs.min.js"></script>
+<script>
+    var app = new Vue(
+        {
+            el: '#app',
+            data: {
+                ticketOrders:[
+                    {
+                        ticketItemTitle: '丑小鸭',
+                        ticketItemHeadImg: '',
+                        ticketItemPlayTime: '2018-07-28',
+                        ticketOrderUnitPrice: 59,
+                        ticketOrderTotalPrice: 118,
+                        ticketOrderTotalSeat: 2,
+                        ticketOrderOrderTime: '2018-07-25'
+                    },
+                    {
+                        ticketItemTitle: '小蝌蚪找妈妈',
+                        ticketItemHeadImg: '',
+                        ticketItemPlayTime: '2018-07-28',
+                        ticketOrderUnitPrice: 59,
+                        ticketOrderTotalPrice: 118,
+                        ticketOrderTotalSeat: 2,
+                        ticketOrderOrderTime: '2018-07-25'
+                    }
+                ]
+            },
+            methods: {
+
+            }
+        }
+    );
+</script>
+</html>

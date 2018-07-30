@@ -241,6 +241,21 @@ public class TicketOrderDetailController extends BaseController {
         try {
             List<Object> objectList = ticketOrderDetailService.listSelectedSeats(ticketItemId, playTimeStr);
             ticketOrderDetailVOList =  DozerMapperUtils.map(getBeanMapper(), objectList, TicketOrderDetailVO.class);
+            List<Object> objectListAdmin = ticketOrderDetailService.listSelectedSeatsAdmin(ticketItemId, playTimeStr);
+            ticketOrderDetailVOList.addAll(DozerMapperUtils.map(getBeanMapper(), objectListAdmin, TicketOrderDetailVO.class));
+        } catch (ServiceException e) {
+            logger.error("返回所有对象JSON数据失败：{}", e.getMessage());
+        }
+        return ticketOrderDetailVOList;
+    }
+
+    @RequestMapping("selected-seats-admin/{ticketItemId}/{playTimeStr}")
+    @ResponseBody
+    public List<TicketOrderDetailVO> listSelectedSeatsAdmin(@PathVariable("ticketItemId") String ticketItemId, @PathVariable("playTimeStr") String playTimeStr) {
+        List<TicketOrderDetailVO> ticketOrderDetailVOList = new ArrayList<>();
+        try {
+            List<Object> objectList = ticketOrderDetailService.listSelectedSeatsAdmin(ticketItemId, playTimeStr);
+            ticketOrderDetailVOList =  DozerMapperUtils.map(getBeanMapper(), objectList, TicketOrderDetailVO.class);
         } catch (ServiceException e) {
             logger.error("返回所有对象JSON数据失败：{}", e.getMessage());
         }
