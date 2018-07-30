@@ -169,12 +169,13 @@
                     </p>
                     <p v-else>您还未选座</p>
                     <p>
-                        共选座<span class="pay">{{ selectedSeat.length }}</span>个</span>
+                        共选座<span class="pay">{{ selectedSeat.length }}</span>个&nbsp;
+                        <span v-if="selectedSeat.length / presentTotalNum >= 1" class="pay">可享受满{{ presentTotalNum }}免{{ presentNum }}优惠，原总支付：￥{{totalPay}}，共减免￥{{totalPay - discountTotalPay}}</span>
                     </p>
                 </div>
                 <div class="bottom">
                     <div class="total-pay">
-                        共需支付：<span class="pay">{{ totalPay }}</span>元
+                        共需支付：<span class="pay">￥{{ discountTotalPay }}</span>
                     </div>
                     <div class="to-pay">
                         <a href="javascript:;" class="weui-btn weui-btn_primary" @click="submitOrderAndPay">立即支付</a>
@@ -202,10 +203,13 @@
                     selectedSeat: [],
                     selectedSeatString: '',
                     totalPay: 0.0,
+                    discountTotalPay: 0.0,
                     currentItem: {},
                     openid: openid,
                     time: time,
-                    allSelectedSeats: []
+                    allSelectedSeats: [],
+                    presentTotalNum: 7,
+                    presentNum: 1
                 },
                 created () {
                     axios.get('/byjc/tickeitem/one/' + this.itemId).then(response => {
@@ -290,12 +294,39 @@
                         this.selectedSeat.forEach((element, index) => {
                             this.selectedSeatString += element.area + '区' + element.seat.split('-')[0] + '排' + element.seat.split('-')[1] + '座\n'
                         })
+                        this.present()
+                    },
+                    present () {
+                        if (this.presentTotalNum != 0) {
+                            var base = parseInt(this.selectedSeat.length / this.presentTotalNum)
+                            var totalPresentNum = base * this.presentNum
+                            if (totalPresentNum > 0) {
+                                var area = 'A'
+                                this.selectedSeat.forEach((item, index) => {
+                                    if (item.area > area) {
+                                        area = item.area
+                                    }
+                                })
+                                if (area == 'C') {
+                                    this.discountTotalPay = (this.totalPay * 1.0 - this.currentItem.unitPriceC * 1.0 * totalPresentNum).toFixed(2)
+                                } else if (area == 'B') {
+                                    this.discountTotalPay = (this.totalPay * 1.0 - this.currentItem.unitPriceB * 1.0 * totalPresentNum).toFixed(2)
+                                } else if (area == 'A') {
+                                    this.discountTotalPay = (this.totalPay * 1.0 - this.currentItem.unitPrice * 1.0 * totalPresentNum).toFixed(2)
+                                }
+                            } else {
+                                this.discountTotalPay = this.totalPay
+                            }
+                        } else {
+                            this.discountTotalPay = this.totalPay
+                        }
                     },
                     submitOrderAndPay () {
                             if (this.totalPay <= 0.0) {
                                 alert('请先选座再支付！')
                                 return;
                             }
+                            // this.present()
                             var selectedSeats = ''
                             this.selectedSeat.forEach((item, index) => {
                                 if (selectedSeats == '') {
@@ -311,7 +342,7 @@
                                     ticketItemId: this.itemId,
                                     unitPrice: this.currentItem.unitPrice,
                                     totalSeat: this.selectedSeat.length,
-                                    totalPrice: this.totalPay,
+                                    totalPrice: this.discountTotalPay,
                                     allSeatsString: this.selectedSeatString,
                                     selectedSeats: selectedSeats,
                                     playTimeStr: time
@@ -358,6 +389,7 @@
                                         alert('您已取消支付')
                                     } else if (res.err_msg == "get_brand_wcpay_request:fail") {
                                         alert('您支付失败')
+                                        alert(JSON.stringify(res))
                                     }
                                 });
                         }

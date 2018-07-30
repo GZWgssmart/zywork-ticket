@@ -16,7 +16,7 @@
             .seats {
                 width: 1300px;
                 height: 300px;
-                margin-top: 10px;
+                margin-top: 70px;
                 overflow: scroll;
             }
 
@@ -63,11 +63,12 @@
             .footer .content {
                 padding-left:5px;
                 padding-right: 5px;
+                font-size: 12px;
             }
 
             .footer .bottom {
                 width: 100%;
-                height: 60px;
+                height: 40px;
                 color: #fff;
                 background-color: rgba(26, 173, 25, 0.6);
                 padding-left: 5px;
@@ -80,9 +81,9 @@
             }
 
             .total-pay {
-                height: 60px;
-                line-height:60px;
-                font-size: 18px;
+                height: 40px;
+                line-height:40px;
+                font-size: 16px;
                 float: left;
             }
 
@@ -92,9 +93,9 @@
 
             .to-pay a {
                 width: 160px;
-                height: 60px;
+                height: 40px;
                 font-size: 16px;
-                line-height:60px;
+                line-height:40px;
             }
 
             .area {
@@ -103,10 +104,12 @@
 
             .area-chg {
                 margin-bottom:5px;
+                font-size: 12px;
             }
 
             .area-chg a {
                 display: inline-block;
+                font-size: 16px;
                 margin-right: 10px;
                 background-color:#ff7700;
                 color: #fff;
@@ -117,26 +120,31 @@
     </head>
 
     <body>
-        <div id="app">
-            <div class="seats">
-                <div class="area">
-                    <i class="iconfont icon-zuowei1" style="color:#00ff00;"></i>已选
-                    <i class="iconfont icon-zuowei1" style="color:#ff0000;"></i>已售
-                    <i class="iconfont icon-zuowei1" style="color:#dddddd;"></i>A区
-                    <i class="iconfont icon-zuowei1" style="color:#ADD7F0;"></i>B区
-                    <i class="iconfont icon-zuowei1" style="color:#e4b9c0;"></i>C区
+    <div id="app">
+        <div style="position: fixed; top:0px;left:5px;">
+            <div class="area">
+                <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#00ff00;"></i>已选
+                <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#ff0000;"></i>已售
+                <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#dddddd;"></i>A区128元
+                <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#ADD7F0;"></i>B区98元
+                <i class="iconfont icon-zuowei1" style="font-size: 18px;color:#e4b9c0;"></i>C区58元
+            </div>
+            <div class="area-chg">
+                <a href="javascript:;" @click="changeArea(1)">一楼A区和B区</a>
+                <a href="javascript:;" @click="changeArea(2)">二楼C区</a>
+                2018-08-12 15:00
+                <br/>
+                座位可上下左右移动哦
+            </div>
+        </div>
+        <div class="seats">
+            <div class="left">
+                <div v-for="(rowData, row) in seats" class="seat-row">
+                    <span class="num">{{row + 1}}</span>
                 </div>
-                <div class="area-chg">
-                    <a href="javascript:;" @click="changeArea(1)">A区和B区</a>
-                    <a href="javascript:;" @click="changeArea(2)">C区</a>
-                </div>
-                <div class="left">
-                    <div v-for="(rowData, row) in seats" class="seat-row">
-                        <span class="num">{{row + 1}}</span>
-                    </div>
-                </div>
-                <div class="right">
-                    <div v-for="(rowData, row) in seats" class="seat-row">
+            </div>
+            <div class="right">
+                <div v-for="(rowData, row) in seats" class="seat-row">
                             <span class="seat" v-for="(seat, col) in rowData">
                                 <i v-if="seat.seat != '0-0' && seat.status == 1 && seat.area == 'A'" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#dddddd;"></i>
                                 <i v-else-if="seat.seat != '0-0' && seat.status == 1 && seat.area == 'B'" class="iconfont icon-zuowei1" v-on:click="selectSeat(seat, col, $event)" style="color:#ADD7F0;"></i>
@@ -145,32 +153,32 @@
                                 <i v-else-if="seat.seat == '0-0'" class="iconfont icon-zuowei1" style="color:rgba(0,0,0,0);"></i>
                                 <i v-else-if="seat.seat != '0-0' && seat.status == 3" class="iconfont icon-zuowei1" style="color:#ff0000;"></i>
                             </span>
-                    </div>
+                </div>
+            </div>
+            <p style="clear:both;"></p>
+        </div>
+        <div class="footer">
+            <div class="content">
+                <h3>绿野仙踪</h3>
+                <p v-if="selectedSeat.length > 0">
+                    您已选择<span class="pay">{{ selectedSeatString }}</span>
+                </p>
+                <p v-else>您还未选座</p>
+                <p>
+                    共选座<span class="pay">{{ selectedSeat.length }}</span>个</span>
+                </p>
+            </div>
+            <div class="bottom">
+                <div class="total-pay">
+                    共需支付：<span class="pay">{{ totalPay }}</span>元
+                </div>
+                <div class="to-pay">
+                    <a href="javascript:;" class="weui-btn weui-btn_primary">立即支付</a>
                 </div>
                 <p style="clear:both;"></p>
             </div>
-            <div class="footer">
-                <div class="content">
-                    <h3>小蝌蚪找妈妈</h3>
-                    <p v-if="selectedSeat.length > 0">
-                        您已选择<span class="pay">{{ selectedSeatString }}</span>
-                    </p>
-                    <p v-else>您还未选座</p>
-                    <p>
-                        共选座<span class="pay">{{ selectedSeat.length }}</span>个，单价：<span class="pay">{{ unitPay }}元</span>
-                    </p>
-                </div>
-                <div class="bottom">
-                    <div class="total-pay">
-                        共需支付：<span class="pay">{{ totalPay }}</span>元
-                    </div>
-                    <div class="to-pay">
-                        <a href="javascript:;" class="weui-btn weui-btn_primary">立即支付</a>
-                    </div>
-                    <p style="clear:both;"></p>
-                </div>
-            </div>
         </div>
+    </div>
     </body>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -188,7 +196,6 @@
                 },
                 methods: {
                     changeArea (floor) {
-                        alert(floor)
                         if (floor == 1) {
                             this.seats = seats1
                         } else if (floor == 2) {

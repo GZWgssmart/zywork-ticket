@@ -30,6 +30,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -100,7 +101,7 @@ public class TicketOrderController extends BaseController {
                 WechatUtil wechatUtil = new WechatUtil();
                 Map<String, String> prepayResult = wechatUtil.prepayResult(ticketOrderVO.getOpenid(),
                         ticketOrderVO.getOrderNo(),
-                        IPUtils.getIP(request), "北艺赣州剧场选座付款", allSeatsString,
+                        IPUtils.getIP(request), "北艺赣州剧场选座付款", "",
                         (int) (ticketOrderVO.getTotalPrice() * 100));
                 Map<String, String> payData = wechatUtil.payData(prepayResult);
                 returnPayData.setAppId(WechatAPI.APP_ID);
