@@ -58,9 +58,6 @@
 
             .footer {
                 font-size: 14px;
-                position: fixed;
-                left: 0;
-                bottom: 0;
                 width: 100%;
             }
 
@@ -77,6 +74,9 @@
                 background-color: rgba(26, 173, 25, 0.6);
                 padding-left: 5px;
                 padding-right:5px;
+                position: fixed;
+                left: 0;
+                bottom: 0;
             }
 
             .pay {
